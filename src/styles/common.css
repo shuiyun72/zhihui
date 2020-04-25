@@ -1,0 +1,23 @@
+@charset "utf-8";
+.el-dialog__header{
+    box-shadow:0px 1px 6px rgba(0,0,0,0.5);
+}
+.pointer{
+    cursor:pointer;
+}
+.el-bottom.big_blue{
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    height: 60px;
+    margin: 30px auto 0;
+    font-size: 26px;
+    background-color: #01B0B7;
+    display: block;
+}
+.btn_defult{
+    padding: 9px 50px;
+    margin-bottom: 10px;
+    background-color: #999;
+    color: #fff;
+}
