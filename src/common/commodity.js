@@ -1,8 +1,8 @@
 export const HomeCommodity = [
-    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",id:"1"},
-    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",id:"1"},
-    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",id:"1"},
-    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",id:"1"},
+    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",history:"382.00",id:"1"},
+    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",history:"482.00",id:"1"},
+    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",history:"322.00",id:"1"},
+    {img:"shop1.png",p1:"大华Tb-SBG24",p2:"14监控",money:"130.00",history:"382.00",id:"1"},
 ]
 
 export const Part2List = [
@@ -23,13 +23,13 @@ export const Part2List = [
 ]
 
 export const Part3List = [
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
-    {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
+    {img:"shop2.png",name:"1索尼球0形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"368.00",moneyOld:"1818.00"},
+    {img:"shop2.png",name:"3索尼球形监12控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
+    {img:"shop2.png",name:"4索尼球形d监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"468.00",moneyOld:"1868.00"},
+    {img:"shop2.png",name:"7索尼球c形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
+    {img:"shop2.png",name:"索尼球形监v控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
+    {img:"shop2.png",name:"索尼球s形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
+    {img:"shop2.png",name:"索s尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
     {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
     {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},
     {img:"shop2.png",name:"索尼球形监控HKGH-3233",link:"http://www.baidu.com",number:20,moneyNew:"568.00",moneyOld:"1868.00"},

@@ -1,110 +1,42 @@
- //商品展示
-.shop_show_item{
-  width: 380px;
-  height: 304px;
-  box-sizing: border-box;
-  box-shadow:0px 3px 6px rgba(0,0,0,0.5);
-  margin-bottom: 16px;
-  img{
-    display: block;
-    margin: 0 auto;
-  }
-  .info{
-    padding: 12px 15px;
-    display: flex;
-    justify-content: space-between;
-    .name{
-      font-size: 19px;
-    }
-    .number{
-      font-size: 12px;
-      line-height: 19px;
-    }
-  }
-  .handle{
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    .money_new{
-      color: #f00;
-      font-size: 19px;
-    }
-    .money_old{
-      color: #999;
-      font-size: 15px;
-      line-height: 26px;
-      text-align: left;
-      width: 120px;
-      text-decoration:line-through;
-    }
-    .add_car{
-      width:103px;
-      height:26px;
-      line-height: 26px;
-      text-align: center;
-      background:rgba(248,133,9,1);
-      border-radius:20px;
-      font-size: 15px;
-      color: #fff;
-      cursor: pointer;
-    }
-  }
+@charset "utf-8";
+.el-dialog__header{
+    box-shadow:0px 1px 6px rgba(0,0,0,0.5);
 }
-//全屏更多
-.link_more{
-  text-align: center;
-  padding: 15px;
-  color: #0027fd;
-  cursor: pointer;
-  box-shadow:0px 3px 6px rgba(0,0,0,0.5);
-  letter-spacing:20px;
-  font-size: 20px;
+.pointer{
+    cursor:pointer;
 }
-//行内更多
-.link {
-  color: #0027fd;
-  cursor: pointer;
-}
-.part_title {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  align-items:flex-end;
-  .text {
-    font-size: 36px;
-    color: #000;
-  }
-  .share {
-    align-items: flex-end;
-    font-size: 24px;
-    i {
-      font-size: 26px;
-      color: #7cb6f1;
-      margin-left: 8px;
-    }
-  }
-}
-.lunbo {
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  i {
-    width: 20px;
-    height: 40px;
-    line-height: 40px;
+.el-bottom.big_blue{
     text-align: center;
-    background-color: #d3d3d3;
-    position: absolute;
-    top: 50%;
-    margin-top: -20px;
     color: #fff;
-    &.el-icon-arrow-left {
-      left: 0;
-    }
-    &.el-icon-arrow-right {
-      right: 0;
-    }
-  }
+    width: 90%;
+    height: 60px;
+    margin: 30px auto 0;
+    font-size: 26px;
+    background-color: #01B0B7;
+    display: block;
 }
+.btn_defult{
+    padding: 9px 50px;
+    margin-bottom: 10px;
+    background-color: #999;
+    color: #fff;
+}
+.link_more {
+    text-align: center;
+    padding: 15px;
+    color: #0027fd;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 20px;
+    font-size: 20px;
+    margin-bottom: 16px;
+    
+}
+.link_more .el-icon-caret-bottom{
+    font-size: 26px;
+}
+.link {
+    color: #0027fd;
+    cursor: pointer;
+}
+

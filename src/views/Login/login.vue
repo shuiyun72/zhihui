@@ -27,4 +27,84 @@ components: {
     height: 1280px;
     position:relative;
 }
+.login_box {
+  .other {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    i {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+    padding: 20px 0;
+    width: 440px;
+    border-top: 1px solid #999;
+    margin: 30px auto 0;
+  }
+  .login_btn {
+    text-align: center;
+    color: #fff;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    margin: 30px auto 0;
+    font-size: 34px;
+    background-color: #01b0b7;
+  }
+  &.login_enroll {
+    width: 600px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    padding: 10px 20px 60px;
+    .el-input-group__append {
+      background-color: #01b0b7;
+      color: #fff;
+      font-size: 20px;
+    }
+    .login_body {
+      padding: 10px 26px 0;
+    }
+  }
+
+  .login_top {
+    font-size: 30px;
+    text-align: right;
+  }
+  .login_title {
+    text-align: center;
+    font-size: 38px;
+    i {
+      margin-right: 20px;
+    }
+  }
+  .login_body {
+    padding: 30px 26px 0;
+    .el-input {
+      input {
+        height: 60px;
+        line-height: 60px;
+        font-size: 22px;
+      }
+      margin: 10px 0;
+    }
+    .remember {
+      .i {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #999;
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+        top: 4px;
+      }
+      span {
+        display: inline-block;
+        line-height: 32px;
+        font-size: 20px;
+      }
+    }
+  }
+}
 </style>

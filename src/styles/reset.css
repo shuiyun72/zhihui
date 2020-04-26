@@ -3,7 +3,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,texta
 /* 酌情修改 */
 body{background:#fff;font-family:"微软雅黑","宋体";}
 body,th,td,input,select,textarea,button{font-size:14px;line-height:1 ;box-sizing: border-box;} /* 重置页面文字属性 */
-
 /* 短引用的内容可取值：''或"" */
 blockquote:before, blockquote:after,q:before, q:after{content:'';content:none} /* 重置嵌套引用*/
 

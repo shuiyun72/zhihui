@@ -89,6 +89,7 @@ export default {
   position: fixed;
   left: 50%;
   text-align: center;
+  z-index:1;
 }
 #leftside {
   top: 200px;
@@ -161,6 +162,7 @@ export default {
         }
         color: #fff;
         background: rgba(53, 192, 198, 1);
+        position:relative;
       }
     }
   }

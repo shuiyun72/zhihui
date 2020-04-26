@@ -1,69 +1,50 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-
+import VueRouter from 'vue-router';
+//用户登录
+import loginRouter from "./login";
+//选票
+import voteRouter from "./vote";
 Vue.use(VueRouter)
-
   const routes = [
+    loginRouter,
+    voteRouter,
     {
       path: '/',
-      redirect: '/home',
+      redirect: 'home',
     },
     {
       path: '/home',
       name: 'Home',
-      component: (res) => require(['@views/Home/home.vue'], res)
-    },
-    {
-      path: '/vote',
-      name: 'Vote',
-      redirect: '/voteAdd',
-      component: (res) => require(['@views/Vote/vote.vue'], res),
+      component: (res) => require(['@views/Home/home.vue'], res),
+      redirect: '/home/home2',
       children:[
-        {//发起投票
-          path: '/voteInitiate',
-          name: 'voteInitiate',
-          component: (res) => require(['@views/Vote/components/voteInitiate.vue'], res)
+        {
+          path: '/home/home1',
+          name: '/home1',
+          component: (res) => require(['@views/Home/home1.vue'], res)
         },
-        {//添加选手
-          path: '/voteAdd',
-          name: 'voteAdd',
-          component: (res) => require(['@views/Vote/components/voteAdd.vue'], res)
-        }
+        {
+          path: '/home/home2',
+          name: 'home2',
+          component: (res) => require(['@views/Home/home2.vue'], res)
+        },
       ]
     },
     {
-      path: '/login',
-      name: 'Login',    
-      component: (res) => require(['@views/Login/login.vue'], res),
-      redirect: '/loginInWeChat',
-      children:[
-        {//登陆微信
-          path: '/loginInWeChat',
-          name: 'LoginInWeChat',
-          component: (res) => require(['@views/Login/loginInWeChat.vue'], res)
-        },
-        {//登陆
-          path: '/loginIn',
-          name: 'LoginIn',
-          component: (res) => require(['@views/Login/loginIn.vue'], res)
-        },
-        {//密码找回企业
-          path: '/loginFind',
-          name: 'loginFind',
-          component: (res) => require(['@views/Login/loginFind.vue'], res)
-        },
-        {//退出
-          path: '/loginOut',
-          name: 'LoginOut',
-          component: (res) => require(['@views/Login/loginOut.vue'], res)
-        },
-        {//注册
-          path: '/loginEnroll',
-          name: 'LoginEnroll',
-          component: (res) => require(['@views/Login/loginEnroll.vue'], res)
-        },
-      ]
+      path: '/commodity',
+      name: 'commodity',
+      component: (res) => require(['@views/commodity/commodity.vue'], res)
     },
+    {
+      path: '/commodity/screen',
+      name: 'commodityscreen',
+      component: (res) => require(['@views/commodity/commodityscreen.vue'], res)
+    },
+    {
+      path: '/commodity/detial',
+      name: 'commodityDetial',
+      component: (res) => require(['@views/commodity/commodityDetial.vue'], res)
+    }
 ]
 
 const router = new VueRouter({

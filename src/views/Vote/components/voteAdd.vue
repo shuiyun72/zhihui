@@ -349,7 +349,6 @@ export default {
     .link {
       color: #0027ff;
       font-size: 28px;
-      cursor: pointer;
     }
   }
   .handle {

@@ -21,3 +21,22 @@
     background-color: #999;
     color: #fff;
 }
+.link_more {
+    text-align: center;
+    padding: 15px;
+    color: #0027fd;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 20px;
+    font-size: 20px;
+    margin-bottom: 16px;
+    
+}
+.link_more .el-icon-caret-bottom{
+    font-size: 26px;
+}
+.link {
+    color: #0027fd;
+    cursor: pointer;
+}
+

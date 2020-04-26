@@ -30,7 +30,7 @@ export default {
     width: 100%;
     background-color:#01B0B7;
     ul{
-      width: 1600px;
+      width: 1200px;
       margin: 0 auto;
       display: flex;
       line-height: 40px;
@@ -41,7 +41,7 @@ export default {
         }
         flex-grow:1;
         text-align: center;
-        font-size: 24px;
+        font-size: 18px;
         color: #fff;
       }
     }
