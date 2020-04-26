@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
     <Footer></Footer>
   </div>
 </template>
@@ -8,16 +8,15 @@
 import Footer from "@components/Footer.vue";
 
 export default {
-  components:{
+  components: {
     Footer
   },
   props: {
     msg: String
   }
-}
+};
 </script>
 <style lang="less">
-
 .part_title {
   display: flex;
   justify-content: space-between;

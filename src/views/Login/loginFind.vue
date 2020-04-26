@@ -29,29 +29,25 @@
         <div class="login_body">
           <p class="qiye_title">企业资料验证3-5个工作日</p>
           <el-row class="qiye_find_file">
-            <el-col :span="10">
-              上传营业执照副本图：
-            </el-col>
+            <el-col :span="10">上传营业执照副本图：</el-col>
             <el-col :span="14">
               <el-button class="btn_defult">上传</el-button>
               <el-button class="btn_defult is_active">预览</el-button>
             </el-col>
           </el-row>
-          <el-row  class="qiye_find_file">
-            <el-col :span="10">
-              上传单位授权书(公章)：
-            </el-col>
+          <el-row class="qiye_find_file">
+            <el-col :span="10">上传单位授权书(公章)：</el-col>
             <el-col :span="14">
               <el-button class="btn_defult">上传</el-button>
               <el-button class="btn_defult">预览</el-button>
             </el-col>
           </el-row>
-          <el-row  class="qiye_find_file">
+          <el-row class="qiye_find_file">
             <el-col :span="12" :offset="10">
-              <a href="" class="down_m">下载授权书模版</a>
+              <a href class="down_m">下载授权书模版</a>
             </el-col>
           </el-row>
-          
+
           <el-input v-model="input1" placeholder="请输入联系人" class="login_input"></el-input>
           <el-input v-model="input1" placeholder="联系电话" class="login_input">
             <template slot="append">获取验证码</template>
@@ -82,7 +78,7 @@
           <img :src="require('@assets/img/yitijiao.png')" alt />
         </div>
         <div class="info">
-          <p>资料已提交我们会在</p>  
+          <p>资料已提交我们会在</p>
           <p>3-5个工作日内审核处理</p>
           <p>请关注手机短信息</p>
         </div>
@@ -103,7 +99,7 @@ export default {
     return {
       activeName: "second",
       dialogVisible: false,
-      dialogTitle:"",
+      dialogTitle: "",
       input1: "",
       input2: ""
     };
@@ -121,25 +117,24 @@ export default {
 </script>
 
 <style lang="less">
-.qiye_find_file{
+.qiye_find_file {
   font-size: 20px;
   padding: 10px 0;
   color: #666;
-  .btn_defult{
+  .btn_defult {
     padding: 9px 50px;
     background-color: #eee;
     font-size: 20px;
-    &.is_active{
-      background-color: #01B0B7;
+    &.is_active {
+      background-color: #01b0b7;
       color: #fff;
     }
   }
-  
 }
-.down_m{
-    color: #0009F7;
+.down_m {
+  color: #0009f7;
 }
-.qiye_title{
+.qiye_title {
   font-size: 20px;
   text-align: center;
   color: #666;

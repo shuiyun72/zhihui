@@ -4,7 +4,7 @@
     <div class="info">
       <p>{{smallGoodsItem.p1}}</p>
       <p>{{smallGoodsItem.p2}}</p>
-      
+
       <div class="detail" v-if="history">
         <div class="money">￥{{smallGoodsItem.money}}</div>
         <div class="delete">￥{{smallGoodsItem.history}}</div>

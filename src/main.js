@@ -6,7 +6,7 @@ import store from './store'
 import "./styles/reset.css";
 import "@utils/ElementComponents";
 import "@styles/iconfont/iconfont.css";
-import "@styles/index.js"; 
+import "@styles/index.js";
 Vue.config.productionTip = false
 
 new Vue({

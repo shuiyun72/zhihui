@@ -2,20 +2,29 @@
   <div>
     <div id="leftside">
       <div class="is_active item_box">
-        <div class="item">采购<br />订单</div>
+        <div class="item">
+          采购
+          <br />订单
+        </div>
         <div class="span">10</div>
       </div>
       <div class="is_active item_box">
-        <div class="item">我的
-        <br />购物车</div>
+        <div class="item">
+          我的
+          <br />购物车
+        </div>
       </div>
       <div class="item_box">
-       <div class="item"> 添加
-        <br />尾货</div>
+        <div class="item">
+          添加
+          <br />尾货
+        </div>
       </div>
       <div class="item_box">
-         <div class="item_last">立即
-        <br />发货</div>
+        <div class="item_last">
+          立即
+          <br />发货
+        </div>
         <div class="span">10</div>
       </div>
     </div>
@@ -27,33 +36,47 @@
             <br />首页
           </div>
         </div>
-        <div class=" item_box is_active">
-          <div class="item">尾货
-          <br />专场</div>
+        <div class="item_box is_active">
+          <div class="item">
+            尾货
+            <br />专场
+          </div>
         </div>
         <div class="item_box">
-          <div class="item">项目
-          <br />信息</div>
+          <div class="item">
+            项目
+            <br />信息
+          </div>
         </div>
         <div class="item_box">
-         <div class="item">企业
-          <br />入驻</div>
+          <div class="item">
+            企业
+            <br />入驻
+          </div>
         </div>
         <div class="item_box">
-          <div class="item">众包
-          <br />合作</div>
+          <div class="item">
+            众包
+            <br />合作
+          </div>
         </div>
         <div class="item_box">
-          <div class="item">达人
-          <br />活动</div>
+          <div class="item">
+            达人
+            <br />活动
+          </div>
         </div>
         <div class="item_box">
-          <div class="item">弱电
-          <br />社区</div>
+          <div class="item">
+            弱电
+            <br />社区
+          </div>
         </div>
         <div class="item_box">
-          <div class="item_last">个人
-          <br />中心</div>
+          <div class="item_last">
+            个人
+            <br />中心
+          </div>
         </div>
       </div>
       <div class="part2">
@@ -83,52 +106,53 @@ export default {
 </script>
 
 <style scoped lang="less">
-#leftside,#rightside {
+#leftside,
+#rightside {
   width: 60px;
   font-size: 14px;
   position: fixed;
   left: 50%;
   text-align: center;
-  z-index:1;
+  z-index: 1;
 }
 #leftside {
   top: 200px;
   margin-left: -890px;
-  box-shadow:0px 3px 6px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   .item_box {
     position: relative;
     width: 60px;
-    padding:10px 9px 0;
+    padding: 10px 9px 0;
     color: #000;
     box-sizing: border-box;
-    background:rgba(255,255,255,1);
-    .item_last{
+    background: rgba(255, 255, 255, 1);
+    .item_last {
       padding-bottom: 12px;
     }
-    .item{
+    .item {
       border-bottom: 1px solid #000;
       padding-bottom: 12px;
       box-sizing: border-box;
     }
-    &.is_active{
-      .item{
+    &.is_active {
+      .item {
         border-bottom: 1px solid #fff;
       }
       color: #fff;
       background: rgba(53, 192, 198, 1);
     }
-    &.is_active~.is_active{
-      .item{
+    &.is_active ~ .is_active {
+      .item {
         border-bottom: 1px solid rgba(53, 192, 198, 1);
       }
     }
-    .span{
+    .span {
       position: absolute;
-      top:50%;
+      top: 50%;
       right: -20px;
       border-radius: 50%;
       font-size: 10px;
-      border:1px solid #f00;
+      border: 1px solid #f00;
       color: #f00;
       padding: 2px;
       margin-top: -20px;
@@ -138,59 +162,59 @@ export default {
 #rightside {
   bottom: 50px;
   margin-left: 830px;
-  .part1{
-    box-shadow:0px 3px 6px rgba(0,0,0,0.5);
+  .part1 {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
     .item_box {
       width: 60px;
-      padding:10px 9px 0;
+      padding: 10px 9px 0;
       color: #000;
       box-sizing: border-box;
-      background:rgba(255,255,255,1);
-      .item_last{
+      background: rgba(255, 255, 255, 1);
+      .item_last {
         padding-bottom: 12px;
       }
-      .item{
+      .item {
         border-bottom: 1px solid #000;
         padding-bottom: 12px;
         box-sizing: border-box;
         position: relative;
-        top:1px
+        top: 1px;
       }
       &.is_active {
-        .item{
+        .item {
           border-bottom: 1px solid #fff;
         }
         color: #fff;
         background: rgba(53, 192, 198, 1);
-        position:relative;
+        position: relative;
       }
     }
   }
-  .part2{
-    width:60px;
-    height:97px;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 3px 6px rgba(0,0,0,0.35);
-    border-radius:30px;
+  .part2 {
+    width: 60px;
+    height: 97px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
     margin-top: 20px;
-    i{
+    i {
       font-size: 26px;
       padding: 14px 0 10px;
     }
-    .green{
-      color: #01B0B7;
+    .green {
+      color: #01b0b7;
     }
   }
-  .part3{
-    width:60px;
-    height:60px;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 3px 6px rgba(0,0,0,0.35);
-    border-radius:50%;
+  .part3 {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
     margin-top: 20px;
     font-size: 26px;
     line-height: 60px;
-    color: #01B0B7;
+    color: #01b0b7;
   }
 }
 </style>

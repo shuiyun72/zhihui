@@ -1,7 +1,11 @@
 <template>
   <div id="header_nav">
     <ul>
-      <li v-for="(item,index) in topNav" :key="index" :class="{'is_active':isActive==index}">{{item.text}}</li>
+      <li
+        v-for="(item,index) in topNav"
+        :key="index"
+        :class="{'is_active':isActive==index}"
+      >{{item.text}}</li>
     </ul>
   </div>
 </template>
@@ -12,8 +16,8 @@ export default {
   data() {
     return {
       input2: "",
-      topNav:Const.topNav,
-      isActive:0
+      topNav: Const.topNav,
+      isActive: 0
     };
   },
   methods: {
@@ -25,26 +29,24 @@ export default {
 </script>
 
 <style scoped lang="less">
-
-  #header_nav{
-    width: 100%;
-    background-color:#01B0B7;
-    ul{
-      width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      line-height: 40px;
-      height: 40px;
-      li{
-        &.is_active{
-          background-color: #27898D;
-        }
-        flex-grow:1;
-        text-align: center;
-        font-size: 18px;
-        color: #fff;
+#header_nav {
+  width: 100%;
+  background-color: #01b0b7;
+  ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    line-height: 40px;
+    height: 40px;
+    li {
+      &.is_active {
+        background-color: #27898d;
       }
+      flex-grow: 1;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
     }
   }
-  
+}
 </style>

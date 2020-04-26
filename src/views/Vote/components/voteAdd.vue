@@ -48,13 +48,14 @@
             <i class="el-icon-sort"></i>
           </el-col>
           <el-col :span="18" :offset="1" class="right_box">
-            <div class="">
+            <div class>
               <el-row>
                 <el-col :span="16">
                   <el-input type="textarea"></el-input>
                 </el-col>
                 <el-col :span="6" :offset="1">
-                  <el-button>取消</el-button><br/>
+                  <el-button>取消</el-button>
+                  <br />
                   <el-button class="red">保存</el-button>
                 </el-col>
               </el-row>
@@ -77,7 +78,7 @@
           <el-button class="btn_defult">选择小视频</el-button>
         </div>
         <div class="select_audio">
-          <el-input class=""></el-input>
+          <el-input class></el-input>
           <el-button class="btn_defult">预览</el-button>
         </div>
         <div class="bottom">
@@ -94,7 +95,10 @@
         </div>
       </div>
       <div v-if="dialogTitle=='选手征集（征集区域）'" class="add_img add_http">
-        <div class="select">选择区域：<span class="blue">全部</span></div>
+        <div class="select">
+          选择区域：
+          <span class="blue">全部</span>
+        </div>
         <div class="add_http_input">
           <el-input></el-input>
         </div>
@@ -118,7 +122,7 @@ export default {
     return {
       dialogTitle: "",
       dialogVisible: false,
-      widthD:"60%",
+      widthD: "60%",
       num: "1",
       options: [
         {
@@ -137,7 +141,7 @@ export default {
     };
   },
   methods: {
-    showDialog(el,width) {
+    showDialog(el, width) {
       this.dialogTitle = el;
       this.dialogVisible = true;
       this.widthD = width;
@@ -146,107 +150,103 @@ export default {
 };
 </script>
 <style lang="less">
-
-.add_img{
-  &.textarea{
-    textarea{
+.add_img {
+  &.textarea {
+    textarea {
       height: 300px;
       margin-bottom: 30px;
     }
-    
   }
-  &.add_http{
-    .select{
+  &.add_http {
+    .select {
       padding: 20px 0;
-      .blue{
-        background-color: #32BDC2;
+      .blue {
+        background-color: #32bdc2;
         padding: 6px 15px;
       }
     }
-    .add_http_input{
+    .add_http_input {
       padding: 20px 0 30px;
-      .el-input{
-      width: 100%;
-      margin-right: 20px;
-      input{
+      .el-input {
         width: 100%;
-        position: relative;
-        top:-5px;
+        margin-right: 20px;
+        input {
+          width: 100%;
+          position: relative;
+          top: -5px;
+        }
       }
     }
-    }
-    
   }
-  .box{
+  .box {
     width: 70%;
     margin: 0 auto;
     height: 300px;
     border: 1px solid #000;
   }
-  .select_audio{
+  .select_audio {
     width: 80%;
     text-align: center;
-    .el-input{
+    .el-input {
       width: 300px;
       margin-right: 20px;
-      input{
+      input {
         width: 100%;
         position: relative;
-        top:-5px;
+        top: -5px;
       }
     }
     margin: 10px auto;
   }
-  .info{
+  .info {
     width: 80%;
-    background-color: #EAE6B7;
+    background-color: #eae6b7;
     color: #666;
     text-align: center;
     font-size: 18px;
     padding: 10px 0;
     margin: 20px auto;
-
   }
-  .bottom{
+  .bottom {
     text-align: center;
-    button{
+    button {
       padding: 9px 50px;
       margin-bottom: 10px;
       background-color: #999;
       color: #fff;
-      &.blue{
-        background-color:#01B0B7;
+      &.blue {
+        background-color: #01b0b7;
       }
     }
   }
 }
 
-.edit_text{
-  .part1{
+.edit_text {
+  .part1 {
     display: flex;
-    .text{
+    .text {
       font-size: 20px;
       line-height: 30px;
       margin-right: 10px;
     }
-    i{
+    i {
       font-size: 20px;
       line-height: 30px;
       margin-left: 10px;
     }
   }
-  .right_box{
+  .right_box {
     padding: 20px;
     background-color: #eee;
-    textarea{
+    textarea {
       height: 100px;
     }
-    button{
+    button {
       padding: 9px 50px;
       margin-bottom: 10px;
       background-color: #999;
       color: #fff;
-      &.red{
+      &.red {
         background-color: #f00;
       }
     }
@@ -312,8 +312,8 @@ export default {
   font-size: 20px;
   border-radius: 30px;
 }
-.el-input.small_input{
-    width: 40px;
+.el-input.small_input {
+  width: 40px;
 }
 
 .el-input.default_input {

@@ -3,7 +3,7 @@ export default {
   name: 'Vote',
   redirect: '/voteAdd',
   component: (res) => require(['@views/Vote/vote.vue'], res),
-  children:[
+  children: [
     {//发起投票
       path: '/voteInitiate',
       name: 'voteInitiate',

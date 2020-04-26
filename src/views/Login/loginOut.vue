@@ -1,19 +1,12 @@
 <template>
-<div>
-  loginIN
-</div>
+  <div>loginIN</div>
 </template>
 
 <script>
-
 export default {
-  components: {
-   
-  },
+  components: {},
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {}
 };

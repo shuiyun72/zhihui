@@ -1,9 +1,9 @@
 <template>
-    <div class="goods_lunbo_s">
-      <i class="el-icon-arrow-left"></i>
-      <i class="el-icon-arrow-right"></i>
-      <slot></slot>
-    </div>
+  <div class="goods_lunbo_s">
+    <i class="el-icon-arrow-left"></i>
+    <i class="el-icon-arrow-right"></i>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -12,15 +12,15 @@ import SmallGoods from "@components/Goods/SmallGoods";
 export default {
   data() {
     return {
-      commodityList:Commodity.HomeCommodity,
+      commodityList: Commodity.HomeCommodity
     };
   },
-  components:{
+  components: {
     SmallGoods
   },
   methods: {
-    showShop(el){
-      console.log(el)
+    showShop(el) {
+      console.log(el);
     }
   }
 };

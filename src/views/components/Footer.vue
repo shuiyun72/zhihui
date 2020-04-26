@@ -26,14 +26,14 @@
       <span class="left">友情链接：</span>
       <div class="center">
         <a :href="item.url" v-for="(item,index) in footImgList" :key="index">
-          <img :src="require('@assets/img/'+item.img)"/>
+          <img :src="require('@assets/img/'+item.img)" />
         </a>
       </div>
       <span class="right">添加友情链接请联系客服</span>
     </div>
     <div class="part3">
-        <a href="">www.zhyook.com</a>
-        版权所有 ICP经营许可证豫ICP备88888888号 网络文化经营许可证号：HN7288898988号
+      <a href>www.zhyook.com</a>
+      版权所有 ICP经营许可证豫ICP备88888888号 网络文化经营许可证号：HN7288898988号
     </div>
   </div>
 </template>
@@ -94,35 +94,35 @@ export default {
       }
     }
   }
-  .part2{
+  .part2 {
     margin-top: 36px;
     line-height: 50px;
-    .left{
+    .left {
       width: 120px;
       float: left;
       font-size: 24px;
       color: #fff;
     }
-    .center{
+    .center {
       float: left;
-      a{
+      a {
         display: inline-block;
         margin-right: 18px;
       }
     }
-    .right{
+    .right {
       float: right;
       width: 266px;
       font-size: 18px;
       color: #999;
     }
   }
-  .part3{
+  .part3 {
     padding-top: 60px;
     font-size: 18px;
     color: #fff;
     text-align: center;
-    a{
+    a {
       color: #fff;
       display: inline-block;
       margin-right: 40px;

@@ -15,33 +15,29 @@ import * as Const from "@/common/const";
 export default {
   data() {
     return {
-      equipmentNav:Const.equipmentNav,
+      equipmentNav: Const.equipmentNav
     };
   },
-  props: {
-    
-  },
-  methods: {
-    
-  }
+  props: {},
+  methods: {}
 };
 </script>
 
 <style scoped lang="less">
-.equipment_nav{
-  padding-top:16px;
+.equipment_nav {
+  padding-top: 16px;
   width: 200px;
   height: 600px;
   box-sizing: border-box;
-  box-shadow:0px 3px 6px rgba(0,0,0,0.5);
-  .nav_item{
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  .nav_item {
     padding: 13px;
     font-size: 20px;
-    .nav_item_text{
+    .nav_item_text {
       display: inline-block;
       width: 120px;
     }
-    .left_icon{
+    .left_icon {
       margin-right: 10px;
     }
   }

@@ -38,10 +38,10 @@ export default {
       isLogin: false
     };
   },
-  mounted(){
-     if(sessionStorage.getItem("login") == 1){
-       this.isLogin = true;
-     }; 
+  mounted() {
+    if (sessionStorage.getItem("login") == 1) {
+      this.isLogin = true;
+    }
   },
   methods: {
     linkPhone(el) {
@@ -52,15 +52,14 @@ export default {
 </script>
 
 <style  lang="less">
-
-.login_in_show{
+.login_in_show {
   font-size: 20px;
   text-align: right;
-  .login_msg{
+  .login_msg {
     color: #f00;
     margin: 0 3px;
   }
-  .name{
+  .name {
     margin: 0 20px;
   }
 }

@@ -1,13 +1,13 @@
 <template>
-<div>
-  <div id="header">
+  <div>
+    <div id="header">
       <HeaderTop></HeaderTop>
       <HeaderSearch></HeaderSearch>
     </div>
-  <div id="vote">
-    <router-view></router-view>
+    <div id="vote">
+      <router-view></router-view>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -18,17 +18,14 @@ export default {
   components: {
     HeaderTop,
     HeaderSearch,
-    HeaderNav,
+    HeaderNav
   },
   data() {
-    return {
- 
-    }
+    return {};
   },
   methods: {}
 };
 </script>
 
 <style lang="less">
-
 </style>

@@ -97,7 +97,13 @@
               <div class="end_com">
                 <div class="d_title">TA的尾货</div>
                 <div class="box_item">
-                  <SmallGoods  class="shop_child_com" :history="'true'" :smallGoodsItem="item" v-for="(item,index) in commodityList" :key="index"></SmallGoods>
+                  <SmallGoods
+                    class="shop_child_com"
+                    :history="'true'"
+                    :smallGoodsItem="item"
+                    v-for="(item,index) in commodityList"
+                    :key="index"
+                  ></SmallGoods>
                 </div>
                 <div class="more">更多...</div>
               </div>
@@ -212,7 +218,7 @@ export default {
   }
   .part_right {
     width: 300px;
-    box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     .seller_msg {
       .title {
         font-size: 24px;
@@ -231,9 +237,9 @@ export default {
         color: #8d0101;
         padding-bottom: 20px;
       }
-      .more{
+      .more {
         font-size: 20px;
-        color: #0644EB;
+        color: #0644eb;
         text-align: right;
       }
     }
@@ -245,7 +251,7 @@ export default {
   padding: 7px 0;
   box-sizing: border-box;
   justify-content: space-between;
-  box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-bottom: 10px;
   img {
     width: 122px;
@@ -268,8 +274,8 @@ export default {
       .money {
         color: #ff0000;
       }
-      .delete{
-        text-decoration:line-through;
+      .delete {
+        text-decoration: line-through;
         margin-left: 20px;
         color: #999;
       }
