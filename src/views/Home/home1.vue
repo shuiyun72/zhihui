@@ -45,7 +45,7 @@
         <div class="link">更多...</div>
       </div>
       <div class="part3_body">
-        <BigGoods :bigGoodsItem="item" v-for="(item,index) in part3List" :key="index"></BigGoods>
+        <BigGoods :bigGoodsItem="item" v-for="(item,index) in part3List" :key="index" class="bottom10"></BigGoods>
       </div>
       <div class="link_more">加载更多</div>
     </div>

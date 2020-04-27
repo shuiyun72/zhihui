@@ -29,11 +29,11 @@ export default {
 </script>
 <style lang="less">
 .shop_show_item {
-  width: 380px;
-  height: 304px;
+  width: 290px;
+  // height: 304px;
   box-sizing: border-box;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
-  margin-bottom: 16px;
+  padding-bottom: 6px;
   // &:hover{
   //   box-shadow: 0px 3px 6px rgba(53, 192, 198, 0.8);
   //   transform:scale(1.005,1.005);
@@ -41,43 +41,45 @@ export default {
   img {
     display: block;
     margin: 0 auto;
+    width: 270px;
   }
   .info {
-    padding: 12px 15px;
+    padding: 12px 12px;
     display: flex;
     justify-content: space-between;
     .name {
-      font-size: 19px;
+      font-size: 16px;
     }
     .number {
-      font-size: 12px;
-      line-height: 19px;
+      font-size: 10px;
+      line-height: 14px;
     }
   }
   .handle {
-    padding: 10px 15px;
+    padding: 4px 15px 10px;
     display: flex;
     justify-content: space-between;
     .money_new {
       color: #f00;
-      font-size: 19px;
+      font-size: 16px;
     }
     .money_old {
       color: #999;
-      font-size: 15px;
-      line-height: 26px;
+      font-size: 14px;
+      line-height: 18px;
       text-align: left;
-      width: 120px;
+      width: 100px;
       text-decoration: line-through;
+      margin-left: 6px;
     }
     .add_car {
       width: 103px;
-      height: 26px;
-      line-height: 26px;
+      height: 20px;
+      line-height: 20px;
       text-align: center;
       background: rgba(248, 133, 9, 1);
       border-radius: 20px;
-      font-size: 15px;
+      font-size: 14px;
       color: #fff;
       cursor: pointer;
     }

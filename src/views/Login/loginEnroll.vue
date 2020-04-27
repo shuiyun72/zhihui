@@ -12,11 +12,13 @@
       <el-input v-model="input1" placeholder="请输入密码" class="login_input"></el-input>
       <el-input v-model="input1" placeholder="请确认密码 " class="login_input"></el-input>
       <div class="remember">
-        <span class="i"></span>
-        <span>
-          我已阅读并同意
-          <span class="link">《智汇优库用户注册协议》</span>
+        <span @click="isAgree = !isAgree" class="pointer">
+          <span class="i iconfont icon-duihao" :class="{'is_agree':isAgree}" ></span>
+          <span>
+            我已阅读并同意
+          </span>
         </span>
+        <span class="link">《智汇优库用户注册协议》</span>
       </div>
     </div>
     <div class="login_btn pointer" @click="showDialog">立即注册</div>
@@ -43,7 +45,8 @@ export default {
     return {
       dialogVisible: false,
       input1: "",
-      input2: ""
+      input2: "",
+      isAgree:true
     };
   },
   methods: {

@@ -2,3 +2,5 @@
 // import "@styles/home.styl";
 import "@styles/commodity.styl";
 import "@styles/common.styl";
+import "@styles/home.styl";
+import "@styles/components.styl";

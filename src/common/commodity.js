@@ -56,3 +56,33 @@ export const Part3List = [
     { img: "shop2.png", name: "索尼球形监控HKGH-3233", link: "http://www.baidu.com", number: 20, moneyNew: "568.00", moneyOld: "1868.00" },
     { img: "shop2.png", name: "索尼球形监控HKGH-3233", link: "http://www.baidu.com", number: 20, moneyNew: "568.00", moneyOld: "1868.00" }
 ]
+
+export const tableListMoney = [
+    {
+        user: "零度",
+        content: "刚刚成交了尾货华为网络交换机HLR",
+        money: "138"
+    }
+]
+export const findUser = [
+    {
+        msg:
+            "【招标公告】河南长葛市双洎河国家湿地公园科普宣教第二期项目 关键字:消防 项目预算:2000万 郑州市 3分钟前",
+        type: "消防",
+        money: "2000万",
+        address: "郑州市",
+        time: "3分钟前"
+    }
+]
+
+export const newMsg = [
+    {
+        img: "shopimg.png",
+        title: "行业动态新闻标题行业动态新闻标题行业动态新闻标题行业动…",
+        p: "行业动态详情内容行业动态详情内容行业动态详情内容行业动态详情内容行业动态详情内容行 业动态详情内容行业动态详情内容行业动态详情内容行业动态详情内容行业动态详情内容行业 动态详情内容行业动态详情内容行业动态详情内容行业动态详情内容行业动态详情内容行业动 态详情内容行业动态详情内容行业动态详情内容…",
+        type: "新品发布",
+        hy: "综合布线系统",
+        address: "郑州",
+        date: "2020-04-13"
+    }
+]

@@ -77,3 +77,17 @@ export const footImgList = [
     { img: "foot2.png", url: "", isBlank: false },
     { img: "foot1.png", url: "", isBlank: false }
 ]
+
+export const itemList = [
+    {num:356,title:"项",text:"自助服务"},
+    {num:98,title:"%",text:"覆盖行业"},
+    {num:365,title:"天",text:"安全运行"},
+    {num:118,title:"人",text:"服务团队"}
+]
+
+export const selfHelpList = [
+    {img:"house.png",text:"免费自助录入",url:"/"},
+    {img:"house.png",text:"产看项目信息",url:"/"},
+    {img:"house.png",text:"弱点知识竞赛",url:"/"},
+    {img:"house.png",text:"免费自助直播",url:"/"}
+]

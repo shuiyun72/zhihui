@@ -117,7 +117,7 @@ export default {
 }
 #leftside {
   top: 200px;
-  margin-left: -890px;
+  margin-left: -720px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   .item_box {
     position: relative;
@@ -161,7 +161,7 @@ export default {
 }
 #rightside {
   bottom: 50px;
-  margin-left: 830px;
+  margin-left: 660px;
   .part1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
     .item_box {

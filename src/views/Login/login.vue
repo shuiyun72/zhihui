@@ -93,10 +93,18 @@ export default {
         width: 20px;
         height: 20px;
         border: 1px solid #999;
-        display: inline-block;
-        margin-right: 20px;
-        position: relative;
-        top: 4px;
+        margin-right: 14px;
+        &.icon-duihao{
+          font-size: 20px;
+          color: transparent;
+          line-height: 24px;
+          &.is_agree{
+             color: #f00;
+          }
+        }
+      }
+      .link{
+        margin-left: 2px;
       }
       span {
         display: inline-block;
