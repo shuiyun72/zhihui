@@ -105,7 +105,7 @@
           <div class="pro">
             <span class="el-icon-arrow-up"></span>
           </div>
-          <el-row v-for="(it,i) in infoMsgList(16,findUser)" :key="i" class="item">
+          <el-row v-for="(it,i) in msgList(16,findUser)" :key="i" class="item">
             <el-col :span="1" class="t_right">
               <span class="point"></span>
             </el-col>
@@ -146,7 +146,7 @@
 
       <div class="h2_part8_box">
         <div class="left">
-          <div class="new_box_item_sy" v-for="(t,i) in infoMsgList(3,newMsg)" :key="i">
+          <div class="new_box_item_sy" v-for="(t,i) in msgList(3,newMsg)" :key="i">
             <div class="left_img">
               <img :src="require('@assets/img/'+t.img)" alt />
             </div>
@@ -165,7 +165,7 @@
         <div class="right">
           <div class="paihang_list_com_sy">
             <div class="title">阅读排行</div>
-            <p class="no_wrap" v-for="(it,i) in infoMsgList(15,readMsg)" :key="i">
+            <p class="no_wrap" v-for="(it,i) in msgList(15,readMsg)" :key="i">
               <span>{{i+1}}</span>
               {{it.text}}
             </p>
@@ -187,7 +187,7 @@
         </div>
       </div>
       <div class="h2_part9_box">
-        <div  class="h2_part9_item" v-for="(t,i) in infoMsgList(6,infoMsg)" :key="i">
+        <div  class="h2_part9_item" v-for="(t,i) in msgList(6,infoMsg)" :key="i">
           <div class="info_item_co_sy">
             <div class="state_p">{{t.state[0]}}</div>
             <div class="img">
@@ -220,7 +220,7 @@
 
       <div class="h2_part8_box">
         <div class="left">
-          <div class="new_box_item_sy" v-for="(t,i) in infoMsgList(3,newMsg)" :key="i">
+          <div class="new_box_item_sy" v-for="(t,i) in msgList(3,newMsg)" :key="i">
             <div class="left_img">
               <img :src="require('@assets/img/'+t.img)" alt />
             </div>
@@ -239,7 +239,7 @@
         <div class="right">
           <div class="paihang_list_com_sy">
             <div class="title">阅读排行</div>
-            <p class="no_wrap" v-for="(it,i) in infoMsgList(15,readMsg)" :key="i">
+            <p class="no_wrap" v-for="(it,i) in msgList(15,readMsg)" :key="i">
               <span>{{i+1}}</span>
               {{it.text}}
             </p>
@@ -261,7 +261,7 @@
         </div>
       </div>
       <div class="h2_part9_box">
-        <div  class="h2_part9_item" v-for="(t,i) in infoMsgList(6,infoMsg)" :key="i">
+        <div  class="h2_part9_item" v-for="(t,i) in msgList(6,infoMsg)" :key="i">
           <div class="info_item_co_sy">
             <div class="state_p">{{t.state[2]}}</div>
             <div class="img">
@@ -339,7 +339,7 @@ export default {
      *  只需要根据后台给的数据修改组件的中对应的属性
      *  如果要看具体的内容，先找循环了什么内容 el
      */
-    infoMsgList(n, el) {
+    msgList(n, el) {
       return DataFor(n, el);
     }
   },

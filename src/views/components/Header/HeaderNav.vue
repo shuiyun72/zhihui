@@ -36,15 +36,15 @@ export default {
     width: 1200px;
     margin: 0 auto;
     display: flex;
-    line-height: 40px;
-    height: 40px;
+    line-height: 30px;
+    height: 30px;
     li {
       &.is_active {
         background-color: #27898d;
       }
       flex-grow: 1;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       color: #fff;
     }
   }

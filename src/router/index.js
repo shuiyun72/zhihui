@@ -10,7 +10,7 @@ const routes = [
   voteRouter,
   {
     path: '/',
-    redirect: 'home',
+    redirect: '/crowds/detail',
   },
   {
     path: '/home',
@@ -31,19 +31,45 @@ const routes = [
     ]
   },
   {
-    path: '/commodity',
-    name: 'commodity',
-    component: (res) => require(['@views/commodity/commodity.vue'], res)
+    path: '/product',
+    name: 'product',
+    component: (res) => require(['@views/Product'], res),
+    redirect: '/product/home',
+    children:[
+      {
+        path: '/product/home',
+        name: 'productHome',
+        component: (res) => require(['@views/Product/productHome.vue'], res)
+      },
+      {
+        path: '/product/detial',
+        name: 'productDetial',
+        component: (res) => require(['@views/Product/productDetial.vue'], res)
+      },
+      {
+        path: '/product/screen',
+        name: 'productScreen',
+        component: (res) => require(['@views/Product/productScreen.vue'], res)
+      },
+    ]
   },
   {
-    path: '/commodity/screen',
-    name: 'commodityscreen',
-    component: (res) => require(['@views/commodity/commodityscreen.vue'], res)
-  },
-  {
-    path: '/commodity/detial',
-    name: 'commodityDetial',
-    component: (res) => require(['@views/commodity/commodityDetial.vue'], res)
+    path: '/crowds',
+    name: 'crowds',
+    component: (res) => require(['@views/Crowds/crowds.vue'], res),
+    redirect: '/crowds/home',
+    children:[
+      {
+        path: '/crowds/home',
+        name: 'crowdsHome',
+        component: (res) => require(['@views/Crowds/crowdsHome.vue'], res)
+      },
+      {
+        path: '/crowds/detail',
+        name: 'crowdsDetail',
+        component: (res) => require(['@views/Crowds/crowdsDetail.vue'], res)
+      }
+    ]
   }
 ]
 

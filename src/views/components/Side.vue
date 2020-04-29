@@ -1,35 +1,41 @@
 <template>
   <div>
     <div id="leftside">
-      <div class="is_active item_box">
-        <div class="item">
-          采购
-          <br />订单
+      <div class="bs">
+        <div class="is_active item_box">
+          <div class="item">
+            采购
+            <br />订单
+          </div>
+          <div class="span">10</div>
         </div>
-        <div class="span">10</div>
+        <div class="is_active item_box">
+          <div class="item">
+            我的
+            <br />购物车
+          </div>
+        </div>
+        <div class="item_box">
+          <div class="item">
+            添加
+            <br />尾货
+          </div>
+        </div>
+        <div class="item_box">
+          <div class="item_last">
+            立即
+            <br />发货
+          </div>
+          <div class="span">10</div>
+        </div>
       </div>
-      <div class="is_active item_box">
-        <div class="item">
-          我的
-          <br />购物车
-        </div>
-      </div>
-      <div class="item_box">
-        <div class="item">
-          添加
-          <br />尾货
-        </div>
-      </div>
-      <div class="item_box">
-        <div class="item_last">
-          立即
-          <br />发货
-        </div>
-        <div class="span">10</div>
+      <div class="left_add bs">
+        立即
+        <br />发布
       </div>
     </div>
     <div id="rightside">
-      <div class="part1">
+      <div class="part1" v-show="isShowRightPart1">
         <div class="item_box">
           <div class="item">
             平台
@@ -101,6 +107,11 @@ export default {
   data() {
     return {};
   },
+  props:{
+    isShowRightPart1:{
+      default:true
+    }
+  },
   methods: {}
 };
 </script>
@@ -108,30 +119,44 @@ export default {
 <style scoped lang="less">
 #leftside,
 #rightside {
-  width: 60px;
-  font-size: 14px;
+  width: 50px;
+  font-size: 12px;
   position: fixed;
   left: 50%;
   text-align: center;
   z-index: 1;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 #leftside {
   top: 200px;
   margin-left: -720px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  .bs{
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  }
+  .left_add{
+    width: 50px;
+    padding: 10px 0;
+    line-height: 14px;
+    margin-top: 30px;
+    border-radius: 50%;
+    background-color: #F88F00;
+    color: #fff;
+  }
   .item_box {
     position: relative;
-    width: 60px;
-    padding: 10px 9px 0;
+    width: 50px;
+    padding: 10px 7px 0;
+    line-height: 14px;
     color: #000;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 1);
     .item_last {
-      padding-bottom: 12px;
+      padding-bottom: 10px;
     }
     .item {
       border-bottom: 1px solid #000;
-      padding-bottom: 12px;
+      padding-bottom: 10px;
       box-sizing: border-box;
     }
     &.is_active {
@@ -156,6 +181,7 @@ export default {
       color: #f00;
       padding: 2px;
       margin-top: -20px;
+      transform: scale(0.6);
     }
   }
 }
@@ -165,38 +191,47 @@ export default {
   .part1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
     .item_box {
-      width: 60px;
+      width: 50px;
       padding: 10px 9px 0;
+      line-height: 14px;
       color: #000;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 1);
       .item_last {
-        padding-bottom: 12px;
+        padding-bottom: 10px;
+        color: #35c0c6;
       }
       .item {
-        border-bottom: 1px solid #000;
-        padding-bottom: 12px;
+        border-bottom: 1px solid #35c0c6;
+        padding-bottom: 10px;
         box-sizing: border-box;
         position: relative;
         top: 1px;
+        color: #35c0c6;
       }
-      &.is_active {
+      &.is_active,
+      &:hover {
         .item {
           border-bottom: 1px solid #fff;
+          color: #fff;
         }
-        color: #fff;
-        background: rgba(53, 192, 198, 1);
+        .item_last {
+          border-bottom: 1px solid #35c0c6;
+          color: #fff;
+        }
+        background: #35c0c6;
         position: relative;
       }
     }
   }
   .part2 {
-    width: 60px;
+    width: 50px;
     height: 97px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
     border-radius: 30px;
     margin-top: 20px;
+    line-height: 14px;
     i {
       font-size: 26px;
       padding: 14px 0 10px;
@@ -206,14 +241,14 @@ export default {
     }
   }
   .part3 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
     border-radius: 50%;
     margin-top: 20px;
     font-size: 26px;
-    line-height: 60px;
+    line-height: 50px;
     color: #01b0b7;
   }
 }

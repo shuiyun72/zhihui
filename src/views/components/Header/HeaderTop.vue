@@ -40,7 +40,7 @@ export default {
     line-height: 29px;
     background-color: #4d4d4d;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     .top_side {
       width: 1200px;
       margin: 0 auto;
