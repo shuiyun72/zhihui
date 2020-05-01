@@ -23,51 +23,60 @@
   }
 }
 .self_help_box {
-  width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding: 10px 
 }
 .self_help {
   background: url("~@assets/img/houseBg.png");
   background-size: 290px auto;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px 46px;
   img {
-    width: 110px;
+    width: 77px;
+    height 94px;
+    margin-right 6px
   }
   p {
-    font-size: 20px;
+    font-size: 14px;
     color: #666;
-    padding: 30px 0 30px 10px;
+    padding: 30px 0 20px 10px;
   }
   button {
     background-color: #07b536;
     color: #fff;
-    padding: 8px 24px;
-    font-size: 16px;
+    padding: 6px 12px;
+    font-size: 12px;
     border-radius: 30px;
   }
 }
 .part_tab_e {
-  width: 260px;
+  width: 240px;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
+  .d_inflex{
+    width 100px
+    justify-content: space-between
+  }
+  .link{
+    line-height 20px
+  }
   .item {
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     align-self: flex-end;
     padding-bottom: 5px;
     &.is_active {
-      border-bottom: 1px solid #f88f00;
+      border-bottom: 2px solid #f88f00;
       color: #f88f00;
     }
   }
 }
 .hui_box_bg {
-  background-color: #f4f4f4;
+  width 1200px;
+  margin 0 auto 20px
 }
 .badge_num_box {
   width: 1200px;
@@ -79,19 +88,20 @@
     border-right: 1px solid #999;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     &:last-child {
       border-right: none;
     }
     .badge_num {
-      font-size: 30px;
+      font-size: 46px;
       color: #666;
       position: relative;
       display: inline;
+      padding-right 28px
       span {
-        font-size: 18px;
+        font-size: 30px;
         position: absolute;
-        right: -20px;
+        right: -10px;
         top: 0px;
       }
     }
@@ -99,19 +109,19 @@
       font-size: 18px;
       text-align: center;
       color: #666;
-      padding-top: 8px;
+      padding-top: 16px;
     }
   }
 }
 .blue_title {
   padding-top: 20px;
   text-align: center;
-  color: #06a8f0;
+  color: #06A8F0;
   .t1 {
     font-size: 26px;
   }
   .t2 {
-    font-size: 18px;
+    font-size: 10px;
     padding: 16px 0 10px;
   }
 }
@@ -120,6 +130,17 @@
   height: 560px;
   background: url("~@assets/img/cimg.png") no-repeat center center;
   background-size: 1920px 560px;
+  position:relative;
+  .click{
+    position:absolute;
+    font-size 18px;
+    color #FFE600;
+    background-color: #8D0909
+    padding:6px 20px;
+    border-radius: 0 20px 20px 0;
+    left 0;
+    bottom 100px;
+  }
 }
 .part_title {
   display: flex;
@@ -152,7 +173,7 @@
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px 20px 6px;
+  padding: 16px 10px 16px 6px;
   &:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -162,22 +183,25 @@
     justify-content: center;
     padding: 2px;
     img {
-      width: 180px;
-      height: 100px;
+      width: 262px;
+      height: 148px;
     }
   }
   .right_content {
-    width: 575px;
+    width: 480px;
     padding-right: 15px;
     .title {
       font-size: 16px;
       padding-bottom: 10px;
+      border-bottom 1px solid #999
+      margin-bottom 10px
     }
     p {
       color: #666;
       padding-bottom: 16px;
       font-size: 12px;
       line-height: 18px;
+      
     }
   }
 }
@@ -229,12 +253,14 @@
 }
 .home2_titlle_show_sy {
   width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto 10px;
+  padding: 10px 20px 10px;
   display: flex;
   justify-content: space-between;
+  background-color #E7F7F8
   .part_title_e {
-    font-size: 22px;
+    font-size: 18px;
     border-bottom: 1px solid #999;
     padding-right :6px
     padding-bottom: 6px;
@@ -312,10 +338,10 @@
     }
     ul{
       display: inline-flex;
-      justify-content: space-between;
-      width:980px ;
+      justify-content: flex-start;
+      flex-grow: 1;
       li{
-        padding:4px 10px ;
+        padding:4px 11px ;
         border-radius: 4px;
         &.is_active{
           color: #fff;
@@ -326,6 +352,7 @@
     .more{
       font-size: 12px;
       padding-top: 4px;
+      width :46px;
     }
   }
 }

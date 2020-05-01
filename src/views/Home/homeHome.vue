@@ -1,6 +1,8 @@
 <template>
   <div id="home2">
-    <div class="bg_img_top"></div>
+    <div class="bg_img_top">
+      <div class="click">点击竞价此展示位</div>
+    </div>
     <div class="blue_title">
       <p class="t1">这里有最活跃的弱电用户群体</p>
       <p class="t2">There are the most active weak user groups here</p>
@@ -14,16 +16,7 @@
         <p>{{item.text}}</p>
       </div>
     </div>
-    <div class="hui_box_bg">
-      <div class="text_right">
-        <div class="share">
-          <!-- 这个是插件的应用，我简单写个样式 -->
-          <span>分享到：</span>
-          <i class="iconfont icon-QQ"></i>
-          <i class="iconfont icon-QQ"></i>
-          <i class="iconfont icon-QQ"></i>
-        </div>
-      </div>
+    <div class="hui_box_bg bs">
       <div class="blue_title">
         <p class="t1">颠覆传统模式—自助</p>
         <p class="t2">Subverting traditional patterns</p>
@@ -46,10 +39,11 @@
         </div>
       </div>
       <div class="right part_tab_e">
-        <div class="item is_active">精选</div>
-        <div class="item">最新</div>
-        <div class="item">最低</div>
-        <div class="item">最热</div>
+        <div class="d_inflex">
+          <div class="item is_active">最近</div>
+          <div class="item">最新</div>
+        </div>
+        <div class="link">更多...</div>
       </div>
     </div>
     <div class="h2_part6">
@@ -105,7 +99,7 @@
           <div class="pro">
             <span class="el-icon-arrow-up"></span>
           </div>
-          <el-row v-for="(it,i) in msgList(16,findUser)" :key="i" class="item">
+          <el-row v-for="(it,i) in DataFor(16,findUser)" :key="i" class="item">
             <el-col :span="1" class="t_right">
               <span class="point"></span>
             </el-col>
@@ -131,6 +125,25 @@
       </div>
     </div>
 
+    <div class="h2_part8a">
+      <div class="home2_titlle_show_sy">
+        <div class="part_title_e">
+          <div class="left">
+            <span>名企汇</span>
+            <span>Famous enterprise</span>
+          </div>
+        </div>
+        <div class="right">
+          <div class="link">更多...</div>
+        </div>
+      </div>
+      <div class="h2_part8a_box">
+        <div class="img bs" v-for="(t,i) in DataFor(25,[{img:'mqh.png'}])" :key="i">
+          <img :src="require('@assets/img/'+t.img)" alt />
+        </div>
+      </div>
+    </div>
+
     <div class="h2_part8">
       <div class="home2_titlle_show_sy">
         <div class="part_title_e">
@@ -146,13 +159,13 @@
 
       <div class="h2_part8_box">
         <div class="left">
-          <div class="new_box_item_sy" v-for="(t,i) in msgList(3,newMsg)" :key="i">
+          <div class="new_box_item_sy" v-for="(t,i) in DataFor(3,newMsg)" :key="i">
             <div class="left_img">
               <img :src="require('@assets/img/'+t.img)" alt />
             </div>
             <div class="right_content">
               <div class="title no_wrap">{{t.title}}</div>
-              <p>{{t.p}}</p>
+              <p class="tin">{{t.p}}</p>
               <el-row>
                 <el-col :span="5" class="blue">{{t.type}}</el-col>
                 <el-col :span="7">行业：{{t.hy}}</el-col>
@@ -165,7 +178,7 @@
         <div class="right">
           <div class="paihang_list_com_sy">
             <div class="title">阅读排行</div>
-            <p class="no_wrap" v-for="(it,i) in msgList(15,readMsg)" :key="i">
+            <p class="no_wrap" v-for="(it,i) in DataFor(15,readMsg)" :key="i">
               <span>{{i+1}}</span>
               {{it.text}}
             </p>
@@ -187,7 +200,7 @@
         </div>
       </div>
       <div class="h2_part9_box">
-        <div  class="h2_part9_item" v-for="(t,i) in msgList(6,infoMsg)" :key="i">
+        <div class="h2_part9_item" v-for="(t,i) in DataFor(8,infoMsg)" :key="i">
           <div class="info_item_co_sy">
             <div class="state_p">{{t.state[0]}}</div>
             <div class="img">
@@ -195,9 +208,10 @@
             </div>
             <div class="box">
               <div class="title">{{t.title}}</div>
+              <p>行业：{{t.hy}}</p>
               <el-row class="info">
-                <el-col :span="16">行业：{{t.hy}}</el-col>
-                <el-col :span="8">地址：{{t.address}}</el-col>
+                <el-col :span="16">地址：{{t.address}}</el-col>
+                <el-col :span="8">{{t.date}}</el-col>
               </el-row>
             </div>
           </div>
@@ -205,49 +219,69 @@
       </div>
     </div>
 
-    <div class="h2_part8">
+    <div class="h2_part11">
       <div class="home2_titlle_show_sy">
         <div class="part_title_e">
           <div class="left">
-            <span>行业动态</span>
-            <span>Industry News</span>
+            <span>最新活动</span>
+            <span>Latest cooperation</span>
           </div>
         </div>
         <div class="right">
           <div class="link">更多...</div>
         </div>
       </div>
-
-      <div class="h2_part8_box">
-        <div class="left">
-          <div class="new_box_item_sy" v-for="(t,i) in msgList(3,newMsg)" :key="i">
-            <div class="left_img">
-              <img :src="require('@assets/img/'+t.img)" alt />
+      <div class="h2_part11_box">
+        <div class="part11_1">
+          <div class="info_item_co_sy big">
+            <div class="state_p">正在进行</div>
+            <div class="img">
+              <img :src="require('@assets/img/hylog.png')" alt />
             </div>
-            <div class="right_content">
-              <div class="title no_wrap">{{t.title}}</div>
-              <p>{{t.p}}</p>
-              <el-row>
-                <el-col :span="5" class="blue">{{t.type}}</el-col>
-                <el-col :span="7">行业：{{t.hy}}</el-col>
-                <el-col :span="6">{{t.address}}</el-col>
-                <el-col :span="6">{{t.date}}</el-col>
+            <div class="box">
+              <div class="title">太原市孙天过轨信息科技有限噶客户答谢会</div>
+              <p>活动详情内容活动详情内容活动详情内容活动详情内容活动详情内容活动详情内容活动详情内容……</p>
+              <el-row class="info">
+                <el-col :span="8" class="t_left">行业：综合布线系统</el-col>
+                <el-col :span="8" class="t_center">地址：郑州</el-col>
+                <el-col :span="8" class="t_right">2020-04-15</el-col>
+              </el-row>
+            </div>
+          </div>
+          <div class="part11_1_right bs">
+            <div class="table_wuyu_com_sy">
+              <el-row v-for="(t,i) in DataFor(13,['infoMsg'])" :key="i">
+                <el-col :span="1" class="t_right">
+                  <i class="iconfont icon-dian"></i>
+                </el-col>
+                <el-col :span="12" class="no_wrap">郑州终于看完了科技有限公司客户答谢会…</el-col>
+                <el-col :span="5">综合布线系统</el-col>
+                <el-col :span="2">郑州</el-col>
+                <el-col :span="4">2020-02-15</el-col>
               </el-row>
             </div>
           </div>
         </div>
-        <div class="right">
-          <div class="paihang_list_com_sy">
-            <div class="title">阅读排行</div>
-            <p class="no_wrap" v-for="(it,i) in msgList(15,readMsg)" :key="i">
-              <span>{{i+1}}</span>
-              {{it.text}}
-            </p>
+        <div class="h2_part11_item">
+          <div class="bs"  v-for="(t,i) in DataFor(3,infoMsg)" :key="i">
+            <div class="info_item_co_sy">
+              <div class="state_p">{{t.state[1]}}</div>
+              <div class="img">
+                <img :src="require('@assets/img/'+t.img)" alt />
+              </div>
+              <div class="box">
+                <div class="title">{{t.title}}</div>
+                <p>行业：{{t.hy}}</p>
+                <el-row class="info">
+                  <el-col :span="16">地址：{{t.address}}</el-col>
+                  <el-col :span="8">{{t.date}}</el-col>
+                </el-row>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
     <div class="h2_part9">
       <div class="home2_titlle_show_sy">
         <div class="part_title_e">
@@ -260,8 +294,8 @@
           <div class="link">更多...</div>
         </div>
       </div>
-      <div class="h2_part9_box">
-        <div  class="h2_part9_item" v-for="(t,i) in msgList(6,infoMsg)" :key="i">
+      <div class="h2_part9_box part12">
+        <div class="h2_part9_item" v-for="(t,i) in DataFor(6,infoMsg)" :key="i">
           <div class="info_item_co_sy">
             <div class="state_p">{{t.state[2]}}</div>
             <div class="img">
@@ -283,7 +317,7 @@
 
 <script>
 import { itemList, selfHelpList } from "@/common/const.js";
-import { DataFor } from "@utils/common";
+
 import * as Commodity from "@/common/commodity";
 import BigGoods from "@components/Goods/BigGoods";
 import SmallGoods from "@components/Goods/SmallGoods";
@@ -296,13 +330,13 @@ export default {
   },
   computed: {
     tableList() {
-      return DataFor(12, this.tableListMoney);
+      return this.DataFor(12, this.tableListMoney);
     },
     part3List() {
-      return DataFor(6, [Commodity.Part3List[6]]);
+      return this.DataFor(6, [Commodity.Part3List[6]]);
     },
     commodityList() {
-      return DataFor(4, [Commodity.HomeCommodity[0]]);
+      return this.DataFor(4, [Commodity.HomeCommodity[0]]);
     }
   },
   data() {
@@ -326,78 +360,165 @@ export default {
           state: ["正在招募", "正在进行", "正在直播"],
           title: "合作信息标题合作信息标题合作信",
           hy: "综合布线系统",
-          address: "郑州"
+          address: "郑州",
+          date: "2020-05-25"
         }
       ]
     };
   },
   methods: {
-    /**
-     * n  : 需要循环的次数
-     * el : 循环的内容 type:Arrty
-     *  不用纠结这个东西是干嘛的
-     *  只需要根据后台给的数据修改组件的中对应的属性
-     *  如果要看具体的内容，先找循环了什么内容 el
-     */
-    msgList(n, el) {
-      return DataFor(n, el);
-    }
-  },
-  
+    
+  }
 };
 </script>
 <style lang="less">
 .info_item_co_sy {
-  position:relative;
-  box-shadow:0px 3px 6px rgba(0,0,0,0.16);
-  .state_p{
-    position:absolute;
+  position: relative;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  .state_p {
+    position: absolute;
     left: 0;
     top: 10px;
-    background-color: #00966E;
+    background-color: #00966e;
     color: #fff;
     border-radius: 0 20px 20px 0;
     padding: 4px 20px;
   }
   .img {
     width: 100%;
-    img{
+    img {
       width: 100%;
     }
   }
-  .box{
-    padding: 8px 20px;
-    background-color: #fff;
-    .title{
-      font-size: 16px;
-      padding-bottom: 12px;
+  &.big {
+    .box {
+      padding: 12px 16px 20px;
+      background-color: #fff;
+      color: #333;
+      .title {
+        font-size: 14px;
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
+      p {
+        padding-bottom: 10px;
+        font-size: 12px;
+      }
+      .info {
+        font-size: 12px;
+      }
     }
-    .info{
+  }
+  .box {
+    padding: 8px 10px;
+    background-color: #fff;
+    color: #333;
+    .title {
       font-size: 14px;
+      padding-bottom: 6px;
+    }
+    p {
+      padding-bottom: 4px;
+      font-size: 12px;
+    }
+    .info {
+      font-size: 12px;
     }
   }
 }
-.h2_part9 {
-  background-color: #f4f4f4;
+.h2_part11 {
+  width: 1200px;
+  margin: 0 auto;
+  .h2_part11_box {
+    .part11_1 {
+      display: flex;
+      justify-content: space-between;
+      .table_wuyu_com_sy {
+        .el-row{
+          padding: 2px 0 8px;
+        }
+        width: 620px;
+        box-sizing: border-box;
+        padding: 30px 40px 30px 20px;
+        font-size: 12px;
+        .iconfont{
+          color: #f00;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  .h2_part11_item{
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .bs{
+      width: 390px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.h2_part9 ,.h12_part9{
   .h2_part9_box {
     width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 8px 0;
+    padding: 0px 0 8px;
     color: #333;
-    .h2_part9_item{
-      width: 32%;
-      &:nth-child(n+1):nth-child(-n+6){
-        margin-bottom: 20px;
+    &.part10 {
+      .h2_part9_item {
+        width: 33%;
+        &:nth-child(n + 1):nth-child(-n + 8) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &.part12{
+      .h2_part9_item {
+        width: 390px;
+        &:nth-child(n + 1):nth-child(-n + 8) {
+          margin-bottom: 10px;
+        }
+        .box{
+          .title{
+            padding-top: 10px;
+          }
+          .info{
+            padding: 6px 0 10px;
+          }
+        }
+      }
+    }
+    .h2_part9_item {
+      width: 24%;
+      &:nth-child(n + 1):nth-child(-n + 8) {
+        margin-bottom: 12px;
       }
     }
   }
 }
 #home2 {
   width: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 40px;
+  .h2_part8a_box {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .img {
+      width: 227px;
+      margin-bottom: 14px;
+      img {
+        width: 100%;
+      }
+    }
+  }
   .h2_part8_box {
     width: 1200px;
     margin: 0 auto;
@@ -414,10 +535,13 @@ export default {
     }
   }
   .h2_part7 {
-    background-color: #f4f4f4;
     padding-bottom: 40px;
+    .link {
+      line-height: 20px;
+    }
   }
   .h2_part6 {
+    padding-top: 10px;
     .shop {
       width: 1200px;
       margin: 0 auto;

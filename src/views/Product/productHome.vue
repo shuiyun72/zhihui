@@ -4,7 +4,9 @@
       <HeaderTop></HeaderTop>
       <HeaderSearch></HeaderSearch>
     </div>
-    <div class="title_img"></div>
+    <div class="bg_img_top">
+      <!-- <div class="click">点击竞价此展示位</div> -->
+    </div>
     <Side></Side>
     <div class="commodity">
       <div class="commodity_main">

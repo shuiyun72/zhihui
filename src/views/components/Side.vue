@@ -35,6 +35,28 @@
       </div>
     </div>
     <div id="rightside">
+      <div class="connection_qq_com_sy bs" v-show="isShow">
+        <div>
+          <i class="iconfont icon-zuojitianchong"></i>
+          <span>客服电话：400-118-6800</span>
+        </div>
+        <div>
+          <i class="iconfont icon-custom-service"></i>
+          <span>
+            在线客服：
+            <svg class="iconfont" aria-hidden="true" :style="W(24)">
+              <use xlink:href="#icon-QQ" />
+            </svg>
+          </span>
+        </div>
+        <div>
+          <i class="iconfont icon-airudiantubiaohuizhi-zhuanqu_helihuajianyi"></i>
+          <span>
+            建议反馈：
+            <span class="link">前往填写内容</span>
+          </span>
+        </div>
+      </div>
       <div class="part1" v-show="isShowRightPart1">
         <div class="item_box">
           <div class="item">
@@ -85,7 +107,7 @@
           </div>
         </div>
       </div>
-      <div class="part2">
+      <div class="part2" @click="showConnection">
         <i class="el-icon-chat-line-round"></i>
         <div class="green">
           联系
@@ -105,14 +127,20 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      isShow:false
+    };
   },
-  props:{
-    isShowRightPart1:{
-      default:true
+  props: {
+    isShowRightPart1: {
+      default: true
     }
   },
-  methods: {}
+  methods: {
+    showConnection(){
+      this.isShow = !this.isShow
+    }
+  }
 };
 </script>
 
@@ -131,16 +159,16 @@ export default {
 #leftside {
   top: 200px;
   margin-left: -720px;
-  .bs{
+  .bs {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   }
-  .left_add{
+  .left_add {
     width: 50px;
     padding: 10px 0;
     line-height: 14px;
     margin-top: 30px;
     border-radius: 50%;
-    background-color: #F88F00;
+    background-color: #f88f00;
     color: #fff;
   }
   .item_box {
@@ -250,6 +278,31 @@ export default {
     font-size: 26px;
     line-height: 50px;
     color: #01b0b7;
+  }
+}
+.connection_qq_com_sy {
+  width: 294px;
+  height: 190;
+  position: absolute;
+  bottom: 100px;
+  left: -310px;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #999;
+  & > div {
+    text-align: left;
+    &:nth-child(1) {
+      padding-bottom: 20px;
+    }
+    &:nth-child(2) {
+      padding-bottom: 30px;
+    }
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #333;
+    }
   }
 }
 </style>

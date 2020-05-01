@@ -1,15 +1,15 @@
 export const topNav = [
-    { text: "首页", route: "Home", isControl: false },
-    { text: "尾货捡漏", route: "PickUp", isControl: false },
-    { text: "项目信息", route: "ProjectMsg", isControl: false },
-    { text: "直播现场", route: "Play", isControl: false },
-    { text: "众包合作", route: "Symbiosis", isControl: false },
-    { text: "达人活动", route: "Home", isControl: false },
-    { text: "智汇商城", route: "Home", isControl: false },
-    { text: "企业名录", route: "Home", isControl: false },
-    { text: "弱点社区", route: "Home", isControl: false },
-    { text: "投票频道", route: "Home", isControl: false },
-    { text: "个人中心", route: "Home", isControl: false }
+    { text: "首页", router: "Home", isControl: false },
+    { text: "尾货捡漏", router: "tailCargo", isControl: false },
+    { text: "项目信息", router: "project", isControl: false },
+    { text: "直播现场", router: "playing", isControl: false },
+    { text: "众包合作", router: "crowds", isControl: false },
+    { text: "达人活动", router: "expert", isControl: false },
+    { text: "智汇商城", router: "product", isControl: false },
+    { text: "企业名录", router: "enterprise", isControl: false },
+    { text: "弱电社区", router: "lightCurrent", isControl: false },
+    { text: "投票频道", router: "vote", isControl: false },
+    { text: "个人中心", router: "personal", isControl: false }
 ]
 
 export const equipmentNav = [

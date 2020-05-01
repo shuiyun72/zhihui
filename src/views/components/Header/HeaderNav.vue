@@ -1,11 +1,16 @@
 <template>
   <div id="header_nav">
     <ul>
-      <li
+      <router-link tag="li" :to="{path:'/'+item.router}" v-for="(item,index) in topNav"
+        :key="index"
+        :class="{'is_active':item.text==HeaderNav}">
+        {{item.text}}
+      </router-link>
+      <!-- <li
         v-for="(item,index) in topNav"
         :key="index"
-        :class="{'is_active':isActive==index}"
-      >{{item.text}}</li>
+        :class="{'is_active':item.text==HeaderNav}"
+      >{{item.text}}</li> -->
     </ul>
   </div>
 </template>
@@ -13,12 +18,19 @@
 <script>
 import * as Const from "@/common/const";
 export default {
+  props:{
+    HeaderNav:{
+      default:"首页"
+    }
+  },
   data() {
     return {
       input2: "",
-      topNav: Const.topNav,
-      isActive: 0
+      topNav: Const.topNav
     };
+  },
+  mounted(){
+    console.log(this.HeaderNav)
   },
   methods: {
     linkPhone() {
@@ -39,7 +51,8 @@ export default {
     line-height: 30px;
     height: 30px;
     li {
-      &.is_active {
+      cursor: pointer;
+      &.is_active,&:hover {
         background-color: #27898d;
       }
       flex-grow: 1;

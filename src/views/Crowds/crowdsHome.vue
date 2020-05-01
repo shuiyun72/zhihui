@@ -4,11 +4,11 @@
     <div class="bg_img_top"></div>
     <div class="crow_part1 bs">
       <div class="select_box_com_sy">
-        <div class="item" v-for="(t,i) in msgList(3,selectList)" :key="i">
+        <div class="item" v-for="(t,i) in DataFor(3,selectList)" :key="i">
           <span class="title">{{t.title}}：</span>
           <ul>
             <li class="is_active">全部</li>
-            <li v-for="(tc,i) in msgList(20,t.li)" :key="i+'c'">{{tc.address}}</li>
+            <li v-for="(tc,i) in DataFor(20,t.li)" :key="i+'c'">{{tc.address}}</li>
           </ul>
           <span class="more">
             更多
@@ -23,7 +23,7 @@
         <span>Peripheral cooperation information</span>
       </div>
       <div class="crow_part2_box">
-        <div class="bs" v-for="(t,i) in msgList(12,infoMsg)" :key="i">
+        <div class="bs" v-for="(t,i) in DataFor(12,infoMsg)" :key="i">
           <div class="new_goods_com_sy">
             <div class="state">{{t.state[0]}}</div>
             <img :src="require('@assets/img/'+t.img)" alt />
@@ -43,7 +43,6 @@
 
 <script>
 import Side from "@components/Side.vue";
-import { DataFor } from "@utils/common";
 import PageNum from "@components/PageNum";
 export default {
   components: { PageNum, Side },
@@ -73,9 +72,7 @@ export default {
     };
   },
   methods: {
-    msgList(n, el) {
-      return DataFor(n, el);
-    }
+    
   }
 };
 </script>

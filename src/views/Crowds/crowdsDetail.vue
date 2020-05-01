@@ -35,12 +35,12 @@
           </div>
           <div class="box2">
             <div class="share">
-          <!-- 这个是插件的应用，我简单写个样式 -->
-          <span>分享到：</span>
-          <i class="iconfont icon-QQ"></i>
-          <i class="iconfont icon-QQ"></i>
-          <i class="iconfont icon-QQ"></i>
-        </div>
+              <!-- 这个是插件的应用，我简单写个样式 -->
+              <span>分享到：</span>
+              <i class="iconfont icon-QQ"></i>
+              <i class="iconfont icon-QQ"></i>
+              <i class="iconfont icon-QQ"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -96,8 +96,8 @@ export default {
         }
       }
       .box2 {
-        div{
-          width:90px ;
+        div {
+          width: 90px;
           height: 20px;
           line-height: 20px;
           text-align: center;
@@ -105,29 +105,29 @@ export default {
           color: #fff;
           border-radius: 10px;
           margin-bottom: 20px;
-          &:nth-child(1){
-            background-color: #7E1102;
+          &:nth-child(1) {
+            background-color: #7e1102;
           }
-          &:nth-child(2){
-            background-color: #01B0B7;
+          &:nth-child(2) {
+            background-color: #01b0b7;
           }
         }
       }
     }
-    .right_foot{
+    .right_foot {
       display: flex;
       justify-content: space-between;
-      .box1{
-      span{
-        color: #666;
-        margin-right: 20px;
-        i{
-         font-size: 20px;
-         margin-right: 4px;
+      .box1 {
+        span {
+          color: #666;
+          margin-right: 20px;
+          i {
+            font-size: 20px;
+            margin-right: 4px;
+          }
         }
       }
-      }
-      .box2{
+      .box2 {
         font-size: 12px;
       }
     }

@@ -6,6 +6,90 @@
   "description": "Travel项目图标",
   "glyphs": [
     {
+      "icon_id": "680950",
+      "name": "服务",
+      "font_class": "fuwu",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    },
+    {
+      "icon_id": "3279357",
+      "name": "企业",
+      "font_class": "gaiicon-",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    },
+    {
+      "icon_id": "4933358",
+      "name": "浏览",
+      "font_class": "liulan",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    },
+    {
+      "icon_id": "145747",
+      "name": "座机_填充",
+      "font_class": "zuojitianchong",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "429444",
+      "name": "客服",
+      "font_class": "custom-service",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "6665548",
+      "name": "合理化建议",
+      "font_class": "airudiantubiaohuizhi-zhuanqu_helihuajianyi",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "11755409",
+      "name": "投诉建议",
+      "font_class": "peizhitubiaosvg-",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "14312412",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1546571",
+      "name": "二维码",
+      "font_class": "erweima",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "5354181",
+      "name": "点",
+      "font_class": "dian",
+      "unicode": "e7a5",
+      "unicode_decimal": 59301
+    },
+    {
+      "icon_id": "1766496",
+      "name": "符号-筛选",
+      "font_class": "shaixuan",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "14399981",
+      "name": "星",
+      "font_class": "xing-copy",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
       "icon_id": "551957",
       "name": "箭头",
       "font_class": "arrow-down",

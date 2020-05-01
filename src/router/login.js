@@ -29,5 +29,10 @@ export default {
       name: 'LoginEnroll',
       component: (res) => require(['@views/Login/loginEnroll.vue'], res)
     },
+    {//企业注册
+      path: '/loginEnrollQy',
+      name: 'LoginEnrollQy',
+      component: (res) => require(['@views/Login/loginEnrollQy.vue'], res)
+    },
   ]
 }

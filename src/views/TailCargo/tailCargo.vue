@@ -4,7 +4,8 @@
       <HeaderTop></HeaderTop>
       <HeaderSearch></HeaderSearch>
     </div>
-    <HeaderNav :HeaderNav="'众包合作'"></HeaderNav>
+    <HeaderNav :HeaderNav="'尾货捡漏'"></HeaderNav>
+    <Side></Side>
     <router-view />
   </div>
 </template>
@@ -13,11 +14,13 @@
 import HeaderTop from "@components/Header/HeaderTop.vue";
 import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
+import Side from "@components/Side.vue";
 export default {
   components: {
     HeaderTop,
     HeaderSearch,
-    HeaderNav
+    HeaderNav,
+    Side
   },
   data() {
     return {};

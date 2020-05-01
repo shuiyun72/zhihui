@@ -5,7 +5,7 @@
         <router-link tag="span" :to="{ path: '/home' }" class="link">
           <img :src="require('@assets/img/log.png')" alt />
         </router-link>
-        <span class="login_text">免费注册</span>
+        <!-- <span class="login_text">免费注册</span> -->
       </el-col>
       <el-col :span="4" class="login_header" :offset="13">
         <span>没有账号，</span>
@@ -39,16 +39,12 @@ export default {
   width: 100%;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   .header_main {
-    width: 1600px;
+    width: 1200px;
     margin: 0 auto;
-    height: 105px;
-    line-height: 105px;
-    &.header_log {
-      padding-bottom: 20px;
-    }
+    line-height: 65px;
     .login_header {
       padding-top: 10px;
-      font-size: 28px;
+      font-size: 16px;
       color: #999;
       .link {
         color: #0765e5;
@@ -63,7 +59,7 @@ export default {
     }
     .log {
       img {
-        width: 206px;
+        width: 158px;
       }
       .login_text {
         font-size: 38px;

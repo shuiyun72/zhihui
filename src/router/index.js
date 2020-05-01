@@ -10,27 +10,53 @@ const routes = [
   voteRouter,
   {
     path: '/',
-    redirect: '/crowds/detail',
+    redirect: '/enterprise',
   },
-  {
+  { //首页
     path: '/home',
-    name: 'Home',
+    name: 'home',
     component: (res) => require(['@views/Home/home.vue'], res),
-    redirect: '/home/home2',
+    redirect: '/home/home',
     children: [
       {
-        path: '/home/home1',
-        name: '/home1',
-        component: (res) => require(['@views/Home/home1.vue'], res)
-      },
-      {
-        path: '/home/home2',
-        name: 'home2',
-        component: (res) => require(['@views/Home/home2.vue'], res)
+        path: '/home/home',
+        name: 'homeHome',
+        component: (res) => require(['@views/Home/homeHome.vue'], res)
       },
     ]
   },
-  {
+  { //尾货捡漏
+    path: '/tailCargo',
+    name: 'tailCargo',
+    component: (res) => require(['@views/TailCargo/tailCargo.vue'], res),
+    redirect: '/tailCargo/home',
+    children: [
+      {
+        path: '/tailCargo/home',
+        name: 'tailCargoHome',
+        component: (res) => require(['@views/TailCargo/tailCargoHome.vue'], res)
+      },
+    ]
+  },
+  {//众包合作
+    path: '/crowds',
+    name: 'crowds',
+    component: (res) => require(['@views/Crowds/crowds.vue'], res),
+    redirect: '/crowds/home',
+    children:[
+      {
+        path: '/crowds/home',
+        name: 'crowdsHome',
+        component: (res) => require(['@views/Crowds/crowdsHome.vue'], res)
+      },
+      {
+        path: '/crowds/detail',
+        name: 'crowdsDetail',
+        component: (res) => require(['@views/Crowds/crowdsDetail.vue'], res)
+      }
+    ]
+  },
+  { //智汇商城
     path: '/product',
     name: 'product',
     component: (res) => require(['@views/Product'], res),
@@ -53,24 +79,20 @@ const routes = [
       },
     ]
   },
-  {
-    path: '/crowds',
-    name: 'crowds',
-    component: (res) => require(['@views/Crowds/crowds.vue'], res),
-    redirect: '/crowds/home',
-    children:[
+  { //企业名录
+    path: '/enterprise',
+    name: 'enterprise',
+    component: (res) => require(['@views/Enterprise/enterprise.vue'], res),
+    redirect: '/enterprise/home',
+    children: [
       {
-        path: '/crowds/home',
-        name: 'crowdsHome',
-        component: (res) => require(['@views/Crowds/crowdsHome.vue'], res)
+        path: '/enterprise/home',
+        name: 'enterpriseHome',
+        component: (res) => require(['@views/Enterprise/enterpriseHome.vue'], res)
       },
-      {
-        path: '/crowds/detail',
-        name: 'crowdsDetail',
-        component: (res) => require(['@views/Crowds/crowdsDetail.vue'], res)
-      }
     ]
-  }
+  },
+  
 ]
 
 const router = new VueRouter({
