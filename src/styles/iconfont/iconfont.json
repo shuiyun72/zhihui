@@ -6,6 +6,41 @@
   "description": "Travel项目图标",
   "glyphs": [
     {
+      "icon_id": "9186710",
+      "name": "QQ空间",
+      "font_class": "QQkongjian",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "5387606",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "eb11",
+      "unicode_decimal": 60177
+    },
+    {
+      "icon_id": "6196908",
+      "name": "电话",
+      "font_class": "dianhua",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "6992721",
+      "name": "举报",
+      "font_class": "jubao",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "14095256",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e77d",
+      "unicode_decimal": 59261
+    },
+    {
       "icon_id": "680950",
       "name": "服务",
       "font_class": "fuwu",

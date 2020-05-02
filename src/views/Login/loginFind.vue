@@ -29,15 +29,15 @@
         <div class="login_body">
           <p class="qiye_title">企业资料验证3-5个工作日</p>
           <el-row class="qiye_find_file">
-            <el-col :span="10">上传营业执照副本图：</el-col>
-            <el-col :span="14">
+            <el-col :span="12"><span class="lang">上传营业执照副本图：</span></el-col>
+            <el-col :span="12">
               <el-button class="btn_defult">上传</el-button>
               <el-button class="btn_defult is_active">预览</el-button>
             </el-col>
           </el-row>
           <el-row class="qiye_find_file">
-            <el-col :span="10">上传单位授权书(公章)：</el-col>
-            <el-col :span="14">
+            <el-col :span="12"><span class="lang">上传单位授权书(公章)：</span></el-col>
+            <el-col :span="12">
               <el-button class="btn_defult">上传</el-button>
               <el-button class="btn_defult">预览</el-button>
             </el-col>
@@ -58,7 +58,7 @@
       </el-tab-pane>
     </el-tabs>
     <!-- dialog////////////////////////////////////////////////////// -->
-    <el-dialog title="提示" :visible.sync="dialogVisible" width="50%">
+    <el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
       <div class="dialog_login_info" v-if="dialogTitle == 'geren'">
         <div class="title">
           <img :src="require('@assets/img/lok.png')" alt />
@@ -118,13 +118,16 @@ export default {
 
 <style lang="less">
 .qiye_find_file {
-  font-size: 20px;
-  padding: 10px 0;
+  font-size: 14px;
+  padding: 8px 0;
   color: #666;
+  .lang{
+    line-height: 28px;
+  }
   .btn_defult {
-    padding: 9px 50px;
+    padding: 6px 20px;
     background-color: #eee;
-    font-size: 20px;
+    font-size: 14px;
     &.is_active {
       background-color: #01b0b7;
       color: #fff;
@@ -135,7 +138,7 @@ export default {
   color: #0009f7;
 }
 .qiye_title {
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
   color: #666;
   margin: 10px auto 20px;
@@ -145,6 +148,7 @@ export default {
     width: 60%;
     display: block;
     margin: 20px auto 30px;
+    padding: 6px 20px;
   }
 }
 .change_login_find {
@@ -154,7 +158,7 @@ export default {
       width: 50%;
       text-align: center;
       transition: 1s all;
-      font-size: 22px;
+      font-size: 18px;
       &.is-active {
         background-color: #01b0b7;
         color: #fff;
@@ -179,17 +183,5 @@ export default {
   }
   width: 100%;
   margin: 0 auto;
-}
-.pointer {
-  cursor: pointer;
-}
-.big_blue {
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  height: 60px;
-  margin: 30px auto 0;
-  font-size: 26px;
-  background-color: #01b0b7;
 }
 </style>

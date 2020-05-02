@@ -24,16 +24,18 @@
       </div>
       <div class="crow_part2_box">
         <div class="bs" v-for="(t,i) in DataFor(12,infoMsg)" :key="i">
-          <div class="new_goods_com_sy">
-            <div class="state">{{t.state[0]}}</div>
-            <img :src="require('@assets/img/'+t.img)" alt />
-            <div class="box">
-              <div class="title">{{t.title}}</div>
-              <p>行业：{{t.hy}}</p>
-              <p>地址：{{t.address}}</p>
-              <p>招募截止时间：{{t.time}}</p>
+          <router-link :to="{path:'/crowds/detail'}">
+            <div class="new_goods_com_sy">
+              <div class="state">{{t.state[0]}}</div>
+              <img :src="require('@assets/img/'+t.img)" alt />
+              <div class="box">
+                <div class="title">{{t.title}}</div>
+                <p>行业：{{t.hy}}</p>
+                <p>地址：{{t.address}}</p>
+                <p>招募截止时间：{{t.time}}</p>
+              </div>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
@@ -71,9 +73,10 @@ export default {
       ]
     };
   },
-  methods: {
+  computed: {
     
-  }
+  },
+  methods: {}
 };
 </script>
 

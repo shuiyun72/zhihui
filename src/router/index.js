@@ -4,13 +4,16 @@ import VueRouter from 'vue-router';
 import loginRouter from "./login";
 //选票
 import voteRouter from "./vote";
+//
+import enterprise from "./components/enterprise";
 Vue.use(VueRouter)
 const routes = [
   loginRouter,
   voteRouter,
+  enterprise,
   {
     path: '/',
-    redirect: '/enterprise',
+    redirect: '/home',
   },
   { //首页
     path: '/home',
@@ -22,6 +25,19 @@ const routes = [
         path: '/home/home',
         name: 'homeHome',
         component: (res) => require(['@views/Home/homeHome.vue'], res)
+      },
+    ]
+  },
+  { //直播秀场
+    path: '/playing',
+    name: 'playing',
+    component: (res) => require(['@views/Playing/playing.vue'], res),
+    redirect: '/playing/home',
+    children: [
+      {
+        path: '/playing/home',
+        name: 'playingHome',
+        component: (res) => require(['@views/Playing/playingHome.vue'], res)
       },
     ]
   },
@@ -53,6 +69,16 @@ const routes = [
         path: '/crowds/detail',
         name: 'crowdsDetail',
         component: (res) => require(['@views/Crowds/crowdsDetail.vue'], res)
+      },
+      {
+        path: '/crowds/detail2',
+        name: 'crowdsDetail2',
+        component: (res) => require(['@views/Crowds/crowdsDetail2.vue'], res)
+      },
+      {
+        path: '/crowds/detail3',
+        name: 'crowdsDetail3',
+        component: (res) => require(['@views/Crowds/crowdsDetail3.vue'], res)
       }
     ]
   },
@@ -79,19 +105,7 @@ const routes = [
       },
     ]
   },
-  { //企业名录
-    path: '/enterprise',
-    name: 'enterprise',
-    component: (res) => require(['@views/Enterprise/enterprise.vue'], res),
-    redirect: '/enterprise/home',
-    children: [
-      {
-        path: '/enterprise/home',
-        name: 'enterpriseHome',
-        component: (res) => require(['@views/Enterprise/enterpriseHome.vue'], res)
-      },
-    ]
-  },
+
   
 ]
 

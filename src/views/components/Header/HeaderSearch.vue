@@ -1,10 +1,11 @@
 <template>
   <div class="header_main">
     <el-row>
-      <el-col :span="3" class="log">
-        <img :src="require('@assets/img/log.png')" alt />
+      <el-col :span="5" class="log">
+        <img :src="require('@assets/img/log.png')" alt v-show="HeaderSearch==''"/>
+        <p class="search_p" v-show="HeaderSearch !=''">{{HeaderSearch}}</p>
       </el-col>
-      <el-col :span="10" :offset="4">
+      <el-col :span="10" :offset="2">
         <el-input placeholder="热门搜索：名录、针管、直播... ..." v-model="input2">
           <template slot="append">搜索</template>
         </el-input>
@@ -33,6 +34,11 @@
 <script>
 import * as Const from "@/common/const";
 export default {
+  props:{
+    HeaderSearch:{
+      default:""
+    }
+  },
   data() {
     return {
       input2: "",
@@ -53,6 +59,10 @@ export default {
 </script>
 
 <style  lang="less">
+.search_p{
+  font-size: 16px;
+  color: #27898D;
+}
 .login_in_show {
   font-size: 14px;
   text-align: right;

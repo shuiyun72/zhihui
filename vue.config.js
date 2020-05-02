@@ -42,6 +42,8 @@ module.exports = {
             .set("@components", resolve("src/views/components"))
             .set("@utils", resolve('src/utils'))
             .set("@api", resolve("src/api"))
+            .set("@const", resolve("src/common/const.js"))
             .set("@styles", resolve("src/styles"));
+            
     }
 }

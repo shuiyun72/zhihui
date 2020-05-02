@@ -25,7 +25,7 @@
       </router-link>
       <el-button class="login" @click="showDialog">立即注册</el-button>
     </div>
-    <el-dialog title="提示" :visible.sync="dialogVisible" width="50%">
+    <el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
       <div class="dialog_login_info">
         <div class="title">欢迎成为智汇优库会员</div>
         <div>
@@ -71,16 +71,5 @@ export default {
   width: 100%;
   margin: 0 auto;
 }
-.pointer {
-  cursor: pointer;
-}
-.big_blue {
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  height: 60px;
-  margin: 30px auto 0;
-  font-size: 26px;
-  background-color: #01b0b7;
-}
+
 </style>

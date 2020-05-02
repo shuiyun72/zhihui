@@ -117,7 +117,7 @@
       <span>同意</span>
       <span class="link">《智汇优库发布协议》</span>
     </div>
-    <div class="handle">
+    <div class="handle_com_sy">
       <el-button class="pre">上一步</el-button>
       <el-button class="next is_active">下一步</el-button>
     </div>
@@ -160,26 +160,6 @@ export default {
     .link {
       color: #0027ff;
       font-size: 28px;
-    }
-  }
-  .handle {
-    text-align: center;
-    padding: 40px 0 100px;
-    .el-button {
-      background-color: #eee;
-      border-radius: 35px;
-      color: #666;
-      width: 340px;
-      height: 70px;
-      font-size: 34px;
-      box-sizing: border-box;
-      &.next {
-        margin-left: 80px;
-      }
-      &.is_active {
-        background-color: #01b0b7;
-        color: #fff;
-      }
     }
   }
   .return {

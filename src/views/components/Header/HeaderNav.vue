@@ -1,16 +1,11 @@
 <template>
   <div id="header_nav">
     <ul>
-      <router-link tag="li" :to="{path:'/'+item.router}" v-for="(item,index) in topNav"
+      <router-link tag="li" :to="{path:'/'+item.router}" v-for="(item,index) in HeaderNavList"
         :key="index"
         :class="{'is_active':item.text==HeaderNav}">
         {{item.text}}
       </router-link>
-      <!-- <li
-        v-for="(item,index) in topNav"
-        :key="index"
-        :class="{'is_active':item.text==HeaderNav}"
-      >{{item.text}}</li> -->
     </ul>
   </div>
 </template>
@@ -21,21 +16,24 @@ export default {
   props:{
     HeaderNav:{
       default:"首页"
+    },
+    HeaderNavList:{
+      default:()=>{
+        return Const.topNav
+      }
     }
   },
   data() {
     return {
       input2: "",
-      topNav: Const.topNav
+      
     };
   },
   mounted(){
-    console.log(this.HeaderNav)
+    
   },
   methods: {
-    linkPhone() {
-      console.log("跳转手机");
-    }
+    
   }
 };
 </script>
@@ -55,9 +53,9 @@ export default {
       &.is_active,&:hover {
         background-color: #27898d;
       }
-      flex-grow: 1;
+      padding: 0 20px;
       text-align: center;
-      font-size: 16px;
+      font-size: 18px;
       color: #fff;
     }
   }

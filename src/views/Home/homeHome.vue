@@ -263,7 +263,7 @@
           </div>
         </div>
         <div class="h2_part11_item">
-          <div class="bs"  v-for="(t,i) in DataFor(3,infoMsg)" :key="i">
+          <div class="bs" v-for="(t,i) in DataFor(3,infoMsg)" :key="i">
             <div class="info_item_co_sy">
               <div class="state_p">{{t.state[1]}}</div>
               <div class="img">
@@ -366,144 +366,89 @@ export default {
       ]
     };
   },
-  methods: {
-    
-  }
+  methods: {}
 };
 </script>
 <style lang="less">
-.info_item_co_sy {
-  position: relative;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  .state_p {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    background-color: #00966e;
-    color: #fff;
-    border-radius: 0 20px 20px 0;
-    padding: 4px 20px;
-  }
-  .img {
-    width: 100%;
-    img {
-      width: 100%;
-    }
-  }
-  &.big {
-    .box {
-      padding: 12px 16px 20px;
-      background-color: #fff;
-      color: #333;
-      .title {
-        font-size: 14px;
-        padding-bottom: 10px;
-        font-weight: bold;
-      }
-      p {
-        padding-bottom: 10px;
-        font-size: 12px;
-      }
-      .info {
-        font-size: 12px;
-      }
-    }
-  }
-  .box {
-    padding: 8px 10px;
-    background-color: #fff;
-    color: #333;
-    .title {
-      font-size: 14px;
-      padding-bottom: 6px;
-    }
-    p {
-      padding-bottom: 4px;
-      font-size: 12px;
-    }
-    .info {
-      font-size: 12px;
-    }
-  }
-}
-.h2_part11 {
-  width: 1200px;
-  margin: 0 auto;
-  .h2_part11_box {
-    .part11_1 {
-      display: flex;
-      justify-content: space-between;
-      .table_wuyu_com_sy {
-        .el-row{
-          padding: 2px 0 8px;
-        }
-        width: 620px;
-        box-sizing: border-box;
-        padding: 30px 40px 30px 20px;
-        font-size: 12px;
-        .iconfont{
-          color: #f00;
-          margin-right: 6px;
-        }
-      }
-    }
-  }
-  .h2_part11_item{
-    padding-top: 14px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .bs{
-      width: 390px;
-      margin-bottom: 14px;
-    }
-  }
-}
-
-.h2_part9 ,.h12_part9{
-  .h2_part9_box {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0px 0 8px;
-    color: #333;
-    &.part10 {
-      .h2_part9_item {
-        width: 33%;
-        &:nth-child(n + 1):nth-child(-n + 8) {
-          margin-bottom: 10px;
-        }
-      }
-    }
-    &.part12{
-      .h2_part9_item {
-        width: 390px;
-        &:nth-child(n + 1):nth-child(-n + 8) {
-          margin-bottom: 10px;
-        }
-        .box{
-          .title{
-            padding-top: 10px;
-          }
-          .info{
-            padding: 6px 0 10px;
-          }
-        }
-      }
-    }
-    .h2_part9_item {
-      width: 24%;
-      &:nth-child(n + 1):nth-child(-n + 8) {
-        margin-bottom: 12px;
-      }
-    }
-  }
-}
 #home2 {
   width: 100%;
   padding-bottom: 40px;
+  .h2_part11 {
+    width: 1200px;
+    margin: 0 auto;
+    .h2_part11_box {
+      .part11_1 {
+        display: flex;
+        justify-content: space-between;
+        .table_wuyu_com_sy {
+          .el-row {
+            padding: 2px 0 8px;
+          }
+          width: 620px;
+          box-sizing: border-box;
+          padding: 30px 40px 30px 20px;
+          font-size: 12px;
+          .iconfont {
+            color: #f00;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+    .h2_part11_item {
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .bs {
+        width: 390px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  .h2_part9,
+  .h12_part9 {
+    .h2_part9_box {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0px 0 8px;
+      color: #333;
+      &.part10 {
+        .h2_part9_item {
+          width: 33%;
+          &:nth-child(n + 1):nth-child(-n + 8) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      &.part12 {
+        .h2_part9_item {
+          width: 390px;
+          &:nth-child(n + 1):nth-child(-n + 8) {
+            margin-bottom: 10px;
+          }
+          .box {
+            .title {
+              padding-top: 10px;
+            }
+            .info {
+              padding: 6px 0 10px;
+            }
+          }
+        }
+      }
+      .h2_part9_item {
+        width: 24%;
+        &:nth-child(n + 1):nth-child(-n + 8) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
   .h2_part8a_box {
     width: 1200px;
     margin: 0 auto;

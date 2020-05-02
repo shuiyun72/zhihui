@@ -61,26 +61,5 @@ export default {
 </script>
 
 <style lang="less">
-.dialog_login_info {
-  .title {
-    font-size: 32px;
-    text-align: center;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #999;
-  }
-  width: 100%;
-  margin: 0 auto;
-}
-.pointer {
-  cursor: pointer;
-}
-.big_blue {
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  height: 60px;
-  margin: 30px auto 0;
-  font-size: 26px;
-  background-color: #01b0b7;
-}
+
 </style>

@@ -12,6 +12,28 @@ export const topNav = [
     { text: "个人中心", router: "personal", isControl: false }
 ]
 
+export const topNavEnterprise = [
+    { text: "企业简介", router: "enterprise/info", isControl: false },
+    { text: "企业资质", router: "enterprise/info2", isControl: false },
+    { text: "项目案例", router: "enterprise/info3", isControl: false },
+    { text: "企业动态", router: "enterprise/info", isControl: false },
+    { text: "企业资讯", router: "enterprise/info4", isControl: false },
+    { text: "人才招聘", router: "enterprise/info5", isControl: false },
+    { text: "智汇商城", router: "enterprise/info", isControl: false },
+    { text: "关于我们", router: "enterprise/info8", isControl: false },
+]
+
+export const topNavEnterpriseMsg = [
+    { text: "企业简介", router: "enterprise/msg1", isControl: false },
+    { text: "企业资质", router: "enterprise/msg2", isControl: false },
+    { text: "项目案例", router: "enterprise/msg3", isControl: false },
+    { text: "企业动态", router: "enterprise/msg4", isControl: false },
+    { text: "企业资讯", router: "enterprise/msg5", isControl: false },
+    { text: "人才招聘", router: "enterprise/msg6", isControl: false },
+    { text: "智汇商城", router: "enterprise/msg7", isControl: false },
+    { text: "关于我们", router: "enterprise/msg8", isControl: false },
+]
+
 export const equipmentNav = [
     { icon: "el-icon-basketball", text: "信息设施", router: "", child: [] },
     { icon: "el-icon-basketball", text: "公共安全", router: "", child: [] },

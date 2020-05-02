@@ -152,13 +152,13 @@ export default {
   position: fixed;
   left: 50%;
   text-align: center;
-  z-index: 1;
+  z-index: 10;
   box-sizing: border-box;
   cursor: pointer;
 }
 #leftside {
   top: 200px;
-  margin-left: -720px;
+  margin-left: -680px;
   .bs {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   }
@@ -215,7 +215,7 @@ export default {
 }
 #rightside {
   bottom: 50px;
-  margin-left: 660px;
+  margin-left: 630px;
   .part1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
     .item_box {
