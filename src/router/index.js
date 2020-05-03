@@ -79,6 +79,16 @@ const routes = [
         path: '/crowds/detail3',
         name: 'crowdsDetail3',
         component: (res) => require(['@views/Crowds/crowdsDetail3.vue'], res)
+      },
+      {
+        path: '/crowds/detail4',
+        name: 'crowdsDetail4',
+        component: (res) => require(['@views/Crowds/crowdsDetail4.vue'], res)
+      },
+      {
+        path: '/crowds/publish',
+        name: 'crowdsPublish',
+        component: (res) => require(['@views/Crowds/crowdsPublish.vue'], res)
       }
     ]
   },

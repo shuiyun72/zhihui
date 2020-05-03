@@ -23,10 +23,24 @@
           </div>
           <div class="box2">
             <div @click="zhidingDialog = true">帮TA置顶</div>
-            <div @click="crowdsDialog1 = true" v-show="!isPartIn&&!isCrowdTrue" class="blue_btn">参与合作</div>
-            <router-link tag="div" class="part_in blue_btn" :to="{path:'/crowds/detail2'}" v-show="isPartIn&&!isCrowdTrue">已参与 找TA聊一聊</router-link>
+            <div
+              @click="crowdsDialog1 = true"
+              v-show="!isPartIn&&!isCrowdTrue"
+              class="blue_btn"
+            >参与合作</div>
+            <router-link
+              tag="div"
+              class="part_in blue_btn"
+              :to="{path:'/crowds/detail2'}"
+              v-show="isPartIn&&!isCrowdTrue"
+            >已参与 找TA聊一聊</router-link>
             <div v-show="isCrowdTrue" class="blue_btn">提前截止</div>
-            <router-link tag="div" :to="{path:'/crowds/detail3'}" class="blue_btn" v-show="isCrowdTrue">查看报名</router-link>
+            <router-link
+              tag="div"
+              :to="{path:'/crowds/detail3'}"
+              class="blue_btn"
+              v-show="isCrowdTrue"
+            >查看报名</router-link>
           </div>
         </div>
         <div class="right_foot">
@@ -213,7 +227,7 @@
           </el-col>
         </el-row>
       </div>
-      <div class="submit_center_btn_sy">
+      <div class="submit_center_btn_sy pb30">
         <el-button class="blue_btn" @click="crowdsDialogSuccess = true">提交</el-button>
       </div>
     </el-dialog>
@@ -244,7 +258,7 @@ export default {
   data() {
     return {
       textarea: "",
-      isPartIn:false,
+      isPartIn: false,
       infoMsg: [
         {
           img: "info.png",
@@ -263,123 +277,24 @@ export default {
       input1: ""
     };
   },
-  computed:{
+  computed: {
     isCrowdTrue() {
       return sessionStorage.getItem("login") == 1 ? true : false;
     }
   },
-  mounted(){
-    console.log(this.isCrowdTrue)
+  mounted() {
+    console.log(this.isCrowdTrue);
   },
   methods: {
-    returnCrowdTrue(){
+    returnCrowdTrue() {
       this.crowdsDialogSuccess = false;
       this.isPartIn = true;
-      this.crowdsDialog1=false;
+      this.crowdsDialog1 = false;
     }
   }
 };
 </script>
 
 <style lang="less">
-.no_bg_huojian {
-  .el-dialog {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .el-dialog__body {
-    padding: 0;
-  }
-  .el-dialog__header {
-    box-shadow: none;
-  }
-  .el-dialog__headerbtn {
-    top: 20px;
-    right: 10px;
-    z-index: 4;
-  }
-}
-.huojian_bg_dia {
-  background: url("~@assets/img/huojian.png");
-  width: 432px;
-  height: 703px;
-  box-sizing: border-box;
-  padding: 130px 30px 0;
-  position: relative;
-  top: -130px;
-  .title_l {
-    color: #fff;
-    margin-bottom: 210px;
-  }
-  .huojian_body {
-    padding: 20px;
-    border-bottom: 2px dotted #ccc;
-    .title {
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    p {
-      padding: 0 0 16px 20px;
-    }
-    .p {
-      padding: 20px 0 6px 20px;
-      color: #999;
-    }
-  }
-  .pull {
-    color: #ce6104;
-    text-align: center;
-    padding: 30px 0 40px;
-  }
-  .btn {
-    text-align: center;
-    button {
-      padding: 8px 40px;
-      border-radius: 30px;
-    }
-  }
-}
-.cro_zhiding_body {
-  .img {
-    text-align: center;
-    padding: 20px 0 20px;
-  }
-  p {
-    text-align: center;
-    line-height: 26px;
-  }
-  .submit {
-    width: 80%;
-    margin: 10px auto 0;
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding: 20px 0;
-    button {
-      padding: 8px 40px;
-      border-radius: 30px;
-    }
-  }
-}
-
-.crowds_dia_body {
-  .point_red {
-    line-height: 36px;
-    text-align: right;
-    padding-right: 3px;
-  }
-  .el-textarea {
-    margin-bottom: 20px;
-  }
-  textarea {
-    height: 120px;
-  }
-  p {
-    line-height: 32px;
-    padding-bottom: 10px;
-  }
-  .p {
-    padding-left: 6px;
-  }
-}
 
 </style>

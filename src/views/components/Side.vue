@@ -29,10 +29,12 @@
           <div class="span">10</div>
         </div>
       </div>
-      <div class="left_add bs">
+      <router-link tag="div" :to="{path:'/crowds/publish'}" class="left_add bs">
+        <!-- <div class="left_add bs"> -->
         立即
         <br />发布
-      </div>
+        <!-- </div> -->
+      </router-link>
     </div>
     <div id="rightside">
       <div class="connection_qq_com_sy bs" v-show="isShow">
@@ -128,7 +130,7 @@
 export default {
   data() {
     return {
-      isShow:false
+      isShow: false
     };
   },
   props: {
@@ -137,8 +139,8 @@ export default {
     }
   },
   methods: {
-    showConnection(){
-      this.isShow = !this.isShow
+    showConnection() {
+      this.isShow = !this.isShow;
     }
   }
 };
@@ -150,7 +152,7 @@ export default {
   width: 50px;
   font-size: 12px;
   position: fixed;
-  left: 50%;
+  left: calc(50vw);
   text-align: center;
   z-index: 10;
   box-sizing: border-box;
@@ -158,7 +160,7 @@ export default {
 }
 #leftside {
   top: 200px;
-  margin-left: -680px;
+  margin-left: -690px;
   .bs {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   }
@@ -215,7 +217,7 @@ export default {
 }
 #rightside {
   bottom: 50px;
-  margin-left: 630px;
+  margin-left: 620px;
   .part1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
     .item_box {

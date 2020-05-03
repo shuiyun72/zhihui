@@ -261,7 +261,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 10px;
   .left {
     .el-breadcrumb__item{
         &:last-child{
@@ -729,5 +729,107 @@
         }
       }
     }
+  }
+}
+.no_bg_huojian {
+  .el-dialog {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .el-dialog__body {
+    padding: 0;
+  }
+  .el-dialog__header {
+    box-shadow: none;
+  }
+  .el-dialog__headerbtn {
+    top: 20px;
+    right: 10px;
+    z-index: 4;
+  }
+}
+.huojian_bg_dia {
+  background: url("~@assets/img/huojian.png");
+  width: 432px;
+  height: 703px;
+  box-sizing: border-box;
+  padding: 130px 30px 0;
+  position: relative;
+  top: -130px;
+  .title_l {
+    color: #fff;
+    margin-bottom: 210px;
+  }
+  .huojian_body {
+    padding: 20px;
+    border-bottom: 2px dotted #ccc;
+    .title {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    p {
+      padding: 0 0 16px 20px;
+    }
+    .p {
+      padding: 20px 0 6px 20px;
+      color: #999;
+    }
+  }
+  .pull {
+    color: #ce6104;
+    text-align: center;
+    padding: 30px 0 40px;
+  }
+  .btn {
+    text-align: center;
+    button {
+      padding: 8px 40px;
+      border-radius: 30px;
+    }
+  }
+}
+.cro_zhiding_body {
+  .img {
+    text-align: center;
+    padding: 20px 0 20px;
+  }
+  p {
+    text-align: center;
+    line-height: 26px;
+  }
+  .orange_p{
+    color :#CC730A;
+  }
+  .submit {
+    width: 80%;
+    margin: 10px auto 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+    button {
+      padding: 8px 40px;
+      border-radius: 30px;
+    }
+  }
+}
+
+.crowds_dia_body {
+  .point_red {
+    line-height: 36px;
+    text-align: right;
+    padding-right: 3px;
+  }
+  .el-textarea {
+    margin-bottom: 20px;
+  }
+  textarea {
+    height: 120px;
+  }
+  p {
+    line-height: 32px;
+    padding-bottom: 10px;
+  }
+  .p {
+    padding-left: 6px;
   }
 }

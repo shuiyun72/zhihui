@@ -5,7 +5,8 @@
       <div class="left">
         <el-breadcrumb separator=">">
           <el-breadcrumb-item :to="{ path: '/crowds' }">众包合作</el-breadcrumb-item>
-          <el-breadcrumb-item>合作详情</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/crowds/detail' }">合作详情</el-breadcrumb-item>
+          <el-breadcrumb-item>查看报名</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
     </div>
@@ -23,8 +24,23 @@
           </div>
           <div class="box2">
             <div @click="zhidingDialog = true">帮TA置顶</div>
-            <div @click="crowdsDialog1 = true" v-if="!isPartIn">参与合作</div>
-            <router-link tag="div" class="part_in" :to="{path:'/crowds/detail2'}" v-if="isPartIn">已参与 找TA聊一聊</router-link>
+            <div
+              v-show="!isPartIn&&!isCrowdTrue"
+              class="blue_btn"
+            >参与合作</div>
+            <router-link
+              tag="div"
+              class="part_in blue_btn"
+              :to="{path:'/crowds/detail2'}"
+              v-show="isPartIn&&!isCrowdTrue"
+            >已参与 找TA聊一聊</router-link>
+            <div v-show="isCrowdTrue" class="blue_btn">提前截止</div>
+            <router-link
+              tag="div"
+              :to="{path:'/crowds/detail3'}"
+              class="blue_btn"
+              v-show="isCrowdTrue"
+            >查看报名</router-link>
           </div>
         </div>
         <div class="right_foot">
@@ -48,7 +64,23 @@
         </div>
       </div>
     </div>
-
+    <div class="crowds3_body wm bs">
+      <el-table :data="tableApply" style="width: 100%"  stripe>
+        <el-table-column prop="name" label="昵称" align="center"></el-table-column>
+        <el-table-column prop="time" label="报名时间" align="center"></el-table-column>
+        <el-table-column prop="text" label="合作意向" align="left" width="600px"></el-table-column>
+        <el-table-column prop="check" label="审核" align="center">
+          <template slot-scope="scope">
+            <span @click="handleClick(scope.row)" class="link">{{scope.row.check}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="state" label="审核状态" align="center">
+          <template slot-scope="scope">
+            <span :style="{color:scope.row.color}">{{scope.row.state}}</span>
+          </template>
+        </el-table-column>
+      </el-table>
+    </div>
     <el-dialog title :visible.sync="zhidingDialog" width="432px" class="no_bg_huojian">
       <div class="huojian_bg_dia">
         <div class="title_l">帮助置顶</div>
@@ -99,131 +131,48 @@
 
 <script>
 import Side from "@components/Side.vue";
+import { tableApply } from "@/common/commodity";
 export default {
   components: { Side },
   data() {
     return {
       textarea: "",
-      isPartIn:false,
-      infoMsg: [
-        {
-          img: "info.png",
-          state: ["正在招募", "正在进行", "正在直播"],
-          title: "合作信息标题合作信息标题合作信",
-          hy: "综合布线系统",
-          address: "郑州",
-          date: "2020-05-25"
-        }
-      ],
+      isPartIn: false,
       zhidingDialog: false,
       zhidingSucess: false,
       zhidingDie: false,
-      input1: ""
+      tableApply: tableApply
     };
   },
-  methods: {}
+  computed: {
+    isCrowdTrue() {
+      return sessionStorage.getItem("login") == 1 ? true : false;
+    }
+  },
+  methods: {
+    handleClick(row) {
+      console.log(row);
+      this.$router.push({path:"/crowds/detail4",queru:row})
+    }
+  }
 };
 </script>
 
 <style lang="less">
-.no_bg_huojian {
-  .el-dialog {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .el-dialog__body {
-    padding: 0;
-  }
-  .el-dialog__header {
-    box-shadow: none;
-  }
-  .el-dialog__headerbtn {
-    top: 20px;
-    right: 10px;
-    z-index: 4;
-  }
-}
-.huojian_bg_dia {
-  background: url("~@assets/img/huojian.png");
-  width: 432px;
-  height: 703px;
-  box-sizing: border-box;
-  padding: 130px 30px 0;
-  position: relative;
-  top: -130px;
-  .title_l {
-    color: #fff;
-    margin-bottom: 210px;
-  }
-  .huojian_body {
-    padding: 20px;
-    border-bottom: 2px dotted #ccc;
-    .title {
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    p {
-      padding: 0 0 16px 20px;
-    }
-    .p {
-      padding: 20px 0 6px 20px;
-      color: #999;
+.crowds3_body {
+  margin-top: 16px;
+  height: 400px;
+  overflow-y: auto;
+  .el-table__header {
+    th {
+      background-color: #cccccc;
+      color: #000;
     }
   }
-  .pull {
-    color: #ce6104;
-    text-align: center;
-    padding: 30px 0 40px;
-  }
-  .btn {
-    text-align: center;
-    button {
-      padding: 8px 40px;
-      border-radius: 30px;
+  thead {
+    .el-table_1_column_3 {
+      text-align: center;
     }
   }
 }
-.cro_zhiding_body {
-  .img {
-    text-align: center;
-    padding: 20px 0 20px;
-  }
-  p {
-    text-align: center;
-    line-height: 26px;
-  }
-  .submit {
-    width: 80%;
-    margin: 10px auto 0;
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding: 20px 0;
-    button {
-      padding: 8px 40px;
-      border-radius: 30px;
-    }
-  }
-}
-
-.crowds_dia_body {
-  .point_red {
-    line-height: 36px;
-    text-align: right;
-    padding-right: 3px;
-  }
-  .el-textarea {
-    margin-bottom: 20px;
-  }
-  textarea {
-    height: 120px;
-  }
-  p {
-    line-height: 32px;
-    padding-bottom: 10px;
-  }
-  .p {
-    padding-left: 6px;
-  }
-}
-
 </style>

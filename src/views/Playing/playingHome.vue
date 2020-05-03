@@ -257,99 +257,7 @@ export default {
     background-color: #048462;
   }
 }
-.playing_dialog_com_sy {
-  .el-dialog__header {
-    padding: 0px 20px 0px;
-    .el-dialog__title {
-      font-size: 12px;
-    }
-    .el-dialog__headerbtn {
-      top: 5px;
-      right: 10px;
-    }
-  }
-  .el-dialog__body {
-    padding: 0;
-  }
-}
-.share_w_q_com_sy {
-  box-sizing: border-box;
-  .item {
-    border-bottom: 1px solid #999;
-    vertical-align: middle;
-    padding: 10px 0 6px;
-    .iconfont {
-      border: 1px solid #eee;
-      border-radius: 50%;
-      padding: 1px;
-    }
-    span {
-      font-size: 12px;
-      margin-left: 10px;
-      position: relative;
-      bottom: 8px;
-    }
-  }
-}
-.play_auto_com_sy {
-  position: relative;
-  .video {
-    position: relative;
-    img {
-      width: 100%;
-    }
-    i {
-      position: absolute;
-    }
-    .icon-quanping {
-      right: 10px;
-      top: 10px;
-    }
-    .el-icon-caret-right {
-      background-color: #908f8f;
-      color: #a2ccce;
-      border-radius: 50%;
-      font-size: 40px;
-      padding: 6px;
-      left: 50%;
-      top: 50%;
-      margin-top: -26px;
-      margin-left: -26px;
-    }
-  }
-  .time {
-    padding: 6px 0 20px 40px;
-    background-color: #eee;
-  }
-  .control {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
-    background-color: #999;
-    .left {
-      color: #000;
-      padding: 20px 0;
-    }
-    .right {
-      color: #000;
-      padding: 16px 0;
-      button {
-        padding: 4px 20px;
-        background-color: #2edaf0;
-        border-radius: 8px;
-        margin-right: 60px;
-        color: #fff;
-      }
-      span {
-        cursor: pointer;
-        margin-right: 10px;
-        i {
-          margin-right: 3px;
-        }
-      }
-    }
-  }
-}
+
 .evm_pl {
   text-align: center;
   font-size: 12px;
@@ -359,14 +267,6 @@ export default {
     line-height: 1;
   }
 }
-.fenxiang_evm_pl_sy {
-  text-align: center;
-  .icon-erweima {
-    font-size: 260px;
-  }
-  p {
-    padding: 10px 0 40px;
-  }
-}
+
 
 </style>
