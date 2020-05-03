@@ -4,8 +4,8 @@
     <div class="title_Progress part0">
       <div class="left">
         <el-breadcrumb separator=">">
-          <el-breadcrumb-item :to="{ path: '/crowds' }">众包合作</el-breadcrumb-item>
-          <el-breadcrumb-item>合作详情</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/expert' }">达人活动</el-breadcrumb-item>
+          <el-breadcrumb-item>活动详情</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
     </div>
@@ -27,7 +27,7 @@
               @click="crowdsDialog1 = true"
               v-show="!isPartIn&&!isCrowdTrue"
               class="blue_btn"
-            >参与合作</div>
+            >报名参加</div>
             <router-link
               tag="div"
               class="part_in blue_btn"
@@ -302,5 +302,4 @@ export default {
 </script>
 
 <style lang="less">
-
 </style>

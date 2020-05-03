@@ -92,6 +92,24 @@ const routes = [
       }
     ]
   },
+  {//活动达人
+    path: '/expert',
+    name: 'expert',
+    component: (res) => require(['@views/Expert/expert.vue'], res),
+    redirect: '/expert/home',
+    children:[
+      {
+        path: '/expert/home',
+        name: 'expertHome',
+        component: (res) => require(['@views/Expert/expertHome.vue'], res)
+      },
+      {
+        path: '/expert/detail',
+        name: 'expertDetail',
+        component: (res) => require(['@views/Expert/expertDetail.vue'], res)
+      },
+    ]
+  },
   { //智汇商城
     path: '/product',
     name: 'product',

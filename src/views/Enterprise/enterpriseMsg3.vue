@@ -33,11 +33,16 @@
           <div class="p5 p_title bs">
             <div class="share">
               <!-- 这个是插件的应用，我简单写个样式 -->
-              <span>点击分享：</span>
-              <i class="iconfont icon-QQ"></i>
-              <i class="iconfont icon-QQ"></i>
-              <i class="iconfont icon-QQ"></i>
-              <i class="iconfont icon-QQ"></i>
+              <span>分享到：</span>
+              <svg class="iconfont" aria-hidden="true" :style="W(16)">
+                <use xlink:href="#icon-QQ" />
+              </svg>
+              <svg class="iconfont" aria-hidden="true" :style="W(16)">
+                <use xlink:href="#icon-weixinmendian" />
+              </svg>
+              <svg class="iconfont" aria-hidden="true" :style="W(16)">
+                <use xlink:href="#icon-QQkongjian" />
+              </svg>
             </div>
           </div>
           <div class="p4 p_title bs">

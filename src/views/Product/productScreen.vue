@@ -27,9 +27,15 @@
         <div class="share">
           <!-- 这个是插件的应用，我简单写个样式 -->
           <span>分享到：</span>
-          <i class="iconfont icon-QQ"></i>
-          <i class="iconfont icon-QQ"></i>
-          <i class="iconfont icon-QQ"></i>
+          <svg class="iconfont" aria-hidden="true" :style="W(16)">
+            <use xlink:href="#icon-QQ" />
+          </svg>
+          <svg class="iconfont" aria-hidden="true" :style="W(16)">
+            <use xlink:href="#icon-weixinmendian" />
+          </svg>
+          <svg class="iconfont" aria-hidden="true" :style="W(16)">
+            <use xlink:href="#icon-QQkongjian" />
+          </svg>
         </div>
       </div>
     </div>
@@ -89,7 +95,12 @@
 
     <div id="home">
       <div class="part3_body">
-        <BigGoods :bigGoodsItem="item" v-for="(item,index) in part3List" :key="index" class="bottom10"></BigGoods>
+        <BigGoods
+          :bigGoodsItem="item"
+          v-for="(item,index) in part3List"
+          :key="index"
+          class="bottom10"
+        ></BigGoods>
       </div>
       <div class="link_more">加载更多</div>
     </div>

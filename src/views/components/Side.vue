@@ -29,7 +29,11 @@
           <div class="span">10</div>
         </div>
       </div>
-      <router-link tag="div" :to="{path:'/crowds/publish'}" class="left_add bs">
+      <div class="left_add bs" v-if="toUrl == ''">
+        立即
+        <br />发布
+      </div>
+      <router-link v-else tag="div" :to="{path:'/'+toUrl+'/publish'}" class="left_add bs">
         <!-- <div class="left_add bs"> -->
         立即
         <br />发布
@@ -136,6 +140,9 @@ export default {
   props: {
     isShowRightPart1: {
       default: true
+    },
+    toUrl:{
+      default:""
     }
   },
   methods: {
