@@ -109,7 +109,7 @@
                 <img :src="require('@assets/img/xiaoya.png')" alt />
               </el-col>
               <el-col :span="2" class="name_time">
-                <p>零度</p>
+                <p>智汇优库</p>
                 <p class="p2">2小时前</p>
               </el-col>
               <el-col :span="18" class="name_text">
@@ -117,7 +117,7 @@
                 <span>零度的</span>评论内容：合作以及结束了吗？？
               </el-col>
               <el-col :span="2" class="name_btn">
-                <el-button size="mini">删除</el-button>
+                <!-- <el-button size="mini">删除</el-button> -->
               </el-col>
             </el-row>
           </div>

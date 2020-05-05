@@ -2,7 +2,7 @@ export const topNav = [
     { text: "首页", router: "Home", isControl: false },
     { text: "尾货捡漏", router: "tailCargo", isControl: false },
     { text: "项目信息", router: "project", isControl: false },
-    { text: "直播现场", router: "playing", isControl: false },
+    { text: "直播秀场", router: "playing", isControl: false },
     { text: "众包合作", router: "crowds", isControl: false },
     { text: "达人活动", router: "expert", isControl: false },
     { text: "智汇商城", router: "product", isControl: false },
@@ -79,7 +79,7 @@ export const footList = [
     {
         title: "关于我们",
         children: [
-            { text: "企业简介", url: "", isBlank: false, isA: true },
+            { text: "企业简介", url: "/aboutUs/page1", isBlank: false, isA: true },
             { text: "企业资讯", url: "", isBlank: false, isA: true },
             { text: "合作流程", url: "", isBlank: false, isA: true },
             { text: "意见反馈", url: "", isBlank: false, isA: true },
@@ -112,4 +112,155 @@ export const selfHelpList = [
     { img: "house.png", text: "产看项目信息", url: "/" },
     { img: "house.png", text: "弱点知识竞赛", url: "/" },
     { img: "house.png", text: "免费自助直播", url: "/" }
+]
+
+export const adminList = [
+    {
+        title: "网站首页",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "占用",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "空闲",
+                number: 1
+            },
+            {
+                title: "展示位3",
+                state: "竞拍",
+                number: 2
+            }
+        ]
+    },
+    {
+        title: "项目频道",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "占用",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "占用",
+                number: 1
+            },
+            {
+                title: "展示位3",
+                state: "空闲",
+                number: 2
+            }
+        ]
+    },
+    {
+        title: "直播频道",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "占用",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "竞拍",
+                number: 1,
+                show: 1
+            },
+            {
+                title: "展示位3",
+                state: "竞拍",
+                number: 2
+            }
+        ]
+    },
+    {
+        title: "合作频道",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "占用",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "占用",
+                number: 1
+            },
+            {
+                title: "展示位3",
+                state: "空闲",
+                number: 2
+            }
+        ]
+    },
+    {
+        title: "活动频道",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "空闲",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "空闲",
+                number: 1
+            },
+            {
+                title: "展示位3",
+                state: "空闲",
+                number: 2
+            }
+        ]
+    },
+    {
+        title: "社区频道",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "空闲",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "空闲",
+                number: 1
+            },
+            {
+                title: "展示位3",
+                state: "空闲",
+                number: 2
+            }
+        ]
+    },
+    {
+        title: "商城频道",
+        number: 0,
+        children: [
+            {
+                title: "展示位1",
+                state: "占用",
+                number: 0
+            },
+            {
+                title: "展示位2",
+                state: "空闲",
+                number: 1
+            },
+            {
+                title: "展示位3",
+                state: "空闲",
+                number: 2
+            }
+        ]
+    },
 ]

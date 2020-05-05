@@ -16,28 +16,36 @@
       <div class="right_box">
         <div class="right_content">
           <div class="box1">
-            <div class="title">合作信息标题合作信息标题合作信</div>
+            <div class="title">活动名称活动名称活动名称活动名称活动名称</div>
             <p>招募截止日期：2019-12-30 00:00</p>
             <p>所在区域：上海市</p>
-            <p>合作预算：230万</p>
+            <p>活动时间：2020-05-25 15:30 至 2020-05-25 18：30</p>
+            <p>活动地址：********（报名审核后显示）</p>
           </div>
           <div class="box2">
             <div @click="zhidingDialog = true">帮TA置顶</div>
             <div
-              @click="crowdsDialog1 = true"
+              @click="expertDialog1 = true"
               v-show="!isPartIn&&!isCrowdTrue"
               class="blue_btn"
             >报名参加</div>
-            <router-link
+            <!-- <router-link
               tag="div"
-              class="part_in blue_btn"
+              class="part_in info_btn"
               :to="{path:'/crowds/detail2'}"
               v-show="isPartIn&&!isCrowdTrue"
-            >已参与 找TA聊一聊</router-link>
-            <div v-show="isCrowdTrue" class="blue_btn">提前截止</div>
+            >已报名 等待审核</router-link>-->
+            <div
+              class="part_in info_btn"
+              v-show="isPartIn&&!isCrowdTrue&&!whatTrue"
+              @click="whatTrue = true"
+            >已报名 等待审核</div>
+            <div class="part_in blue_btn" v-show="isPartIn&&!isCrowdTrue&&whatTrue">已通过 找TA聊一聊</div>
+            <div v-show="isCrowdTrue" class="blue_btn" @click="stopVisible = true">提前截止</div>
+            <div v-show="isCrowdTrue" class="blue_btn" @click="evmVisible= true">扫描二维码</div>
             <router-link
               tag="div"
-              :to="{path:'/crowds/detail3'}"
+              :to="{path:'/expert/detail3'}"
               class="blue_btn"
               v-show="isCrowdTrue"
             >查看报名</router-link>
@@ -109,7 +117,7 @@
                 <img :src="require('@assets/img/xiaoya.png')" alt />
               </el-col>
               <el-col :span="2" class="name_time">
-                <p>零度</p>
+                <p>智汇优库</p>
                 <p class="p2">2小时前</p>
               </el-col>
               <el-col :span="18" class="name_text">
@@ -117,7 +125,7 @@
                 <span>零度的</span>评论内容：合作以及结束了吗？？
               </el-col>
               <el-col :span="2" class="name_btn">
-                <el-button size="mini">删除</el-button>
+                <!-- <el-button size="mini">删除</el-button> -->
               </el-col>
             </el-row>
           </div>
@@ -190,55 +198,38 @@
       </div>
     </el-dialog>
     <el-dialog
-      title="参与合作"
-      :visible.sync="crowdsDialog1"
-      width="500px"
+      title="活动报名"
+      :visible.sync="expertDialog1"
+      width="600px"
       class="playing_dialog_com_sy"
     >
-      <div class="crowds_dia_body">
-        <el-row>
-          <el-col :span="1" class="point_red">*</el-col>
-          <el-col :span="23">
-            <p>请输入参与合作的意向</p>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="1" class="point_red none">*</el-col>
-          <el-col :span="23">
-            <el-input
-              type="textarea"
-              placeholder="请输入你要发布的合作对接内容，发布真实信息有助于快速达成合作。"
-              v-model="textarea"
-              maxlength="200"
-              show-word-limit
-            ></el-input>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="1" class="point_red">*</el-col>
-          <el-col :span="6">
-            <p>请输入您的报价：</p>
-          </el-col>
-          <el-col :span="6">
-            <el-input v-model="input1"></el-input>
-          </el-col>
-          <el-col :span="11">
-            <p class="p">元</p>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="1" class="point_red none">*</el-col>
-          <el-col :span="23">
-            <p>联系方式：138****1890</p>
-          </el-col>
-        </el-row>
+      <div class="expert_dia_body">
+        <div class="title">河南海达之光通信设备有限公司客户答谢会</div>
+        <p class="p">活动时间：2019.10.24 - 2019.10.27</p>
+        <p class="p">支付方式：线下支付</p>
+        <div class="box jcs bs">
+          <div class="left">
+            <img :src="require('@assets/img/xiaoya.png')" alt />
+            <p>昵称：零度</p>
+          </div>
+          <div class="right">
+            <div class="item">
+              <span>参与人姓名：</span>
+              <el-input v-model="value1"></el-input>
+            </div>
+            <div class="item">
+              <span>参与人电话：</span>
+              <el-input v-model="value2"></el-input>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="submit_center_btn_sy pb30">
         <el-button class="blue_btn" @click="crowdsDialogSuccess = true">提交</el-button>
       </div>
     </el-dialog>
     <el-dialog
-      title="申请提交成功"
+      title="报名成功"
       :visible.sync="crowdsDialogSuccess"
       width="400px"
       class="playing_dialog_com_sy"
@@ -247,13 +238,38 @@
         <div class="img">
           <img :src="require('@assets/img/zhiding1.png')" alt />
         </div>
-        <p>合作申请提交成功</p>
-        <p>+2个智汇币</p>
+        <p>恭喜您已报名成功</p>
+        <p class="orange_p">+2个智汇币</p>
+        <p>请耐心等待主办方确认</p>
         <div class="submit">
-          <el-button class="blue_btn" @click="returnCrowdTrue">返回</el-button>
+          <el-button class="blue_btn" @click="returnCrowdTrue">确定</el-button>
         </div>
       </div>
     </el-dialog>
+    <el-dialog title="截止活动" :visible.sync="stopVisible" width="400px" class="playing_dialog_com_sy">
+      <div class="crowds4_dialog_body">
+        <p class="crowds4_p expert_p">你确定要提前截止该活动吗？</p>
+        <div class="submit_blue_btn_sy">
+          <el-button @click="stopVisible = false" class="info_btn">取消</el-button>
+          <el-button @click="stopVisible = false">确定</el-button>
+        </div>
+      </div>
+    </el-dialog>
+    <el-dialog title="活动验证通道" :visible.sync="evmVisible" width="400px" class="playing_dialog_com_sy">
+        <div class="crowds4_dialog_body">
+          <div class="info">
+            <img :src="require('@assets/img/xiaoya.png')" alt />
+            <span>昵称：零度</span>
+          </div>
+          <p class="expert_p">IT精英组织了技术交流类活动</p>
+          <p class="expert_p">扫码验证入场资格</p>
+          <p class="expert_p"><i class="iconfont icon-erweima"></i></p>
+          <p class="expert_p">来自智汇优库达人活动</p>
+          <div class="submit_blue_btn_sy">
+            <el-button @click="evmVisible = false">返回</el-button>
+          </div>
+        </div>
+      </el-dialog>
   </div>
 </template>
 
@@ -265,6 +281,9 @@ export default {
     return {
       textarea: "",
       isPartIn: false,
+      whatTrue: false,
+      stopVisible:false,
+      evmVisible:false,
       infoMsg: [
         {
           img: "info.png",
@@ -275,10 +294,12 @@ export default {
           date: "2020-05-25"
         }
       ],
+      value1: "",
+      value2: "",
       zhidingDialog: false,
       zhidingSucess: false,
       zhidingDie: false,
-      crowdsDialog1: false,
+      expertDialog1: false,
       crowdsDialogSuccess: false,
       input1: ""
     };
@@ -295,11 +316,50 @@ export default {
     returnCrowdTrue() {
       this.crowdsDialogSuccess = false;
       this.isPartIn = true;
-      this.crowdsDialog1 = false;
+      this.expertDialog1 = false;
     }
   }
 };
 </script>
 
 <style lang="less">
+.expert_dia_body {
+  padding: 20px 40px 40px;
+  .title {
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .p {
+    padding: 6px 0 6px 40px;
+  }
+  .box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px 34px;
+    margin-top: 16px;
+    .left {
+      text-align: center;
+      p {
+        padding-top: 10px;
+      }
+    }
+    .right {
+      width: 360px;
+      .item {
+        display: flex;
+        span {
+          display: inline-blick;
+          width: 126px;
+          line-height: 30px;
+        }
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
 </style>

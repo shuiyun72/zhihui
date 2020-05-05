@@ -4,13 +4,15 @@ import VueRouter from 'vue-router';
 import loginRouter from "./login";
 //选票
 import voteRouter from "./vote";
-//
+//企业名录
 import enterprise from "./components/enterprise";
+//达人活动
+import expert from "./components/expert";
+//众包合作
+import crowds from "./components/crowds";
+
 Vue.use(VueRouter)
-const routes = [
-  loginRouter,
-  voteRouter,
-  enterprise,
+const routes = [  
   {
     path: '/',
     redirect: '/home',
@@ -28,6 +30,67 @@ const routes = [
       },
     ]
   },
+  { //项目信息
+    path: '/project',
+    name: 'project',
+    component: (res) => require(['@views/Project/project.vue'], res),
+    redirect: '/project/home',
+    children: [
+      {
+        path: '/project/home',
+        name: 'projectHome',
+        component: (res) => require(['@views/Project/projectHome.vue'], res)
+      },
+      {
+        path: '/project/list',
+        name: 'projectList',
+        component: (res) => require(['@views/Project/projectList.vue'], res)
+      },
+      {
+        path: '/project/list2',
+        name: 'projectList2',
+        component: (res) => require(['@views/Project/projectList2.vue'], res)
+      },
+      {
+        path: '/project/detail1',
+        name: 'projectDetail1',
+        component: (res) => require(['@views/Project/projectDetail1.vue'], res)
+      },
+    ]
+  },
+  { //关于我们
+    path: '/aboutUs',
+    name: 'aboutUs',
+    component: (res) => require(['@views/AboutUs/aboutUs.vue'], res),
+    redirect: '/playing/home',
+    children: [
+      {
+        path: '/aboutUs/page1',
+        name: 'aboutUsPage1',
+        component: (res) => require(['@views/AboutUs/aboutUsPage1.vue'], res)
+      },
+      {
+        path: '/aboutUs/page2',
+        name: 'aboutUsPage2',
+        component: (res) => require(['@views/AboutUs/aboutUsPage2.vue'], res)
+      },
+      {
+        path: '/aboutUs/page3',
+        name: 'aboutUsPage3',
+        component: (res) => require(['@views/AboutUs/aboutUsPage3.vue'], res)
+      },
+      {
+        path: '/aboutUs/page4',
+        name: 'aboutUsPage4',
+        component: (res) => require(['@views/AboutUs/aboutUsPage4.vue'], res)
+      },
+      {
+        path: '/aboutUs/page5',
+        name: 'aboutUsPage5',
+        component: (res) => require(['@views/AboutUs/aboutUsPage5.vue'], res)
+      },
+    ]
+  },
   { //直播秀场
     path: '/playing',
     name: 'playing',
@@ -38,6 +101,21 @@ const routes = [
         path: '/playing/home',
         name: 'playingHome',
         component: (res) => require(['@views/Playing/playingHome.vue'], res)
+      },
+      {
+        path: '/playing/admin1',
+        name: 'playingAdmin1',
+        component: (res) => require(['@views/Playing/playingAdmin1.vue'], res)
+      },
+      {
+        path: '/playing/admin2',
+        name: 'playingAdmin2',
+        component: (res) => require(['@views/Playing/playingAdmin2.vue'], res)
+      },
+      {
+        path: '/playing/admin3',
+        name: 'playingAdmin3',
+        component: (res) => require(['@views/Playing/playingAdmin3.vue'], res)
       },
     ]
   },
@@ -51,62 +129,6 @@ const routes = [
         path: '/tailCargo/home',
         name: 'tailCargoHome',
         component: (res) => require(['@views/TailCargo/tailCargoHome.vue'], res)
-      },
-    ]
-  },
-  {//众包合作
-    path: '/crowds',
-    name: 'crowds',
-    component: (res) => require(['@views/Crowds/crowds.vue'], res),
-    redirect: '/crowds/home',
-    children:[
-      {
-        path: '/crowds/home',
-        name: 'crowdsHome',
-        component: (res) => require(['@views/Crowds/crowdsHome.vue'], res)
-      },
-      {
-        path: '/crowds/detail',
-        name: 'crowdsDetail',
-        component: (res) => require(['@views/Crowds/crowdsDetail.vue'], res)
-      },
-      {
-        path: '/crowds/detail2',
-        name: 'crowdsDetail2',
-        component: (res) => require(['@views/Crowds/crowdsDetail2.vue'], res)
-      },
-      {
-        path: '/crowds/detail3',
-        name: 'crowdsDetail3',
-        component: (res) => require(['@views/Crowds/crowdsDetail3.vue'], res)
-      },
-      {
-        path: '/crowds/detail4',
-        name: 'crowdsDetail4',
-        component: (res) => require(['@views/Crowds/crowdsDetail4.vue'], res)
-      },
-      {
-        path: '/crowds/publish',
-        name: 'crowdsPublish',
-        component: (res) => require(['@views/Crowds/crowdsPublish.vue'], res)
-      }
-    ]
-  },
-  {//活动达人
-    path: '/expert',
-    name: 'expert',
-    component: (res) => require(['@views/Expert/expert.vue'], res),
-    redirect: '/expert/home',
-    children:[
-      {
-        path: '/expert/home',
-        name: 'expertHome',
-        component: (res) => require(['@views/Expert/expertHome.vue'], res)
-      },
-      {
-        path: '/expert/detail',
-        name: 'expertDetail',
-        component: (res) => require(['@views/Expert/expertDetail.vue'], res)
       },
     ]
   },
@@ -133,7 +155,11 @@ const routes = [
       },
     ]
   },
-
+  loginRouter, 
+  voteRouter,  
+  enterprise,  
+  expert,   
+  crowds, 
   
 ]
 

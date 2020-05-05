@@ -23,10 +23,24 @@
         <span>Peripheral cooperation information</span>
       </div>
       <div class="crow_part2_box">
-        <div class="bs" v-for="(t,i) in DataFor(12,infoMsg)" :key="i">
+        <div class="bs" v-for="(t,i) in DataFor(10,infoMsg)" :key="i">
           <router-link :to="{path:'/crowds/detail'}">
             <div class="new_goods_com_sy">
               <div class="state">{{t.state[0]}}</div>
+              <img :src="require('@assets/img/'+t.img)" alt />
+              <div class="box">
+                <div class="title">{{t.title}}</div>
+                <p>行业：{{t.hy}}</p>
+                <p>地址：{{t.address}}</p>
+                <p>招募截止时间：{{t.time}}</p>
+              </div>
+            </div>
+          </router-link>
+        </div>
+        <div class="bs" v-for="(t,i) in DataFor(2,infoMsg)" :key="i+'y'">
+          <router-link :to="{path:'/crowds/detail'}">
+            <div class="new_goods_com_sy">
+              <div class="state red">{{t.state[3]}}</div>
               <img :src="require('@assets/img/'+t.img)" alt />
               <div class="box">
                 <div class="title">{{t.title}}</div>
@@ -64,7 +78,7 @@ export default {
       infoMsg: [
         {
           img: "info.png",
-          state: ["正在招募", "正在进行", "正在直播"],
+          state: ["正在招募", "正在进行", "正在直播","招募结束"],
           title: "合作信息标题合作信息标题合作信",
           hy: "综合布线系统",
           address: "郑州",

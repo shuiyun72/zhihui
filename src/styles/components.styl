@@ -140,6 +140,10 @@
     border-radius: 0 20px 20px 0;
     left 0;
     bottom 100px;
+    &.green{
+      color #fff;
+      background-color: #016017
+    }
   }
 }
 .part_title {
@@ -348,6 +352,12 @@
   padding: 16px 40px;
   color: #666;
   width: 100%;
+  .d_flex{
+    .title{
+      width: 60px;
+      padding-top: 9px;
+    }
+  }
   .item{
     display: flex;
     justify-content: space-between;
@@ -815,6 +825,9 @@
           &.part_in{
             width 150px
           }
+          &.info_btn{
+            background-color #A9AFAF
+          }
           &:nth-child(1) {
             background-color: #7e1102;
           }
@@ -977,6 +990,10 @@
     }
     p {
       text-align: center;
+      &.p2{
+        font-size:12px;
+        margin-top:3px;
+      }   
     }
   }
 }
@@ -1087,5 +1104,200 @@
   }
   p {
     padding: 10px 0 40px;
+  }
+}
+.left_menu_con_sy {
+  border-right: 4px solid #ccc;
+  padding: 4px 0 4px 10px;
+  .item {
+    cursor pointer;
+    margin-bottom: 20px;
+    border-left: 6px solid transparent;
+    padding: 2px 0 2px 12px;
+    &.active,&:hover {
+      border-left: 6px solid #b90000;
+      color: #b90000;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.submit_blue_btn_sy {
+  text-align: center;
+  button {
+    background-color: #01b0b7;
+    color: #fff;
+    padding: 4px 26px;
+    border-radius: 20px;
+  }
+  .info_btn{
+    background-color #fff;
+    color:#666;
+    margin-right: 40px;
+  }
+}
+.zh_sub_com_sy {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 26px 30px 10px 30px;
+  &.ad2{
+    .el-row{
+      margin-bottom :20px
+    }
+  }
+  .btn_default{
+    padding: 2px 30px
+  }
+  .el-row {
+    &.pt {
+      padding: 20px 0;
+    }
+    .n {
+      font-size: 22px;
+      color: #01b0b7;
+    }
+    .m {
+      font-size: 22px;
+      color: #ff0000;
+    }
+    input {
+      width: 50%;
+    }
+    .btr {
+      border-right: 3px dotted #ccc;
+      padding: 5px 0;
+    }
+    .btn {
+      padding: 9px 30px;
+      border-radius: 20px;
+      background-color: #f88f00;
+      color: #fff;
+    }
+  }
+  .tp {
+    border-top: 1px solid #999;
+    padding: 10px 0;
+    color: #999;
+    font-size: 10px;
+  }
+}
+.show_list_com_sy {
+  width: 243px;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  background-color: #fff;
+  .title_top {
+    text-align: center;
+    background-color: #999;
+    padding: 4px 0;
+    color: #fff;
+  }
+  .el-row {
+    line-height: 26px;
+    cursor: pointer;
+    .c_span {
+      color: #666;
+    }
+    .title_span {
+      font-weight: bold;
+    }
+    .t_right {
+      padding-right: 6px;
+    }
+    .stateC {
+      color: #0009e2;
+      &.stateR {
+        color: #f00;
+      }
+    }
+  }
+  .item {
+    .active {
+      background-color: #01b0b7;
+      .c_span {
+        color: #fff;
+      }
+    }
+    padding-top: 20px;
+  }
+}
+.item_table_left_com_sy {
+  box-sizing: border-box;
+  font-size: 12px;
+  border-left: 4px solid transparent;
+  .title {
+    font-size: 16px;
+    border-bottom: 1px solid #999;
+    width: 87%;
+    padding: 10px 0px 10px 20px;
+    margin-bottom: 4px;
+  }
+  .item_box {
+    line-height: 24px;
+    .orange {
+      color: #f88f00;
+    }
+    .address {
+      text-align: right;
+      padding-right: 34px;
+    }
+    .text {
+      padding-left: 20px;
+    }
+  }
+  .more {
+    text-align: right;
+    color: #006cf9;
+    padding: 14px 34px 16px 0;
+  }
+}
+.item_card_com_sy {
+  &.c1 {
+    background: linear-gradient(90deg, #2f98f0, #fff);
+  }
+  &.c2 {
+    background: linear-gradient(90deg, #44c4b6, #fff);
+  }
+  &.c3 {
+    background: linear-gradient(90deg, #bc42ef, #fff);
+  }
+  padding: 30px 30px 16px 30px;
+  box-sizing: border-box;
+  .title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #fff;
+    line-height: 22px;
+    span {
+      margin-right: 8px;
+    }
+  }
+  .right {
+    padding-top: 24px;
+    .round {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  display: inline-flex;
+  justify-content: space-between;
+}
+.part_list_com_sy{
+  .title{
+    padding:8px 12px ;
+  }
+  th{
+    background-color: #eee;
+    color: #000;
+  }
+  td{
+    color: #001BE6;
+    font-size: 12px;
   }
 }

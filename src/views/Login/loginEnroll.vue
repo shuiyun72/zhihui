@@ -49,7 +49,7 @@ export default {
       dialogVisible: false,
       input1: "",
       input2: "",
-      isAgree: true
+      isAgree: false
     };
   },
   methods: {

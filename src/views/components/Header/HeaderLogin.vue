@@ -74,8 +74,8 @@ export default {
     .radius_log {
       text-align: right;
       img {
-        width: 81px;
-        height: 81px;
+        width: 56px;
+        height: auto;
       }
     }
   }

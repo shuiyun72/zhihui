@@ -4,9 +4,10 @@
     <div class="title_Progress part0">
       <div class="left">
         <el-breadcrumb separator=">">
-          <el-breadcrumb-item :to="{ path: '/crowds' }">众包合作</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/crowds/detail' }">合作详情</el-breadcrumb-item>
-          <el-breadcrumb-item>查看报名</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/expert' }">达人活动</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/expert/detail' }">活动详情</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/expert/detail3' }">报名详情</el-breadcrumb-item>
+          <el-breadcrumb-item>审核</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
     </div>
@@ -70,7 +71,7 @@
             <img :src="require('@assets/img/xiaoya.png')" alt />
             <span>昵称：小女人</span>
           </div>
-          <p class="crowds4_p">合作报名审核已通过，请及时联系。</p>
+          <p class="crowds4_p">活动报名审核已通过，请及时联系。</p>
           <div class="submit_blue_btn_sy">
             <el-button @click="successVisible = false">返回列表</el-button>
           </div>

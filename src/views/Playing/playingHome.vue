@@ -4,7 +4,7 @@
       <HeaderTop></HeaderTop>
       <HeaderSearch></HeaderSearch>
     </div>
-    <HeaderNav :HeaderNav="'直播现场'"></HeaderNav>
+    <HeaderNav :HeaderNav="'直播秀场'"></HeaderNav>
     <Side></Side>
     <div id="firm">
       <div class="bg_img_top">
@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="bs">
+        <div class="bs"  @click="playingDialogVisible = true">
           <div class="new_goods_com_sy">
             <!-- <div class="state">即将开始</div> -->
             <div class="wait_paly">
@@ -65,9 +65,21 @@
             </div>
           </div>
         </div>
-        <div class="bs" v-for="(t,i) in DataFor(13,infoMsg)" :key="i" @click="playingDialogVisible = true">
+        <div class="bs" v-for="(t,i) in DataFor(11,infoMsg)" :key="i">
           <div class="new_goods_com_sy">
             <div class="state">{{t.state[2]}}</div>
+            <img :src="require('@assets/img/'+t.img)" alt />
+            <div class="box">
+              <div class="title">{{t.title}}</div>
+              <p>行业：{{t.hy}}</p>
+              <p>地址：{{t.address}}</p>
+              <p>直播时间：{{t.time}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="bs" v-for="(t,i) in DataFor(2,infoMsg)" :key="i">
+          <div class="new_goods_com_sy">
+            <div class="state red">{{t.state[3]}}</div>
             <img :src="require('@assets/img/'+t.img)" alt />
             <div class="box">
               <div class="title">{{t.title}}</div>
@@ -205,7 +217,7 @@ export default {
       infoMsg: [
         {
           img: "info.png",
-          state: ["正在招募", "正在进行", "正在直播"],
+          state: ["正在招募", "正在进行", "正在直播","直播结束"],
           title: "直播间标题直播间标题直播间标题",
           hy: "综合布线系统",
           address: "郑州",
@@ -226,47 +238,7 @@ export default {
 };
 </script>
 <style lang="less">
-#play {
-  .pl_title {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #999;
-    margin-bottom: 10px;
-    width: 200px;
-    background-color: #fff;
-    padding: 3px;
-  }
-  .pl_body {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
 
-    .bs {
-      width: 384px;
-      margin-bottom: 20px;
-    }
-  }
-  .el-tabs__item {
-    font-size: 16px;
-    &.is-active,
-    &:hover {
-      color: #048462;
-    }
-  }
-  .el-tabs__active-bar {
-    background-color: #048462;
-  }
-}
-
-.evm_pl {
-  text-align: center;
-  font-size: 12px;
-  padding: 0px 0 10px;
-  i {
-    font-size: 160px;
-    line-height: 1;
-  }
-}
 
 
 </style>
