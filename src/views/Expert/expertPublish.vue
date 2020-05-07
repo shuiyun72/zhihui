@@ -261,28 +261,5 @@ export default {
 </script>
 
 <style lang="less">
-.check_btn_com_sy {
-  .el-checkbox-button {
-    &.is_focus {
-      .el-checkbox-button__inner {
-        border-color: 1px solid #dcdfe6;
-      }
-    }
-    &.is-checked {
-      .el-checkbox-button__inner {
-        background-color: #fff;
-        color: #f88509;
-        border: 1px solid #f88509;
-      }
-    }
-    .el-checkbox-button__inner {
-      border-left: 1px solid #dcdfe6;
-      border-radius: 6px;
-      width: 60px;
-      text-align: center;
-      margin-right: 20px;
-      box-shadow: none;
-    }
-  }
-}
+
 </style>

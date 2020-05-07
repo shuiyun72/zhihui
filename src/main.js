@@ -9,6 +9,7 @@ import "@styles/iconfont/iconfont.js";
 import "@styles/iconfont/iconfont.css";
 import "@styles/index.js";
 import "@utils/common";
+import _ from "lodash";
 Vue.config.productionTip = false
 
 new Vue({

@@ -264,3 +264,95 @@ export const adminList = [
         ]
     },
 ]
+  
+export const PersonalList = [
+    {
+        title: "我的资料",
+        number: 0,
+        children: [
+            {title: "基本资料",state: "占用",number: 0, show: 0},
+            {title: "密码管理",state: "占用",number: 0, show: 0},
+            {title: "个人认证",state: "占用",number: 0, show: 0},
+            {title: "企业认证",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "我的账户",
+        number: 0,
+        children: [
+            {title: "智汇币",state: "占用",number: 0, show: 0},
+            {title: "智汇豆",state: "占用",number: 0, show: 0},
+            {title: "直播红包",state: "占用",number: 0, show: 0},
+            {title: "竞赛红包",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "我的团队",
+        number: 0,
+        children: [
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "历史发布",
+        number: 0,
+        children: [
+            {title: "我的合作",state: "占用",number: 0, show: 0},
+            {title: "我的活动",state: "占用",number: 0, show: 0},
+            {title: "我的直播",state: "占用",number: 0, show: 0},
+            {title: "我的主页",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "我的订阅",
+        number: 0,
+        children: [
+            {title: "订阅详情",state: "占用",number: 0, show: 0},
+            {title: "订阅设置",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "我的竞赛",
+        number: 0,
+        children: [
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "采购订单",
+        number: 0,
+        children: [
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "卖家中心",
+        number: 0,
+        children: [
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            // {title: "基本资料",state: "占用",number: 0, show: 0},
+        ]
+    },
+    {
+        title: "我的消息",
+        number: 0,
+        children: [
+            {title: "系统消息",state: "占用",number: 0, show: 1},
+            {title: "审核通知",state: "占用",number: 6, show: 0},
+            {title: "竞拍变更",state: "占用",number: 0, show: 0},
+            {title: "中奖通知",state: "占用",number: 0, show: 0},
+            {title: "评论消息",state: "占用",number: 1, show: 0},
+        ]
+    }
+]

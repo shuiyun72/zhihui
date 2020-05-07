@@ -18,9 +18,11 @@
       <div class="show_list_com_sy bs">
         <div class="title_top">展示位</div>
         <div class="item" v-for="(t,i) in adminList" :key="i+'t'">
-          <el-row @click.native="parentHandle">
+          <el-row @click.native="parentHandle(i)">
             <el-col :span="6" class="t_right">
-              <i class="el-icon-caret-bottom"></i>
+              <i
+                :class="adminList[i].children.length > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"
+              ></i>
             </el-col>
             <el-col :span="6">
               <span class="title_span">{{t.title}}</span>
@@ -90,7 +92,7 @@
                   <span :class="{'active':scope.row.active}">{{scope.row.name}}</span>
                 </template>
               </el-table-column>
-              <el-table-column  label="当前状态" align="center">
+              <el-table-column label="当前状态" align="center">
                 <template slot-scope="scope">
                   <span :class="{'active':scope.row.active}">{{scope.row.state}}</span>
                 </template>
@@ -119,7 +121,8 @@ export default {
   components: { PageNum, HeaderTop, HeaderSearch, HeaderNav, Side },
   data() {
     return {
-      adminList: adminList,
+      adminList: _.cloneDeep(adminList),
+      adminListOld: _.cloneDeep(adminList),
       value: "",
       tableData: [
         {
@@ -127,7 +130,7 @@ export default {
           name: "昵称：零度 (我)",
           state: "领先",
           money: 9,
-          active:1
+          active: 1
         },
         {
           img: "xiaoya.png",
@@ -147,13 +150,15 @@ export default {
           state: "出局",
           money: 1
         }
-      ]
+      ],
+      child6: true
     };
   },
   methods: {
-    parentHandle(e) {
-      console.log(e);
-      console.log("sst");
+    parentHandle(i) {
+      JSON.stringify(this.adminList[i].children) == "[]"
+        ? (this.adminList[i].children = this.adminListOld[i].children)
+        : (this.adminList[i].children = []);
     },
     childHandle(e) {
       console.log(e);
@@ -163,6 +168,4 @@ export default {
 };
 </script>
 <style lang="less">
-
-
 </style>

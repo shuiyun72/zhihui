@@ -290,6 +290,7 @@ export default {
   },
   mounted() {
     console.log(this.isCrowdTrue);
+    console.log("%c 1.0 /crowds/detail > 参与合作 > 提交 > 聊一聊 2.0 /crowds/detail(登录状态) > 查看报名 > 查看 > 拒绝",'color:#0f0;')
   },
   methods: {
     returnCrowdTrue() {

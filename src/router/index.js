@@ -12,6 +12,7 @@ import expert from "./components/expert";
 import crowds from "./components/crowds";
 
 Vue.use(VueRouter)
+
 const routes = [  
   {
     path: '/',
@@ -27,6 +28,64 @@ const routes = [
         path: '/home/home',
         name: 'homeHome',
         component: (res) => require(['@views/Home/homeHome.vue'], res)
+      },
+    ]
+  },
+  { //弱电社区
+    path: '/lightCurrent',
+    name: 'lightCurrent',
+    component: (res) => require(['@views/LightCurrent/lightCurrent.vue'], res),
+    redirect: '/lightCurrent/home',
+    children: [
+      {
+        path: '/lightCurrent/home',
+        name: 'lightCurrentHome',
+        component: (res) => require(['@views/LightCurrent/lightCurrentHome.vue'], res)
+      },
+      {
+        path: '/lightCurrent/child2',
+        name: 'lightCurrentChild2',
+        component: (res) => require(['@views/LightCurrent/lightCurrentChild2.vue'], res)
+      },
+      {
+        path: '/lightCurrent/child3',
+        name: 'lightCurrentChild3',
+        component: (res) => require(['@views/LightCurrent/lightCurrentChild3.vue'], res)
+      },
+      {
+        path: '/lightCurrent/child4',
+        name: 'lightCurrentChild4',
+        component: (res) => require(['@views/LightCurrent/lightCurrentChild4.vue'], res)
+      },
+      {
+        path: '/lightCurrent/child4/detail',
+        name: 'lightCurrentChild4Detail',
+        component: (res) => require(['@views/LightCurrent/lightCurrentChild4Detail.vue'], res)
+      },
+      {
+        path: '/lightCurrent/child5',
+        name: 'lightCurrentChild5',
+        component: (res) => require(['@views/LightCurrent/lightCurrentChild5.vue'], res)
+      },
+      {
+        path: '/lightCurrent/detail',
+        name: 'lightCurrentDetail',
+        component: (res) => require(['@views/LightCurrent/lightCurrentDetail.vue'], res)
+      },
+      {
+        path: '/lightCurrent/detail2',
+        name: 'lightCurrentDetail2',
+        component: (res) => require(['@views/LightCurrent/lightCurrentDetail2.vue'], res)
+      },
+      {
+        path: '/lightCurrent/detail3',
+        name: 'lightCurrentDetail3',
+        component: (res) => require(['@views/LightCurrent/lightCurrentDetail3.vue'], res)
+      },
+      {
+        path: '/lightCurrent/publish',
+        name: 'lightCurrentPublish',
+        component: (res) => require(['@views/LightCurrent/lightCurrentPublish.vue'], res)
       },
     ]
   },
@@ -52,9 +111,19 @@ const routes = [
         component: (res) => require(['@views/Project/projectList2.vue'], res)
       },
       {
-        path: '/project/detail1',
-        name: 'projectDetail1',
-        component: (res) => require(['@views/Project/projectDetail1.vue'], res)
+        path: '/project/detail2',
+        name: 'projectDetail2',
+        component: (res) => require(['@views/Project/projectDetail2.vue'], res)
+      },
+      {
+        path: '/project/detail3',
+        name: 'projectDetail3',
+        component: (res) => require(['@views/Project/projectDetail3.vue'], res)
+      },
+      {
+        path: '/project/detail4',
+        name: 'projectDetail4',
+        component: (res) => require(['@views/Project/projectDetail4.vue'], res)
       },
     ]
   },

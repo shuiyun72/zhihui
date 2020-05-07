@@ -8,7 +8,7 @@
     <Side></Side>
     <div id="firm">
       <div class="bg_img_top">
-        <div class="click">点击竞价此展示位</div>
+        <div class="click" @click="routerTo">点击竞价此展示位</div>
       </div>
     </div>
     <div id="play" class="wm">
@@ -65,7 +65,7 @@
             </div>
           </div>
         </div>
-        <div class="bs" v-for="(t,i) in DataFor(11,infoMsg)" :key="i">
+        <div class="bs" v-for="(t,i) in DataFor(11,infoMsg)" :key="i+'t1'">
           <div class="new_goods_com_sy">
             <div class="state">{{t.state[2]}}</div>
             <img :src="require('@assets/img/'+t.img)" alt />
@@ -77,7 +77,7 @@
             </div>
           </div>
         </div>
-        <div class="bs" v-for="(t,i) in DataFor(2,infoMsg)" :key="i">
+        <div class="bs" v-for="(t,i) in DataFor(2,infoMsg)" :key="i+'t2'">
           <div class="new_goods_com_sy">
             <div class="state red">{{t.state[3]}}</div>
             <img :src="require('@assets/img/'+t.img)" alt />
@@ -233,6 +233,9 @@ export default {
   methods: {
     handleClick(tab, event) {
       console.log(tab, event);
+    },
+    routerTo(){
+      this.$router.push({path:"/playing/admin1"})
     }
   }
 };

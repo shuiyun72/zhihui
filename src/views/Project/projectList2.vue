@@ -4,6 +4,14 @@
     <!-- <div class="bg_img_top">
       <div class="click">点击竞价此展示位</div>
     </div>-->
+    <div class="project_nav">
+      <div class="main wm">
+        <div class="item">全部</div>
+        <div class="item">开标预告</div>
+        <router-link tag="div" :to="{path:'/project/list'}" class="item">招采信息</router-link>
+        <router-link tag="div" :to="{path:'/project/list2'}" class="item active">评标结果</router-link>
+      </div>
+    </div>
     <div class="project_body wm">
       <div class="title_Progress">
         <div class="left">
@@ -108,8 +116,8 @@ export default {
   },
   computed: {},
   methods: {
-    cellClick(el) {
-      this.$router.push({ path: "/project/detail1" });
+    cellClick() {
+      this.$router.push({ path: "/project/detail2" });
     }
   }
 };

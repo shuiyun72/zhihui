@@ -162,7 +162,7 @@ import Side from "@components/Side.vue";
 export default {
   components: { Side },
   mounted(){
-    console.log("%c /project/home 页面的设计的很不错",'color:#0f0;')
+    console.log("%c /project/home > 附近项目 > 评标结果 > 列表 > 商机分析 > 历史招标代理 > 列表 > 历史服务甲方",'color:#0f0;')
   },
   data() {
     return {

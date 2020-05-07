@@ -1064,11 +1064,22 @@
   }
 }
 
-.crowds_publish_body {
+.crowds_publish_body.wm {
   margin-top: 16px;
   margin-bottom: 40px;
   padding-bottom: 40px;
 
+  .img_light{
+    padding-bottom 40px;
+    border-bottom 1px solid #eeeeee
+    margin-bottom 20px
+  }
+  .textarea_light{
+    padding :0 80px;
+    textarea{
+      height 200px
+    }
+  }
   .title_c {
     padding: 8px 20px;
     background-color: #ccc;
@@ -1124,11 +1135,11 @@
   .crowds_pub_foot {
     width: 80%;
     margin: 0 auto;
-    border-top: 1px solid #ccc;
-
+    
     .part1 {
       text-align: center;
       padding: 30px 0 40px;
+      border-top: 1px solid #ccc;
     }
 
     .part2 {
@@ -1541,15 +1552,39 @@
   }
 }
 
+.project_nav {
+  border-bottom: 2px solid #F88F00;
+  padding: 20px 0 0 0;
+
+  .main {
+    display: flex;
+    padding-left: 60px;
+
+    .item {
+      width: 60px;
+      padding: 6px 20px 4px;
+      text-align: center;
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: #F88F00;
+        color: #fff;
+      }
+    }
+  }
+}
+
 .project_body {
   .p_list_p1 {
     padding: 6px 20px 6px;
-    margin-bottom 40px
+    margin-bottom: 40px;
+
     .el-table {
       height: 800px;
-      overflow-y auto
+      overflow-y: auto;
     }
   }
+
   .part1 {
     width: 980px;
     margin: 20px auto 4px;
@@ -1624,5 +1659,92 @@
       width: 583px;
       margin-bottom: 30px;
     }
+  }
+}
+
+.pro_detail1 {
+  padding-bottom: 30px;
+
+  .part1 {
+    padding: 20px 40px;
+    margin: 16px 0;
+  }
+}
+.light_body {
+  .c4_child{
+    padding : 10px 110px 20px;
+    margin-bottom 30px
+    .c4_title{
+      padding 10px 0;
+      font-size 16px
+      border-bottom 1px solid #ccc
+      margin-bottom 6px
+    }
+    .el-row{
+      border-bottom 2px dotted #ccc;
+      line-height 30px;
+      padding 4px 0
+      cursor: pointer;
+      img{
+        margin-right 6px
+      }
+    }
+  }
+  .detial3_say{
+    border-top 1px solid #aaa;
+    padding 10px 40px 40px;
+    textarea{
+      border-radius: 10px
+      border 1px solid #aaa
+      height 160px
+    }
+    .t_right{
+      padding 20px 40px 0 0
+    }
+  }
+  .light_title {
+    padding: 20px 40px 10px;
+    .left {
+      width: 600px;
+      .box {
+        display: flex;
+        .li {
+          padding: 3px 16px;
+          background-color: #ccc;
+          color: #666;
+          margin-right: 2px;
+          &.active {
+            background-color: #f88f00;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .part1 {
+    padding: 40px 40px 20px 40px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    .p_text {
+      color: #666;
+      padding: 20px;
+      line-height: 26px;
+    }
+    .img_box {
+      padding: 0 40px 20px;
+    }
+    .table_img {
+      padding: 26px 40px 10px;
+      border-top: 2px dotted #aaa;
+      color: #999;
+    }
+  }
+}
+.more_icon{
+  padding: 20px 0 30px;
+  text-align: center;
+  i{
+    color: #999;
+    font-size: 40px;
   }
 }
