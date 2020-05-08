@@ -10,6 +10,7 @@ import "@styles/iconfont/iconfont.css";
 import "@styles/index.js";
 import "@utils/common";
 import _ from "lodash";
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -17,3 +18,13 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+router.afterEach((to,from,next) => {
+  let top = document.documentElement.scrollTop || document.body.scrollTop
+	 const timeTop = setInterval(() => {
+	   document.body.scrollTop = document.documentElement.scrollTop = top -= 20
+	   if (top <= 0) {
+	     clearInterval(timeTop)
+	   }
+	 }, 20)
+})

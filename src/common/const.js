@@ -119,20 +119,16 @@ export const adminList = [
         title: "网站首页",
         number: 0,
         children: [
-            {
-                title: "展示位1",
-                state: "占用",
-                number: 0
-            },
+            { title: "展示位1", state: "占用", number: 0, show: 0, router: "" },
             {
                 title: "展示位2",
                 state: "空闲",
-                number: 1
+                number: 1, show: 0, router: ""
             },
             {
                 title: "展示位3",
                 state: "竞拍",
-                number: 2
+                number: 2, show: 0, router: ""
             }
         ]
     },
@@ -143,17 +139,17 @@ export const adminList = [
             {
                 title: "展示位1",
                 state: "占用",
-                number: 0
+                number: 0, show: 0, router: ""
             },
             {
                 title: "展示位2",
                 state: "占用",
-                number: 1
+                number: 1, show: 0, router: ""
             },
             {
                 title: "展示位3",
                 state: "空闲",
-                number: 2
+                number: 2, show: 0, router: ""
             }
         ]
     },
@@ -164,18 +160,18 @@ export const adminList = [
             {
                 title: "展示位1",
                 state: "占用",
-                number: 0
+                number: 0, show: 0, router: ""
             },
             {
                 title: "展示位2",
                 state: "竞拍",
                 number: 1,
-                show: 1
+                show: 1, router: ""
             },
             {
                 title: "展示位3",
                 state: "竞拍",
-                number: 2
+                number: 2, show: 0, router: ""
             }
         ]
     },
@@ -186,17 +182,17 @@ export const adminList = [
             {
                 title: "展示位1",
                 state: "占用",
-                number: 0
+                number: 0, show: 0, router: ""
             },
             {
                 title: "展示位2",
                 state: "占用",
-                number: 1
+                number: 1, show: 0, router: ""
             },
             {
                 title: "展示位3",
                 state: "空闲",
-                number: 2
+                number: 2, show: 0, router: ""
             }
         ]
     },
@@ -207,17 +203,17 @@ export const adminList = [
             {
                 title: "展示位1",
                 state: "空闲",
-                number: 0
+                number: 0, show: 0, router: ""
             },
             {
                 title: "展示位2",
                 state: "空闲",
-                number: 1
+                number: 1, show: 0, router: ""
             },
             {
                 title: "展示位3",
                 state: "空闲",
-                number: 2
+                number: 2, show: 0, router: ""
             }
         ]
     },
@@ -228,17 +224,17 @@ export const adminList = [
             {
                 title: "展示位1",
                 state: "空闲",
-                number: 0
+                number: 0, show: 0, router: ""
             },
             {
                 title: "展示位2",
                 state: "空闲",
-                number: 1
+                number: 1, show: 0, router: ""
             },
             {
                 title: "展示位3",
                 state: "空闲",
-                number: 2
+                number: 2, show: 0, router: ""
             }
         ]
     },
@@ -249,41 +245,33 @@ export const adminList = [
             {
                 title: "展示位1",
                 state: "占用",
-                number: 0
+                number: 0, show: 0, router: ""
             },
-            {
-                title: "展示位2",
-                state: "空闲",
-                number: 1
-            },
-            {
-                title: "展示位3",
-                state: "空闲",
-                number: 2
-            }
+            { title: "展示位2", state: "空闲", number: 1, show: 0, router: "" },
+            { title: "展示位3", state: "空闲", number: 2, show: 0, router: "" }
         ]
     },
 ]
-  
+
 export const PersonalList = [
     {
         title: "我的资料",
         number: 0,
         children: [
-            {title: "基本资料",state: "占用",number: 0, show: 0},
-            {title: "密码管理",state: "占用",number: 0, show: 0},
-            {title: "个人认证",state: "占用",number: 0, show: 0},
-            {title: "企业认证",state: "占用",number: 0, show: 0},
+            { title: "基本资料", number: 0, show: 1, router: "Datum1" },
+            { title: "密码管理", number: 0, show: 0, router: "Datum2" },
+            { title: "个人认证", number: 0, show: 0, router: "Datum3" },
+            { title: "企业认证", number: 0, show: 0, router: "Datum4" },
         ]
     },
     {
         title: "我的账户",
         number: 0,
         children: [
-            {title: "智汇币",state: "占用",number: 0, show: 0},
-            {title: "智汇豆",state: "占用",number: 0, show: 0},
-            {title: "直播红包",state: "占用",number: 0, show: 0},
-            {title: "竞赛红包",state: "占用",number: 0, show: 0},
+            { title: "智汇币", number: 0, show: 0, router: "AccountHome1" },
+            { title: "智汇豆", number: 0, show: 0, router: "AccountHome2" },
+            { title: "直播红包", number: 0, show: 0, router: "AccountHome3" },
+            { title: "竞赛红包", number: 0, show: 0, router: "AccountHome4" },
         ]
     },
     {
@@ -300,18 +288,18 @@ export const PersonalList = [
         title: "历史发布",
         number: 0,
         children: [
-            {title: "我的合作",state: "占用",number: 0, show: 0},
-            {title: "我的活动",state: "占用",number: 0, show: 0},
-            {title: "我的直播",state: "占用",number: 0, show: 0},
-            {title: "我的主页",state: "占用",number: 0, show: 0},
+            { title: "我的合作", number: 0, show: 0, router: "" },
+            { title: "我的活动", number: 0, show: 0, router: "" },
+            { title: "我的直播", number: 0, show: 0, router: "" },
+            { title: "我的主页", number: 0, show: 0, router: "" },
         ]
     },
     {
         title: "我的订阅",
         number: 0,
         children: [
-            {title: "订阅详情",state: "占用",number: 0, show: 0},
-            {title: "订阅设置",state: "占用",number: 0, show: 0},
+            { title: "订阅详情", number: 0, show: 0, router: "" },
+            { title: "订阅设置", number: 0, show: 0, router: "" },
         ]
     },
     {
@@ -348,11 +336,11 @@ export const PersonalList = [
         title: "我的消息",
         number: 0,
         children: [
-            {title: "系统消息",state: "占用",number: 0, show: 1},
-            {title: "审核通知",state: "占用",number: 6, show: 0},
-            {title: "竞拍变更",state: "占用",number: 0, show: 0},
-            {title: "中奖通知",state: "占用",number: 0, show: 0},
-            {title: "评论消息",state: "占用",number: 1, show: 0},
+            { title: "系统消息", number: 0, show: 0, router: "Msg1" },
+            { title: "审核通知", number: 6, show: 0, router: "" },
+            { title: "竞拍变更", number: 0, show: 0, router: "" },
+            { title: "中奖通知", number: 0, show: 0, router: "" },
+            { title: "评论消息", number: 1, show: 0, router: "" },
         ]
     }
 ]

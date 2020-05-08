@@ -1042,9 +1042,10 @@
 }
 
 .jubao_pl_com_sy {
-  &.light{
-    padding 20px 40px
+  &.light {
+    padding: 20px 40px;
   }
+
   .title {
     background-color: #999;
     color: #fff;
@@ -1069,7 +1070,7 @@
 
   .p {
     font-size: 12px;
-    line-height :20px
+    line-height: 20px;
   }
 
   .pl_submit {
@@ -1454,7 +1455,7 @@
     background-color: #999;
     padding: 10px 0;
     color: #fff;
-    margin-bottom :16px
+    margin-bottom: 16px;
   }
 
   .el-row {
@@ -1483,10 +1484,11 @@
   }
 
   .item {
-    .el-row:last-child{
-      margin-bottom :10px;
+    .el-row:last-child {
+      margin-bottom: 10px;
     }
-    .active {
+
+    .active, :hover {
       background-color: #01b0b7;
 
       .c_span {
@@ -1737,9 +1739,10 @@
   }
 
   .btn_p5 {
-    &.hidden{
-      visibility hidden
+    &.hidden {
+      visibility: hidden;
     }
+
     margin-left: 20px;
   }
 }
@@ -1839,36 +1842,188 @@
     }
   }
 }
+
 .person_info_crad_sy {
   padding: 20px 30px;
+
   &.mt20 {
     margin: 20px 0;
   }
+
   .left {
     width: 60px;
   }
+
   .right {
     width: 94%;
+
     .part1_p {
       .l {
         padding-top: 10px;
         font-size: 16px;
       }
+
       border-bottom: 1px solid #ccc;
       border-radius: 0;
       padding: 6px 0px 10px 20px;
     }
+
     .part2_p {
       color: #666;
+
       .l {
         padding: 10px 20px;
+
         p {
           line-height: 26px;
         }
       }
+
       .r {
         padding-top: 70px;
       }
     }
+  }
+}
+
+.part_text_com_sy {
+  padding: 10px 30px 20px;
+  margin-top: 10px;
+
+  .title_l {
+    padding-bottom: 6px;
+    padding-left: 20px;
+    border-bottom: 1px solid #999;
+
+    .left_c {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  .el-row {
+    padding: 10px 20px 10px;
+    line-height: 26px;
+
+    .col_title {
+      font-weight: bold;
+    }
+  }
+}
+
+.info_init_sy {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: #666;
+
+  .per_title {
+    font-size: 16px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 6px;
+  }
+
+  .info_init {
+    padding: 20px 0 10px;
+  }
+
+  .p {
+    line-height: 22px;
+  }
+}
+
+.submit_btn_sy {
+  text-align: center;
+
+  &.mbt {
+    margin-top: 20px;
+    padding: 30px 30px 40px;
+    border-top: 2px dotted #aaa;
+  }
+
+  button {
+    background-color: #01b0b7;
+    padding: 4px 26px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 20px;
+  }
+}
+.acc_table_com_sy {
+  .has-gutter {
+    th {
+      background-color: #999;
+      color: #fff;
+    }
+  }
+  .link{
+    color: #0027FF;
+    cursor: pointer;
+  }
+}
+.title_return_com_sy {
+  padding: 6px 0;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #ccc;
+  .left {
+    font-size: 16px;
+    color: #0d15e5;
+    .r0 {
+      margin: 0 8px;
+      font-weight: bold;
+    }
+    .r1 {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+.acc_info_com_sy {
+  border: 2px dotted #ccc;
+  padding: 20px 0;
+  color: #666;
+  & > div {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 6px 30px;
+    .title {
+      margin-bottom: 10px;
+    }
+    p {
+      padding-left: 20px;
+      margin-bottom: 6px;
+    }
+    .btn_p3{
+      background-color: #eee;
+    }
+  }
+  .a_l {
+    border-right: 2px dotted #ccc;
+    .t_center{
+      padding-top: 30px;
+    }
+  }
+  .a_r {
+    .t_center{
+      padding-top: 50px;
+    }
+  }
+}
+.public_from_com_sy{
+  line-height: 32px;
+  color: #666;
+  p.info{
+    line-height: 20px;
+    font-size: 12px;
+    color: #999;
+  }
+  .point_red{
+    padding-right: 6px;
+  }
+  .el-row{
+    margin-bottom: 10px;
+  }
+  .el-cascader{
+    width: 100%;
   }
 }

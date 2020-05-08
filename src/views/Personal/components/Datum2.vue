@@ -1,0 +1,66 @@
+<template>
+  <div class="person_right">
+    <div class="info_init_sy bs">
+      <div class="per_title">基本信息</div>
+      <el-row class="info_init">
+        <el-col :span="2" :offset="1"><img :src="require('@assets/img/xiaoya.png')" alt /></el-col>
+        <el-col :span="3">
+          <div class="p">昵称：零度</div>
+          <div class="p">性别：男 </div>
+        </el-col>
+        <el-col :span="3">
+          <div class="p">主体：个人</div>
+          <div class="p">地址：郑州市</div>
+        </el-col>
+      </el-row>
+    </div>
+    <div class="datum_body bs">
+      <div class="form_data">
+        <el-row>
+          <el-col :span="1" class="t_right point_red">*</el-col>
+          <el-col :span="3">当前密码：</el-col>
+          <el-col :span="6">
+            <el-input v-model="value1"></el-input>
+          </el-col>
+          <el-col :span="6" :offset="1">
+            <div class="link">忘记密码</div>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="1" class="t_right point_red">*</el-col>
+          <el-col :span="3">输入新密码：</el-col>
+          <el-col :span="6">
+            <el-input v-model="value2"></el-input>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="1" class="t_right point_red">*</el-col>
+          <el-col :span="3">确认新密码：</el-col>
+          <el-col :span="6">
+            <el-input v-model="value3"></el-input>
+          </el-col>
+        </el-row>
+      </div>
+       <div class="submit_btn_sy mbt">
+        <el-button>保存</el-button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      value2: "",
+      value3: "",
+      value4: "",
+      value5: "",
+      value1: "",
+    };
+  },
+  methods: {}
+};
+</script>
+<style lang="less">
+</style>

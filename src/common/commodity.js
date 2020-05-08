@@ -95,7 +95,7 @@ export const tableApply = [
             "合作意向合作意向合作意向合作意向合作意向合作意向合作意向合作意向",
         check: "查看并审核",
         state: "未审核",
-        color: "#999"   
+        color: "#999"
     },
     {
         name: "零度",
@@ -113,5 +113,63 @@ export const tableApply = [
         check: "查看",
         state: "未通过",
         color: "#A70000"
+    }
+]
+
+
+export const AccountHomeData1 = [
+    {
+        date: "2019-08-11 10:00:02",
+        type: "竞拍展示位扣除",
+        num: "-20",
+        unit: "智汇币"
+    },
+    {
+        date: "2019-08-11 10:00:02",
+        type: "充值",
+        num: "+1万",
+        unit: "智汇币"
+    },
+    {
+        date: "2019-08-11 10:00:02",
+        type: "发布合作",
+        num: "+10",
+        unit: "智汇币"
+    }
+]
+
+export const AccountHomeData2 = [
+    {
+        date: "2019-08-11 10:00:02",
+        type: "一级粉丝充值获得",
+        num: "+20",
+        unit: "智汇币"
+    },
+    {
+        date: "2019-08-11 10:00:02",
+        type: "智汇豆提现",
+        num: "-5",
+        unit: "智汇币"
+    },
+    {
+        date: "2019-08-11 10:00:02",
+        type: "智汇豆提现",
+        num: "-10",
+        unit: "智汇币"
+    }
+]
+
+export const AccountHomeData3 = [
+    {
+        date: "2019-08-11 10:00:02",
+        type: "直播红包",
+        num: "+5",
+        unit: "元"
+    },
+    {
+        date: "2019-08-11 10:00:02",
+        type: "提现记录",
+        num: "-5",
+        unit: "元"
     }
 ]

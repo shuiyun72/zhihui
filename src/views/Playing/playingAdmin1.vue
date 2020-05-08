@@ -34,7 +34,7 @@
           <el-row
             v-for="(tc,ic) in t.children"
             :key="i+ic+'tc'"
-            @click.native="childHandle"
+            @click.native="childHandle(i,ic)"
             :class="{'active':tc.show}"
           >
             <el-col :span="6" :offset="6">
@@ -160,9 +160,14 @@ export default {
         ? (this.adminList[i].children = this.adminListOld[i].children)
         : (this.adminList[i].children = []);
     },
-    childHandle(e) {
-      console.log(e);
-      console.log("sss");
+    childHandle(i,ic) {
+      console.log(i,ic)
+      _.map(this.adminList,item=>{
+        _.map(item.children,child=>{
+          child.show = 0;
+        })
+      })
+      this.adminList[i].children[ic].show = 1;
     }
   }
 };
