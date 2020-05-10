@@ -1,28 +1,27 @@
 <template>
-  <div>
-    <div id="header">
-      <HeaderTop></HeaderTop>
-      <HeaderSearch></HeaderSearch>
-    </div>
-    <div class="bg_img_top">
-      <!-- <div class="click">点击竞价此展示位</div> -->
-    </div>
-    <Side></Side>
+  <div class="tail_cargo">
+    <div class="bg2_img_top"></div>
     <div class="commodity">
       <div class="commodity_main">
         <div class="commodity_main_w_box"></div>
         <div class="box_item">
           <div class="d_inflex">
-            <SmallGoods :smallGoodsItem="item" v-for="(item,index) in commodityList" :key="index"></SmallGoods>
+            <SmallGoods
+              :smallGoodsItem="item"
+              v-for="(item,index) in commodityList"
+              :key="index"
+              class="bs"
+            ></SmallGoods>
           </div>
         </div>
       </div>
     </div>
     <div class="title_Progress">
       <div class="left">
-        <el-breadcrumb separator=">">
-          <el-breadcrumb-item :to="{ path: '/' }">尾货捡漏</el-breadcrumb-item>
-          <el-breadcrumb-item>综合布线系统</el-breadcrumb-item>
+        <el-breadcrumb separator=">" >
+          <el-breadcrumb-item :to="{ path: '/tailCargo' }">尾货捡漏</el-breadcrumb-item>
+          <el-breadcrumb-item @click.native="handleScreen(-1,{})" v-if="srceenActiveN > -1"><span class="breadcrumb_text">综合布线系统</span></el-breadcrumb-item>
+          <el-breadcrumb-item>{{srceenActiveN > -1 ? srceenActive.text :'综合布线系统'}}</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
       <div class="right">
@@ -41,36 +40,18 @@
         </div>
       </div>
     </div>
-    <div class="text_info">
+    <div class="text_info wm jcs bs">
       <div class="left">综合布线系统：</div>
       <div class="right">
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>室内外光</span>
-        <span>网络数据/语音模块产品</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
-        <span>网络数据</span>
+        <span
+          v-for="(t,i) in DataFor(10,[{text:'室内外光'},{text:'网络数据/语音模块产品'},{text:'综合布线工具产品'}])"
+          :key="i+'s'"
+          @click="handleScreen(i,t)"
+          :class="{'active':srceenActiveN == i}"
+        >{{t.text}}</span>
       </div>
     </div>
-    <div class="search_btn">
+    <div class="search_btn wm">
       <el-button-group>
         <el-button class="is_active">综合</el-button>
         <el-button>最近</el-button>
@@ -94,18 +75,15 @@
         <i class="el-icon-arrow-right is_active"></i>
       </div>
     </div>
-
-    <div id="home">
-      <div class="part3_body">
-        <BigGoods
-          :bigGoodsItem="item"
-          v-for="(item,index) in part3List"
-          :key="index"
-          class="bottom10"
-        ></BigGoods>
-      </div>
-      <div class="link_more">加载更多</div>
+    <div class="part3_body jcs wm">
+      <BigGoods
+        :bigGoodsItem="item"
+        v-for="(item,index) in part3List"
+        :key="index"
+        class="bottom10"
+      ></BigGoods>
     </div>
+    <div class="link_more wm">加载更多</div>
   </div>
 </template>
 
@@ -121,7 +99,9 @@ export default {
   data() {
     return {
       commodityList: Commodity.HomeCommodity,
-      part3List: Commodity.Part3List
+      part3List: Commodity.Part3List,
+      srceenActiveN:-1,
+      srceenActive:{}
     };
   },
   components: {
@@ -131,7 +111,21 @@ export default {
     SmallGoods,
     BigGoods
   },
-  methods: {}
+  computed:{
+    isScreen(){
+      if(JSON.stringify(this.srceenActive) == "{}"){
+        return false
+      }else{
+        return true
+      }
+    }
+  },
+  methods: {
+    handleScreen(i,t){
+      this.srceenActiveN = i;
+      this.srceenActive = t;
+    }
+  }
 };
 </script>
 

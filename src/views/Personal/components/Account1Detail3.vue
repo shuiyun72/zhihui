@@ -52,34 +52,13 @@
 </template>
 
 <script>
+import { addressList2 } from "@const";
 export default {
   components: {},
   data() {
     return {
       value1: "",
-      addressList:[{
-        value: 'henansheng',
-        label: '河南省',
-        children: [{
-          value: 'zhengzhou',
-          label: '郑州',
-          children:[
-            {value: 'jinshui', label: '金水区'},
-            {value: 'zhongyuan', label: '中原区'},
-          ]
-        },{
-          value: 'xuchang',
-          label: '许昌'
-        }]
-      },
-      {
-        value: 'heibeisheng',
-        label: '河北省',
-        children: [{
-          value: 'beijing',
-          label: '北京',
-        }]
-      }],
+      addressList:addressList2,
       addressModel:[],
     };
   },

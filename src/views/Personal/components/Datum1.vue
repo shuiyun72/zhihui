@@ -129,6 +129,7 @@
 </template>
 
 <script>
+import { addressList1 } from "@const";
 export default {
   data() {
     return {
@@ -142,32 +143,7 @@ export default {
       value4: "",
       value5: "",
       value6: "",
-      addressList: [
-        {
-          value: "henansheng",
-          label: "河南省",
-          children: [
-            {
-              value: "zhengzhou",
-              label: "郑州"
-            },
-            {
-              value: "xuchang",
-              label: "许昌"
-            }
-          ]
-        },
-        {
-          value: "heibeisheng",
-          label: "河北省",
-          children: [
-            {
-              value: "beijing",
-              label: "北京"
-            }
-          ]
-        }
-      ],
+      addressList: addressList1,
       addressModel: []
     };
   },

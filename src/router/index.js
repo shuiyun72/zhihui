@@ -17,7 +17,7 @@ import project from "./components/project";
 
 Vue.use(VueRouter)
 
-const routes = [  
+const routes = [
   {
     path: '/',
     redirect: '/home',
@@ -135,39 +135,36 @@ const routes = [
         name: 'tailCargoHome',
         component: (res) => require(['@views/TailCargo/tailCargoHome.vue'], res)
       },
+      {
+        path: '/tailCargo/screen',
+        name: 'tailCargoScreen',
+        component: (res) => require(['@views/TailCargo/tailCargoScreen.vue'], res)
+      },
+      {
+        path: '/tailCargo/detial',
+        name: 'tailCargoDetial',
+        component: (res) => require(['@views/TailCargo/tailCargoDetial.vue'], res)
+      },
     ]
   },
   { //智汇商城
     path: '/product',
     name: 'product',
     component: (res) => require(['@views/Product'], res),
-    redirect: '/product/home',
-    children:[
-      {
-        path: '/product/home',
-        name: 'productHome',
-        component: (res) => require(['@views/Product/productHome.vue'], res)
-      },
-      {
-        path: '/product/detial',
-        name: 'productDetial',
-        component: (res) => require(['@views/Product/productDetial.vue'], res)
-      },
-      {
-        path: '/product/screen',
-        name: 'productScreen',
-        component: (res) => require(['@views/Product/productScreen.vue'], res)
-      },
+    redirect: '/home/home',
+    children: [
+
+
     ]
   },
-  loginRouter, 
-  voteRouter,  
-  enterprise,  
-  expert,   
-  crowds, 
+  loginRouter,
+  voteRouter,
+  enterprise,
+  expert,
+  crowds,
   lightCurrent,
   project
-  
+
 ]
 
 const router = new VueRouter({

@@ -4,6 +4,7 @@
       <HeaderTop></HeaderTop>
       <HeaderSearch></HeaderSearch>
     </div>
+    <HeaderNav :HeaderNav="'投票频道'"></HeaderNav>
     <div id="vote">
       <router-view></router-view>
     </div>

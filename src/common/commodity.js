@@ -143,19 +143,19 @@ export const AccountHomeData2 = [
         date: "2019-08-11 10:00:02",
         type: "一级粉丝充值获得",
         num: "+20",
-        unit: "智汇币"
+        unit: "智汇豆"
     },
     {
         date: "2019-08-11 10:00:02",
         type: "智汇豆提现",
         num: "-5",
-        unit: "智汇币"
+        unit: "智汇豆"
     },
     {
         date: "2019-08-11 10:00:02",
         type: "智汇豆提现",
         num: "-10",
-        unit: "智汇币"
+        unit: "智汇豆"
     }
 ]
 

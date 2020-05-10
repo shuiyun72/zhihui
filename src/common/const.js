@@ -271,17 +271,15 @@ export const PersonalList = [
             { title: "智汇币", number: 0, show: 0, router: "AccountHome1" },
             { title: "智汇豆", number: 0, show: 0, router: "AccountHome2" },
             { title: "直播红包", number: 0, show: 0, router: "AccountHome3" },
-            { title: "竞赛红包", number: 0, show: 0, router: "AccountHome4" },
+            { title: "竞赛红包", number: 0, show: 0, router: "AccountHome3" },
         ]
     },
     {
         title: "我的团队",
         number: 0,
         children: [
-            {title: "我的团队",number: 0, show: 0, router: "Group1"},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            { title: "我的团队", number: 0, show: 0, router: "Group1" },
+
         ]
     },
     {
@@ -306,30 +304,21 @@ export const PersonalList = [
         title: "我的竞赛",
         number: 0,
         children: [
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            { title: "我的竞赛", number: 0, show: 0, router: "Player" },
         ]
     },
     {
         title: "采购订单",
         number: 0,
         children: [
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
+
         ]
     },
     {
         title: "卖家中心",
         number: 0,
         children: [
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
+
         ]
     },
     {
@@ -338,9 +327,61 @@ export const PersonalList = [
         children: [
             { title: "系统消息", number: 0, show: 0, router: "Msg1" },
             { title: "审核通知", number: 6, show: 0, router: "Msg2" },
-            { title: "竞拍变更", number: 0, show: 0, router: "Msg3" },
-            { title: "中奖通知", number: 0, show: 0, router: "Msg4" },
-            { title: "评论消息", number: 1, show: 0, router: "" },
+            { title: "竞拍变更", number: 3, show: 0, router: "Msg3" },
+            { title: "中奖通知", number: 1, show: 0, router: "Msg4" },
+            { title: "评论消息", number: 15, show: 0, router: "Msg5" },
         ]
     }
 ]
+
+
+export const addressList1 = [
+    {
+        value: "henansheng",
+        label: "河南省",
+        children: [
+            {
+                value: "zhengzhou",
+                label: "郑州"
+            },
+            {
+                value: "xuchang",
+                label: "许昌"
+            }
+        ]
+    },
+    {
+        value: "heibeisheng",
+        label: "河北省",
+        children: [
+            {
+                value: "beijing",
+                label: "北京"
+            }
+        ]
+    }
+]
+
+export const addressList2 = [{
+    value: 'henansheng',
+    label: '河南省',
+    children: [{
+        value: 'zhengzhou',
+        label: '郑州',
+        children: [
+            { value: 'jinshui', label: '金水区' },
+            { value: 'zhongyuan', label: '中原区' },
+        ]
+    }, {
+        value: 'xuchang',
+        label: '许昌'
+    }]
+},
+{
+    value: 'heibeisheng',
+    label: '河北省',
+    children: [{
+        value: 'beijing',
+        label: '北京',
+    }]
+}]

@@ -1,10 +1,15 @@
 <template>
-  <div id="home">
-    <div class="part1">
+  <div class="tail_cargo">
+    <div class="part1 jcs wm">
       <EquListHome></EquListHome>
       <div class="part1_center">
-        <img :src="require('@assets/img/bigimg.png')" alt />
-        <GoodsLunboS class="m_top10">
+        <div class="img">
+          <router-link :to="{path:'/tailCargo/screen'}">
+            <img :src="require('@assets/img/bigimg.png')" alt />
+          </router-link>
+        </div>
+
+        <GoodsLunboS class="m_top14">
           <div class="d_flex">
             <SmallGoods :smallGoodsItem="item" v-for="(item,index) in commodityList" :key="index"></SmallGoods>
           </div>
@@ -12,15 +17,15 @@
       </div>
       <div class="part1_right">
         <SayHelloHome></SayHelloHome>
-        <div class="img first">
+        <div class="img_l">
           <img :src="require('@assets/img/shopimg.png')" alt />
         </div>
-        <div class="img">
+        <div class="img_l">
           <img :src="require('@assets/img/shopimg.png')" alt />
         </div>
       </div>
     </div>
-    <div class="part2">
+    <div class="part2 wm">
       <div class="part_title">
         <div class="text">推荐的品牌</div>
         <div class="share">
@@ -38,19 +43,19 @@
         </div>
       </div>
       <GoodsLunboS>
-        <div class="part2_body">
+        <div class="part2_body jcs">
           <div v-for="(item,index) in part2List" :key="index">
             <img :src="require('@assets/img/'+item.img)" alt />
           </div>
         </div>
       </GoodsLunboS>
     </div>
-    <div class="part3">
+    <div class="part3 wm">
       <div class="part_title">
         <div class="text">离我最近</div>
         <div class="link">更多...</div>
       </div>
-      <div class="part3_body">
+      <div class="part3_body jcs">
         <BigGoods
           :bigGoodsItem="item"
           v-for="(item,index) in part3List"
@@ -98,7 +103,6 @@ export default {
 </script>
 
 <style lang="less">
-.m_top10 {
-  margin-top: 14px;
-}
+
+
 </style>

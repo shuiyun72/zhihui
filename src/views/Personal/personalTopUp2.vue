@@ -26,7 +26,7 @@
         <div class="part_box bs part_box1">
           <div class="p_title">收款账户信息</div>
           <div class="msg_info">
-            <p>帐户名称：郑州智汇优库网络科技有限公司  </p>
+            <p>帐户名称：郑州智汇优库网络科技有限公司</p>
             <p>对公账号： 8888888888888888</p>
             <p>开户银行：郑州市广发银行花园路支行</p>
           </div>
@@ -48,17 +48,21 @@
         </div>
       </div>
     </div>
-        <el-dialog title="温馨提示" :visible.sync="afterPayDialog" width="320px" class="playing_dialog_com_sy bdra">
+    <el-dialog
+      title="温馨提示"
+      :visible.sync="afterPayDialog"
+      width="320px"
+      class="playing_dialog_com_sy bdra"
+    >
       <div class="after_pay">
         <p>工作人员核对完成后会在</p>
         <p>24小时内联系您，请您耐心等待</p>
-        <p> 如遇特殊情况请拨打400客服电话</p>
+        <p>如遇特殊情况请拨打400客服电话</p>
         <p>客服：400 1186 800</p>
         <div class="submit_btn_sy mbt">
-        <el-button class="pay" @click="afterPayDialog = false">返回</el-button>
+          <el-button class="pay" @click="afterPayDialog = false">返回</el-button>
+        </div>
       </div>
-      </div>
-      
     </el-dialog>
   </div>
 </template>
@@ -78,11 +82,11 @@ export default {
   },
   data() {
     return {
-      value1:"",
-      value2:"",
-      value3:"",
-      value4:"",
-      afterPayDialog:false
+      value1: "",
+      value2: "",
+      value3: "",
+      value4: "",
+      afterPayDialog: false
     };
   },
   mounted() {},

@@ -200,6 +200,7 @@
 <script>
 import Side from "@components/Side.vue";
 import { tableApply } from "@/common/commodity";
+import { addressList1 } from "@const";
 export default {
   components: { Side },
   methods:{
@@ -209,25 +210,7 @@ export default {
   },
   data() {
     return {
-      addressList:[{
-        value: 'henansheng',
-        label: '河南省',
-        children: [{
-          value: 'zhengzhou',
-          label: '郑州'
-        },{
-          value: 'xuchang',
-          label: '许昌'
-        }]
-      },
-      {
-        value: 'heibeisheng',
-        label: '河北省',
-        children: [{
-          value: 'beijing',
-          label: '北京',
-        }]
-      }],
+      addressList:addressList1,
       addressModel:[],
       options: [
         {

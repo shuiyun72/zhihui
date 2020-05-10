@@ -48,6 +48,7 @@ import HeaderTop from "@components/Header/HeaderTop.vue";
 import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
+import _ from "lodash";
 import { PersonalList } from "@const";
 import {
   AccountHomeData1,
@@ -71,15 +72,22 @@ import Account1Detail3 from "./components/Account1Detail3.vue";
 import Account2 from "./components/Account2.vue";
 import Account3 from "./components/Account3.vue";
 import Account4 from "./components/Account4.vue";
+//我的团队
 import Group1 from "./components/Group1.vue";
+//历史发布
 import Records1 from "./components/Records1.vue";
 import Records2 from "./components/Records2.vue";
 import Records3 from "./components/Records3.vue";
+//我的竞赛
+import Player from "./components/Player.vue";
+import PlayerAdd from "./components/PlayerAdd.vue";
+//我的消息
 import Msg1 from "./components/Msg1.vue";
 import Msg2 from "./components/Msg2.vue";
 import Msg3 from "./components/Msg3.vue";
 import Msg4 from "./components/Msg4.vue";
-import _ from "lodash";
+import Msg5 from "./components/Msg5.vue";
+
 export default {
   components: {
     HeaderTop,
@@ -105,10 +113,13 @@ export default {
     Records1,
     Records2,
     Records3,
+    Player,
+    PlayerAdd,
     Msg1,
     Msg2,
     Msg3,
-    Msg4
+    Msg4,
+    Msg5
   },
   data() {
     return {

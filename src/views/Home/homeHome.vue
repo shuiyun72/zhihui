@@ -74,9 +74,9 @@
           <img :src="require('@assets/img/shopimg.png')" alt />
         </div>
         <div class="right">
-          <GoodsLunboS class="m_top10">
+          <GoodsLunboS>
             <div class="d_flex">
-              <SmallGoods :smallGoodsItem="item" v-for="(item,index) in commodityList" :key="index"></SmallGoods>
+              <SmallGoods :smallGoodsItem="item" v-for="(item,index) in DataFor(5,[commodityList[0]])" :key="index"></SmallGoods>
             </div>
           </GoodsLunboS>
         </div>
@@ -94,7 +94,7 @@
           <div class="link">更多...</div>
         </div>
       </div>
-      <div class="h2_part7_box">
+      <div class="h2_part7_box wm">
         <div class="table_msg_e_address">
           <div class="pro">
             <span class="el-icon-arrow-up"></span>
@@ -370,172 +370,5 @@ export default {
 };
 </script>
 <style lang="less">
-#home2 {
-  width: 100%;
-  padding-bottom: 40px;
-  .h2_part11 {
-    width: 1200px;
-    margin: 0 auto;
-    .h2_part11_box {
-      .part11_1 {
-        display: flex;
-        justify-content: space-between;
-        .table_wuyu_com_sy {
-          .el-row {
-            padding: 2px 0 8px;
-          }
-          width: 620px;
-          box-sizing: border-box;
-          padding: 30px 40px 30px 20px;
-          font-size: 12px;
-          .iconfont {
-            color: #f00;
-            margin-right: 6px;
-          }
-        }
-      }
-    }
-    .h2_part11_item {
-      padding-top: 14px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      .bs {
-        width: 390px;
-        margin-bottom: 14px;
-      }
-    }
-  }
 
-  .h2_part9,
-  .h12_part9 {
-    .h2_part9_box {
-      width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0px 0 8px;
-      color: #333;
-      &.part10 {
-        .h2_part9_item {
-          width: 33%;
-          &:nth-child(n + 1):nth-child(-n + 8) {
-            margin-bottom: 10px;
-          }
-        }
-      }
-      &.part12 {
-        .h2_part9_item {
-          width: 390px;
-          &:nth-child(n + 1):nth-child(-n + 8) {
-            margin-bottom: 10px;
-          }
-          .box {
-            .title {
-              padding-top: 10px;
-            }
-            .info {
-              padding: 6px 0 10px;
-            }
-          }
-        }
-      }
-      .h2_part9_item {
-        width: 24%;
-        &:nth-child(n + 1):nth-child(-n + 8) {
-          margin-bottom: 12px;
-        }
-      }
-    }
-  }
-  .h2_part8a_box {
-    width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .img {
-      width: 227px;
-      margin-bottom: 14px;
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .h2_part8_box {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    color: #333;
-    .left {
-      width: 800px;
-    }
-    .right {
-      width: 386px;
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    }
-  }
-  .h2_part7 {
-    padding-bottom: 40px;
-    .link {
-      line-height: 20px;
-    }
-  }
-  .h2_part6 {
-    padding-top: 10px;
-    .shop {
-      width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      padding: 10px 0;
-      justify-content: space-between;
-      .left {
-        img {
-          width: 270px;
-          height: 125px;
-        }
-      }
-      .small_goods {
-        width: 220px;
-      }
-    }
-    .h2_part6_box {
-      width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      .left {
-        width: 300px;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
-        .img {
-          padding: 3px;
-          background-color: #fff;
-          img {
-            width: 294px;
-          }
-        }
-      }
-      .right {
-        width: 890px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        .bottom10:nth-child(-n + 3):nth-child(n + 1) {
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-  .text_right {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 20px;
-  }
-}
 </style>

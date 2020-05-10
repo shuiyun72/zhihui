@@ -6,6 +6,55 @@
   "description": "Travel项目图标",
   "glyphs": [
     {
+      "icon_id": "3863301",
+      "name": "柱形图",
+      "font_class": "zhuxingtu",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "1517784",
+      "name": "减",
+      "font_class": "jian",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "6536707",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "737441",
+      "name": "点",
+      "font_class": "dian2",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "1164943",
+      "name": "点",
+      "font_class": "dian3",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "14046404",
+      "name": "点",
+      "font_class": "dian4",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "4933869",
+      "name": "点",
+      "font_class": "dian1",
+      "unicode": "ec1e",
+      "unicode_decimal": 60446
+    },
+    {
       "icon_id": "8875676",
       "name": "微信",
       "font_class": "weixin1",

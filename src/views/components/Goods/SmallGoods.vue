@@ -36,21 +36,20 @@ export default {
 </script>
 <style lang="less">
 .small_goods {
-  display: flex;
-  width: 240px;
+  display: inline-flex;
   img {
-    width: 114px;
-    height: 85px;
+    width: 92px;
+    height: auto;
   }
   .info {
     margin-top: 16px;
     p {
       color: #666666;
-      font-size: 14px;
+      font-size: 12px;
       margin-bottom: 4px;
     }
     .detail {
-      width: 100px;
+      width: 90px;
       margin-top: 10px;
       display: flex;
       justify-content: space-between;
