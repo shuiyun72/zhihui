@@ -167,7 +167,7 @@
     border-radius: 0 20px 20px 0;
     left: 0;
     bottom: 100px;
-
+    cursor:pointer;
     &.green {
       color: #fff;
       background-color: #016017;
@@ -1949,6 +1949,7 @@
     border-radius: 20px;
   }
 }
+
 .acc_table_com_sy {
   .has-gutter {
     th {
@@ -1956,74 +1957,189 @@
       color: #fff;
     }
   }
-  .link{
+
+  .link {
     color: #0027FF;
     cursor: pointer;
   }
 }
+
 .title_return_com_sy {
   padding: 6px 0;
   margin-bottom: 6px;
   border-bottom: 1px solid #ccc;
+
   .left {
     font-size: 16px;
     color: #0d15e5;
+
     .r0 {
       margin: 0 8px;
       font-weight: bold;
     }
+
     .r1 {
       font-weight: bold;
       cursor: pointer;
     }
   }
 }
+
 .acc_info_com_sy {
   border: 2px dotted #ccc;
   padding: 20px 0;
   color: #666;
+
   & > div {
     width: 50%;
     box-sizing: border-box;
     padding: 0 0 6px 30px;
+
     .title {
       margin-bottom: 10px;
     }
+
     p {
       padding-left: 20px;
       margin-bottom: 6px;
     }
-    .btn_p3{
+
+    .btn_p3 {
       background-color: #eee;
     }
   }
+
   .a_l {
     border-right: 2px dotted #ccc;
-    .t_center{
+
+    .t_center {
       padding-top: 30px;
     }
   }
+
   .a_r {
-    .t_center{
+    .t_center {
       padding-top: 50px;
     }
   }
 }
-.public_from_com_sy{
+
+.public_from_com_sy {
   line-height: 32px;
   color: #666;
-  p.info{
+
+  p.info {
     line-height: 20px;
     font-size: 12px;
     color: #999;
   }
-  .point_red{
+
+  .point_red {
     padding-right: 6px;
   }
-  .el-row{
+
+  .el-row {
     margin-bottom: 10px;
   }
-  .el-cascader{
+
+  .el-cascader {
     width: 100%;
+  }
+}
+
+.pay_evm_com_sy {
+  width: 468px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  .item1 {
+    width: 220px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .box1 {
+      padding: 40px 0px 12px;
+
+      p {
+        line-height: 22px;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      img {
+        width: 126px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .box2 {
+      padding: 6px 0;
+      font-size: 16px;
+      vertical-align: middle;
+
+      .icon-zhifubao {
+        font-size: 36px;
+        color: #009bed;
+      }
+
+      .icon-weixin1 {
+        font-size: 30px;
+        color: #43af48;
+      }
+
+      i, span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      span {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .i1 {
+    background-color: #009bed;
+  }
+
+  .i2 {
+    background-color: #43af48;
+  }
+}
+
+.btn_selete_com_sy {
+  width: 90px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  display: inline-block;
+  background-color: #eee;
+  margin-right: 26px;
+  color: #999;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.active {
+    background-color: #baf9ae;
+    color: #03740c;
+    border: 1px solid #3cfb18;
+
+    i {
+      color: #3cfb18;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    line-height: 1;
+    font-size: 38px;
+    color: #aaa;
   }
 }

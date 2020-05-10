@@ -83,6 +83,16 @@ const routes = [
         path: '/personal/topUp',
         name: 'personalTopUp',
         component: (res) => require(['@views/Personal/personalTopUp.vue'], res)
+      },
+      {
+        path: '/personal/topUp2',
+        name: 'personalTopUp2',
+        component: (res) => require(['@views/Personal/personalTopUp2.vue'], res)
+      },
+      {
+        path: '/personal/Records4',
+        name: 'personalRecords4',
+        component: (res) => require(['@views/Personal/personalRecords4.vue'], res)
       }
     ]
   },

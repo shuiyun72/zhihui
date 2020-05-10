@@ -278,7 +278,7 @@ export const PersonalList = [
         title: "我的团队",
         number: 0,
         children: [
-            // {title: "基本资料",state: "占用",number: 0, show: 0},
+            {title: "我的团队",number: 0, show: 0, router: "Group1"},
             // {title: "基本资料",state: "占用",number: 0, show: 0},
             // {title: "基本资料",state: "占用",number: 0, show: 0},
             // {title: "基本资料",state: "占用",number: 0, show: 0},
@@ -288,10 +288,10 @@ export const PersonalList = [
         title: "历史发布",
         number: 0,
         children: [
-            { title: "我的合作", number: 0, show: 0, router: "" },
-            { title: "我的活动", number: 0, show: 0, router: "" },
-            { title: "我的直播", number: 0, show: 0, router: "" },
-            { title: "我的主页", number: 0, show: 0, router: "" },
+            { title: "我的合作", number: 0, show: 0, router: "Records1" },
+            { title: "我的活动", number: 0, show: 0, router: "Records2" },
+            { title: "我的直播", number: 0, show: 0, router: "Records3" },
+            { title: "我的主页", number: 0, show: 0, router: "Records4" },
         ]
     },
     {
@@ -337,9 +337,9 @@ export const PersonalList = [
         number: 0,
         children: [
             { title: "系统消息", number: 0, show: 0, router: "Msg1" },
-            { title: "审核通知", number: 6, show: 0, router: "" },
-            { title: "竞拍变更", number: 0, show: 0, router: "" },
-            { title: "中奖通知", number: 0, show: 0, router: "" },
+            { title: "审核通知", number: 6, show: 0, router: "Msg2" },
+            { title: "竞拍变更", number: 0, show: 0, router: "Msg3" },
+            { title: "中奖通知", number: 0, show: 0, router: "Msg4" },
             { title: "评论消息", number: 1, show: 0, router: "" },
         ]
     }

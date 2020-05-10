@@ -4,7 +4,18 @@
       <HeaderTop></HeaderTop>
       <HeaderSearch :HeaderSearch="'扬州海达线缆通信设备有限公司'"></HeaderSearch>
     </div>
-    <div class="bg_img_top"></div>
+    <div class="title_Progress records4_pro">
+      <div class="left">
+        <el-breadcrumb separator=">">
+          <el-breadcrumb-item :to="{ path: '/home' }">返回首页</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/personal' }">个人中心</el-breadcrumb-item>
+          <el-breadcrumb-item>编辑企业主页</el-breadcrumb-item>
+        </el-breadcrumb>
+      </div>
+    </div>
+    <div class="bg_img_top">
+      <div class="click">编辑图片</div>
+    </div>
     <HeaderNav :HeaderNav="'企业简介'" :HeaderNavList="topNavEnterprise"></HeaderNav>
     <Side></Side>
     <div id="enterp_msg">
@@ -29,9 +40,7 @@
             </div>
           </div>
           <div class="right">
-            <el-button class="turn_top">刷新置顶</el-button>
-            <br />
-            <el-button class="shouc">收藏该企业</el-button>
+            <el-button class="turn_top">编辑</el-button>
           </div>
         </div>
       </div>
@@ -140,4 +149,7 @@ export default {
 </script>
 
 <style lang="less">
+.records4_pro{
+  padding: 16px 0;
+}
 </style>

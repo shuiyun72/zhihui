@@ -56,7 +56,7 @@
           </div>
           <div class="p1 p_title bs">
             <div class="title">百度地图</div>
-            <img :src="require('@assets/img/r2.png')" alt />
+            <img :src="require('@assets/img/map1.jpg')" alt />
           </div>
         </div>
         <div class="msg4_right">

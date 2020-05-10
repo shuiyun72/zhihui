@@ -319,13 +319,13 @@
     .el-breadcrumb__item {
       &:last-child {
         .el-breadcrumb__inner {
-          font-size: 18px;
+          font-size: 16px;
           color: #0644eb;
         }
       }
 
       .el-breadcrumb__inner.is-link, .el-breadcrumb__separator {
-        font-size: 18px;
+        font-size: 16px;
         color: #0644eb;
       }
     }
@@ -1827,97 +1827,249 @@
     }
   }
 }
+
 .account_body {
   padding: 10px 40px;
   min-height: 800px;
   color: #666;
-  .none_title_table{
+
+  .none_title_table {
     padding: 20px 0;
   }
-  .home_title{
+
+  .home_title {
     padding: 10px 0 10px;
     font-size: 16px;
     border-bottom: 1px solid #999;
   }
-  .h_title{
+
+  .h_title {
     padding: 16px 0;
   }
-  .h_select{
-    .item{
+
+  .h_select {
+    .item {
       width: 33.3%;
       text-align: center;
       background: #ccc;
       padding: 4px 0;
-      &.active{
+
+      &.active {
         background-color: #F88F00;
         color: #fff;
       }
     }
   }
-  .zhb_info{
+
+  .zhb_info {
     padding: 20px 0 40px;
     border-bottom: 8px solid #eee;
-    .btn{
+
+    .btn {
       padding: 3px 30px;
       border-radius: 10px;
       background-color: #01B0B7;
       color: #fff;
       margin: 0 30px 0 60px;
     }
-    .link{
+
+    .link {
       font-size: 12px;
     }
-    .span{
+
+    .span {
       font-size: 24px;
       color: #f00;
       margin: 0 6px;
     }
   }
-  .per_next{
+
+  .per_next {
     line-height: 40px;
     padding: 30px 0 30px;
-    &.ptb{
+
+    &.ptb {
       border-top: 2px dotted #ccc;
       margin-top: 50px;
     }
-    .span{
-      color:#DE6F00;
+
+    .span {
+      color: #DE6F00;
       margin: 0 40px 0 10px;
     }
-    .btn_p5{
-      padding: 3px 20px ;
+
+    .btn_p5 {
+      padding: 3px 20px;
       margin-left: 20px;
       color: #fff;
       background-color: #01B0B7;
     }
-    .btn_p5_r{
-      padding: 6px 50px ;
+
+    .btn_p5_r {
+      padding: 6px 50px;
       font-size: 16px;
       border-radius: 20px;
       color: #fff;
       background-color: #01B0B7;
     }
   }
+
   .acc_title {
     padding: 6px 0;
     border-bottom: 1px solid #eee;
     margin-bottom: 6px;
+
     .a_l {
       font-size: 16px;
     }
   }
-  .acc_title_l{
+
+  .acc_title_l {
     padding: 6px 0;
     margin-bottom: 6px;
+
     .a_l {
       font-size: 16px;
     }
   }
+
   .pt {
     padding-top: 400px;
   }
-  .pt10_title{
+
+  .pt10_title {
     color: #666;
     padding: 40px 0 10px 0;
+  }
+}
+
+.personal_top_up.wm {
+  margin-top: 12px;
+  padding-bottom: 60px;
+  color: #666;
+
+  .mt.mbt {
+    margin-top: 50px;
+  }
+
+  .pay {
+    margin-left: 60px;
+  }
+
+  .p_l {
+    width: 289px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    .t_title {
+      font-size: 16px;
+      border-bottom: 1px solid #999;
+      padding: 10px 0 6px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .p1 {
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .p_r {
+    width: 889px;
+    box-sizing: border-box;
+    padding: 30px;
+
+    .el-row {
+      margin-bottom: 18px;
+
+      .t1 {
+        text-align: right;
+        padding-right: 6px;
+      }
+    }
+  }
+
+  .p_right {
+    width: 889px;
+    box-sizing: border-box;
+
+    .part_box {
+      padding: 0 0 30px;
+
+      &.part_box1 {
+        margin-bottom: 16px;
+      }
+
+      .p_title {
+        padding: 5px 20px;
+        background-color: #aaa;
+        color: #eee;
+      }
+
+      .msg_info {
+        width: 86%;
+        border: 1px solid #999;
+        border-radius: 10px;
+        margin: 20px auto 30px;
+        padding: 16px 30px;
+        background-color: #eee;
+
+        p {
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+      .msg_input{
+        width 40%;
+        margin 20px 0 30px 30px;
+        .el-input{
+          margin-bottom :10px;
+        }
+      }
+    }
+  }
+}
+.after_pay{
+  width: 80%;
+  margin: 30px auto 0;
+  p{
+    line-height: 28px;
+    text-align: center;
+    color: #777
+  }
+}
+.records_body {
+  padding: 30px 30px;
+  .g_title {
+    font-size: 16px;
+    border-bottom: 1px solid #999;
+    color: #666;
+    width: 110px;
+    padding-bottom: 6px;
+    display: inline-bolck;
+  }
+  .r_auido{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding :20px 40px 
+    .r_auido_item{
+      width:48%;
+      margin-bottom :26px
+      .box{
+        padding :10px 20px 20px;
+        p{
+          padding :6px 0 10px
+        }
+      }
+    }
+  }
+  .el-table{
+    margin-top: 6px;
+  }
+  th{
+    background-color: #eee;
+    color: #333;
   }
 }

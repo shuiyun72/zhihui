@@ -49,7 +49,11 @@ import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
 import { PersonalList } from "@const";
-import { AccountHomeData1 , AccountHomeData2 ,AccountHomeData3 } from "@/common/commodity";
+import {
+  AccountHomeData1,
+  AccountHomeData2,
+  AccountHomeData3
+} from "@/common/commodity";
 //我的资料
 import Datum1 from "./components/Datum1.vue";
 import Datum2 from "./components/Datum2.vue";
@@ -67,8 +71,15 @@ import Account1Detail3 from "./components/Account1Detail3.vue";
 import Account2 from "./components/Account2.vue";
 import Account3 from "./components/Account3.vue";
 import Account4 from "./components/Account4.vue";
-
+import Group1 from "./components/Group1.vue";
+import Records1 from "./components/Records1.vue";
+import Records2 from "./components/Records2.vue";
+import Records3 from "./components/Records3.vue";
 import Msg1 from "./components/Msg1.vue";
+import Msg2 from "./components/Msg2.vue";
+import Msg3 from "./components/Msg3.vue";
+import Msg4 from "./components/Msg4.vue";
+import _ from "lodash";
 export default {
   components: {
     HeaderTop,
@@ -90,20 +101,27 @@ export default {
     Account1Detail,
     Account1Detail2,
     Account1Detail3,
-    Msg1
+    Group1,
+    Records1,
+    Records2,
+    Records3,
+    Msg1,
+    Msg2,
+    Msg3,
+    Msg4
   },
   data() {
     return {
       PersonalList: _.cloneDeep(PersonalList),
       PersonalListOld: _.cloneDeep(PersonalList),
       rightComponent: "Account1Detail2",
-      AccountHomeData:[]
+      AccountHomeData: []
     };
   },
-  mounted(){
-    if(Boolean(sessionStorage.getItem("PersonalR"))){
-      let r = JSON.parse(sessionStorage.getItem("PersonalR"))
-      this.childHandle(r.i,r.ic,r.router);
+  mounted() {
+    if (sessionStorage.getItem("PersonalR")) {
+      let r = JSON.parse(sessionStorage.getItem("PersonalR"));
+      this.childHandle(r.i, r.ic, r.router);
     }
   },
   methods: {
@@ -118,18 +136,23 @@ export default {
           child.show = 0;
         });
       });
-      if(router == 'AccountHome1' ){
-        this.AccountHomeData = { data:AccountHomeData1 ,home:"h1"}
-      }else
-      if(router == 'AccountHome2' ){
-        this.AccountHomeData =  { data:AccountHomeData2 ,home:"h2"}
-      }else
-      if(router == 'AccountHome3' ){
-        this.AccountHomeData =  { data:AccountHomeData3 ,home:"h3"}
+      if (router == "AccountHome1") {
+        this.AccountHomeData = { data: AccountHomeData1, home: "h1" };
+      } else if (router == "AccountHome2") {
+        this.AccountHomeData = { data: AccountHomeData2, home: "h2" };
+      } else if (router == "AccountHome3") {
+        this.AccountHomeData = { data: AccountHomeData3, home: "h3" };
+      } else if (router == "Records4") {
+        this.$router.push({ path: "/personal/Records4" });
       }
-      this.PersonalList[i].children[ic].show = 1;
-      this.rightComponent = router;
-      sessionStorage.setItem("PersonalR",JSON.stringify({router:router,i:i,ic:ic}));
+      if (router != "Records4") {
+        this.PersonalList[i].children[ic].show = 1;
+        this.rightComponent = router;
+        sessionStorage.setItem(
+          "PersonalR",
+          JSON.stringify({ router: router, i: i, ic: ic })
+        );
+      }
     }
   }
 };

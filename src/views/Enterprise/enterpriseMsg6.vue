@@ -56,7 +56,7 @@
           </div>
           <div class="p1 p_title bs">
             <div class="title">百度地图</div>
-            <img :src="require('@assets/img/r2.png')" alt />
+            <img :src="require('@assets/img/map1.jpg')" alt />
           </div>
         </div>
         <div class="msg6_right">
@@ -88,14 +88,13 @@ import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
 import { topNavEnterpriseMsg as topNavEnterprise } from "@const";
-import PageNum from "@components/PageNum";
+
 export default {
   components: {
     HeaderTop,
     HeaderSearch,
     HeaderNav,
-    Side,
-    PageNum
+    Side
   },
   data() {
     return {
