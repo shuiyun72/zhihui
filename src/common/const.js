@@ -117,7 +117,7 @@ export const selfHelpList = [
 export const adminList = [
     {
         title: "网站首页",
-        number: 0,
+        number: 1,
         children: [
             { title: "展示位1", state: "占用", number: 0, show: 0, router: "" },
             {
@@ -134,7 +134,7 @@ export const adminList = [
     },
     {
         title: "项目频道",
-        number: 0,
+        number: 1,
         children: [
             {
                 title: "展示位1",
@@ -155,7 +155,7 @@ export const adminList = [
     },
     {
         title: "直播频道",
-        number: 0,
+        number: 1,
         children: [
             {
                 title: "展示位1",
@@ -177,7 +177,7 @@ export const adminList = [
     },
     {
         title: "合作频道",
-        number: 0,
+        number: 1,
         children: [
             {
                 title: "展示位1",
@@ -198,7 +198,7 @@ export const adminList = [
     },
     {
         title: "活动频道",
-        number: 0,
+        number: 1,
         children: [
             {
                 title: "展示位1",
@@ -219,7 +219,7 @@ export const adminList = [
     },
     {
         title: "社区频道",
-        number: 0,
+        number: 1,
         children: [
             {
                 title: "展示位1",
@@ -240,7 +240,7 @@ export const adminList = [
     },
     {
         title: "商城频道",
-        number: 0,
+        number: 1,
         children: [
             {
                 title: "展示位1",
@@ -256,7 +256,7 @@ export const adminList = [
 export const PersonalList = [
     {
         title: "我的资料",
-        number: 0,
+        number: 1,
         children: [
             { title: "基本资料", number: 0, show: 1, router: "Datum1" },
             { title: "密码管理", number: 0, show: 0, router: "Datum2" },
@@ -266,7 +266,7 @@ export const PersonalList = [
     },
     {
         title: "我的账户",
-        number: 0,
+        number: 1,
         children: [
             { title: "智汇币", number: 0, show: 0, router: "AccountHome1" },
             { title: "智汇豆", number: 0, show: 0, router: "AccountHome2" },
@@ -284,7 +284,7 @@ export const PersonalList = [
     },
     {
         title: "历史发布",
-        number: 0,
+        number: 1,
         children: [
             { title: "我的合作", number: 0, show: 0, router: "Records1" },
             { title: "我的活动", number: 0, show: 0, router: "Records2" },
@@ -294,7 +294,7 @@ export const PersonalList = [
     },
     {
         title: "我的订阅",
-        number: 0,
+        number: 1,
         children: [
             { title: "订阅详情", number: 0, show: 0, router: "" },
             { title: "订阅设置", number: 0, show: 0, router: "" },
@@ -323,7 +323,7 @@ export const PersonalList = [
     },
     {
         title: "我的消息",
-        number: 0,
+        number: 1,
         children: [
             { title: "系统消息", number: 0, show: 0, router: "Msg1" },
             { title: "审核通知", number: 6, show: 0, router: "Msg2" },

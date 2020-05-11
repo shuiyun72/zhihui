@@ -35,6 +35,35 @@ const routes = [
       },
     ]
   },
+  { //交易流程
+    path: '/steps',
+    name: 'steps',
+    component: (res) => require(['@views/Steps/steps.vue'], res),
+    redirect: '/steps1',
+    children: [
+      {
+        path: '/steps1',
+        name: 'steps1',
+        component: (res) => require(['@views/Steps/steps1.vue'], res)
+      },
+      {
+        path: '/steps2',
+        name: 'steps2',
+        component: (res) => require(['@views/Steps/steps2.vue'], res)
+      },
+      {
+        path: '/steps3',
+        name: 'steps3',
+        component: (res) => require(['@views/Steps/steps3.vue'], res)
+      },
+      {
+        path: '/steps4',
+        name: 'steps4',
+        component: (res) => require(['@views/Steps/steps4.vue'], res)
+      },
+      
+    ]
+  },
   { //关于我们
     path: '/aboutUs',
     name: 'aboutUs',
@@ -141,9 +170,9 @@ const routes = [
         component: (res) => require(['@views/TailCargo/tailCargoScreen.vue'], res)
       },
       {
-        path: '/tailCargo/detial',
-        name: 'tailCargoDetial',
-        component: (res) => require(['@views/TailCargo/tailCargoDetial.vue'], res)
+        path: '/tailCargo/detail',
+        name: 'tailCargoDetail',
+        component: (res) => require(['@views/TailCargo/tailCargoDetail.vue'], res)
       },
     ]
   },

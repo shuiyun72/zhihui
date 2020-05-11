@@ -21,7 +21,7 @@
           <el-row @click.native="parentHandle(i)">
             <el-col :span="6" class="t_right">
               <i
-                :class="adminList[i].children.length > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"
+                :class="t.number > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"
               ></i>
             </el-col>
             <el-col :span="6">
@@ -32,10 +32,12 @@
             </el-col>
           </el-row>
           <el-row
+            v-show="t.number"
             v-for="(tc,ic) in t.children"
             :key="i+ic+'tc'"
             @click.native="childHandle(i,ic)"
             :class="{'active':tc.show}"
+            class="child_nav"
           >
             <el-col :span="6" :offset="6">
               <span class="c_span">{{tc.title}}</span>
@@ -122,7 +124,6 @@ export default {
   data() {
     return {
       adminList: _.cloneDeep(adminList),
-      adminListOld: _.cloneDeep(adminList),
       value: "",
       tableData: [
         {
@@ -156,12 +157,9 @@ export default {
   },
   methods: {
     parentHandle(i) {
-      JSON.stringify(this.adminList[i].children) == "[]"
-        ? (this.adminList[i].children = this.adminListOld[i].children)
-        : (this.adminList[i].children = []);
+      this.adminList[i].number = this.adminList[i].number == 0 ? 1 : 0 ;
     },
     childHandle(i,ic) {
-      console.log(i,ic)
       _.map(this.adminList,item=>{
         _.map(item.children,child=>{
           child.show = 0;

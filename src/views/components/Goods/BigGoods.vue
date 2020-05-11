@@ -1,6 +1,8 @@
 <template>
   <div class="shop_show_item">
-    <img :src="require('@assets/commodity/'+bigGoodsItem.img)" alt />
+    <router-link :to="{path:'/tailCargo/detail'}">
+      <img :src="require('@assets/commodity/'+bigGoodsItem.img)" alt />
+    </router-link>
     <div class="info">
       <div class="name">{{bigGoodsItem.name}}</div>
       <div class="number">数量：{{bigGoodsItem.number}}</div>

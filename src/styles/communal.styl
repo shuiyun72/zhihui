@@ -265,7 +265,7 @@
   }
 
   button {
-    font-size :14px
+    font-size: 14px;
     padding: 6px 20px;
 
     &.is_active {
@@ -285,25 +285,29 @@
   color: #666;
   display: flex;
   box-sizing: border-box;
+
   .left {
     width: 100px;
-    line-height 20px
+    line-height: 20px;
   }
 
   .right {
-    width:1060px;
+    width: 1060px;
+
     span {
       display: inline-block;
-      line-height :20px
+      line-height: 20px;
       cursor: pointer;
-      margin-right:20px;
-      color :#999;
-      a{
-        color :#999;
+      margin-right: 20px;
+      color: #999;
+
+      a {
+        color: #999;
       }
+
       &.active {
         color: #fff;
-        background :#35C0C6
+        background: #35C0C6;
       }
     }
   }
@@ -317,12 +321,13 @@
   padding-top: 10px;
 
   .left {
-    .breadcrumb_text{
+    .breadcrumb_text {
       font-size: 16px;
       color: #0644eb;
-      font-weight:bold;
-      cursor:pointer;
+      font-weight: bold;
+      cursor: pointer;
     }
+
     .el-breadcrumb__item {
       &:last-child {
         .el-breadcrumb__inner {
@@ -347,6 +352,7 @@
 
 .commodity {
   padding: 20px 0;
+
   .box_item {
     width: 100%;
 
@@ -2715,21 +2721,26 @@
 #home2 {
   width: 100%;
   padding-bottom: 40px;
+
   .h2_part11 {
     width: 1200px;
     margin: 0 auto;
+
     .h2_part11_box {
       .part11_1 {
         display: flex;
         justify-content: space-between;
+
         .table_wuyu_com_sy {
           .el-row {
             padding: 2px 0 8px;
           }
+
           width: 620px;
           box-sizing: border-box;
           padding: 30px 40px 30px 20px;
           font-size: 12px;
+
           .iconfont {
             color: #f00;
             margin-right: 6px;
@@ -2737,11 +2748,13 @@
         }
       }
     }
+
     .h2_part11_item {
       padding-top: 14px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
       .bs {
         width: 390px;
         margin-bottom: 14px;
@@ -2749,8 +2762,7 @@
     }
   }
 
-  .h2_part9,
-  .h12_part9 {
+  .h2_part9, .h12_part9 {
     .h2_part9_box {
       width: 1200px;
       margin: 0 auto;
@@ -2759,38 +2771,47 @@
       flex-wrap: wrap;
       padding: 0px 0 8px;
       color: #333;
+
       &.part10 {
         .h2_part9_item {
           width: 33%;
+
           &:nth-child(n + 1):nth-child(-n + 8) {
             margin-bottom: 10px;
           }
         }
       }
+
       &.part12 {
         .h2_part9_item {
           width: 390px;
+
           &:nth-child(n + 1):nth-child(-n + 8) {
             margin-bottom: 10px;
           }
+
           .box {
             .title {
               padding-top: 10px;
             }
+
             .info {
               padding: 6px 0 10px;
             }
           }
         }
       }
+
       .h2_part9_item {
         width: 24%;
+
         &:nth-child(n + 1):nth-child(-n + 8) {
           margin-bottom: 12px;
         }
       }
     }
   }
+
   .h2_part8a_box {
     width: 1200px;
     margin: 0 auto;
@@ -2798,14 +2819,17 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     .img {
       width: 227px;
       margin-bottom: 14px;
+
       img {
         width: 100%;
       }
     }
   }
+
   .h2_part8_box {
     width: 1200px;
     margin: 0 auto;
@@ -2813,70 +2837,288 @@
     justify-content: space-between;
     padding: 8px 0;
     color: #333;
+
     .left {
       width: 800px;
     }
+
     .right {
       width: 386px;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     }
   }
+
   .h2_part7 {
     padding-bottom: 40px;
+
     .link {
       line-height: 20px;
     }
   }
+
   .h2_part6 {
     padding-top: 10px;
+
     .shop {
       width: 1200px;
       margin: 0 auto;
       display: flex;
       padding: 10px 0;
       justify-content: space-between;
+
       .left {
         img {
           width: 218px;
           height: 109px;
         }
       }
+
       .small_goods {
         width: 186px;
       }
     }
+
     .h2_part6_box {
       width: 1200px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+
       .left {
         width: 300px;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+
         .img {
           padding: 3px;
           background-color: #fff;
+
           img {
             width: 294px;
           }
         }
       }
+
       .right {
         width: 890px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
         .bottom10:nth-child(-n + 3):nth-child(n + 1) {
           margin-bottom: 10px;
         }
       }
     }
   }
+
   .text_right {
     width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column-reverse;
     padding-top: 20px;
+  }
+}
+
+// 手机二维码组件备用
+.phone_evm {
+  .evm {
+    font-size: 16px;
+    text-align: center;
+
+    span {
+      color: #03c1c9;
+      margin: 0 4px;
+    }
+  }
+
+  img {
+    width: 110px;
+  }
+}
+.tail_cargo_detail.wm {
+  margin-top: 10px;
+  padding-bottom: 60px;
+  .tail_handle {
+    padding: 20px 0;
+  }
+  .tail_detail2 {
+    padding-top: 0px;
+    .t_l {
+      width: 280px;
+      .title {
+        background-color: #eee;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+      }
+      .bottom10 {
+        margin-bottom: 10px;
+        width: 280px;
+        .name {
+          font-size: 14px;
+        }
+      }
+    }
+    .t_r {
+      width: 900px;
+      color: #666;
+      box-sizing: border-box;
+      padding:30px 40px;
+      .t{
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+      p{
+        line-height: 26px;
+        margin-bottom: 20px;
+      }
+      .img{
+        text-align: center;
+        margin-bottom: 10px;
+        img{
+          width: 60%;
+        }
+      }
+    }
+  }
+  .tail_detail {
+    .title {
+      background-color: #eee;
+      padding: 10px 20px;
+    }
+    .no_bw{
+      box-shadow:none;
+    }
+    .t_body_l {
+      .item {
+        .i {
+          width: 280px;
+          .name {
+            font-size: 14px;
+          }
+          .money_new {
+            font-size: 14px;
+          }
+          .money_old {
+            line-height: inherit;
+          }
+        }
+      }
+    }
+  }
+  .c_detial_commid {
+    padding-bottom: 20px;
+    background-color: #eee;
+    margin-bottom: 20px;
+  }
+
+  .c_detial {
+    width: 1200px;
+    margin: 0 auto;
+    color: #666;
+
+    .part1 {
+      display: flex;
+      justify-content: space-between;
+      .part_left {
+        width: 960px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed #666;
+        padding-bottom: 20px;
+
+        .left {
+          width: 450px;
+        }
+
+        .center {
+          width: 495px;
+
+          .title {
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 10px;
+            line-height: 28px;
+          }
+          .money_info {
+            background-color: #eee;
+            padding: 16px 20px;
+            margin-top: 14px;
+
+            .info {
+              line-height: 26px;
+            }
+
+            .money {
+              font-size: 18px;
+              color: #f00;
+              margin: 0 60px 0 14px;
+            }
+
+            .delete {
+              text-decoration: line-through;
+              color: #666;
+            }
+
+            .red2 {
+              margin-left: 36px;
+            }
+          }
+
+          .turn {
+            color: #666;
+            font-size: 12px;
+            padding: 6px 0;
+          }
+        }
+
+        .msg_info {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 26px;
+
+          p {
+            margin-bottom: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .part_right {
+      width: 225px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      box-sizing: border-box;
+
+      .seller_msg {
+        .title {
+          font-size: 16px;
+          background-color: #eee;
+          padding: 10px 20px;
+          color: #8d0101;
+        }
+        .detail_l {
+          padding: 0 4px;
+        }
+      }
+
+      .end_com {
+        width: 212px;
+        padding: 12px 0 10px;
+        border-top: 2px dashed #999;
+        margin: 0 auto;
+
+        .d_title {
+          font-size: 16px;
+          color: #8d0101;
+          padding-bottom: 10px;
+        }
+
+        .more {
+          color: #0644eb;
+          text-align: right;
+        }
+      }
+    }
   }
 }

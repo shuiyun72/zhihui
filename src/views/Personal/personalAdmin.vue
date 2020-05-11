@@ -13,7 +13,7 @@
           <el-row @click.native="parentHandle(i)">
             <el-col :span="6" class="t_right">
               <i
-                :class="PersonalList[i].children.length > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"
+                :class="t.number > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"
               ></i>
             </el-col>
             <el-col :span="6">
@@ -24,10 +24,12 @@
             </el-col>
           </el-row>
           <el-row
+            v-show="t.number"
             v-for="(tc,ic) in t.children"
             :key="i+ic+'tc'"
             @click.native="childHandle(i,ic,tc.router)"
             :class="{'active':tc.show}"
+            class="child_nav"
           >
             <el-col :span="6" :offset="6">
               <span class="c_span">{{tc.title}}</span>
@@ -124,7 +126,6 @@ export default {
   data() {
     return {
       PersonalList: _.cloneDeep(PersonalList),
-      PersonalListOld: _.cloneDeep(PersonalList),
       rightComponent: "Account1Detail2",
       AccountHomeData: []
     };
@@ -137,9 +138,7 @@ export default {
   },
   methods: {
     parentHandle(i) {
-      JSON.stringify(this.PersonalList[i].children) == "[]"
-        ? (this.PersonalList[i].children = this.PersonalListOld[i].children)
-        : (this.PersonalList[i].children = []);
+      this.PersonalList[i].number = this.PersonalList[i].number == 0 ? 1 : 0 ;
     },
     childHandle(i, ic, router) {
       _.map(this.PersonalList, item => {

@@ -32,7 +32,7 @@ export default {
 .c_d_img_lunbo {
   background-color: #fff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
-  width: 600px;
+  width: 450px;
   .big_img {
     width: 100%;
     img {
@@ -40,21 +40,23 @@ export default {
     }
   }
   .small_show {
-    padding: 22px 44px;
+    padding: 22px 26px;
     position: relative;
     .pre,
     .next {
       position: absolute;
       font-size: 20px;
-      height: 86px;
-      line-height: 86px;
+      height: 66px;
+      line-height: 66px;
       top: 50%;
-      margin-top: -43px;
+      margin-top: -33px;
       font-weight: bold;
       text-align: center;
-      width: 30px;
+      width: 24px;
       cursor: pointer;
-      background-color: #eee;
+      &:hover{
+        background-color: #eee;
+      }
     }
     .pre {
       left: 0;
@@ -67,6 +69,7 @@ export default {
         border: 2px solid transparent;
         border-radius: 6px;
         margin-right: 2px;
+        width: 92px;
         &.is_active {
           border: 2px solid #03c1c9;
         }
