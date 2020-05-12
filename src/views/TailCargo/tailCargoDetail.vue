@@ -119,7 +119,7 @@
       <div class="tail_handle wm">
         <el-row>
           <el-col :span="4" :offset="8" class="t_center">
-            <el-button class="blue_btn">联系卖家</el-button>
+            <el-button class="blue_btn" @click="sayDialog=true">联系卖家</el-button>
           </el-col>
           <el-col :span="4" class="t_center">
             <router-link :to="{path:'/steps'}">
@@ -187,18 +187,79 @@
           ></BigGoods>
         </div>
         <div class="t_r bs">
-          <div class="t">
-            商品详情：
-          </div>
-          <p class="tin">
-            商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述。
-          </p>
+          <div class="t">商品详情：</div>
+          <p
+            class="tin"
+          >商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述。</p>
           <div class="img" v-for="(t,i) in 4" :key="i+'xx'">
-            <img :src="require('@assets/commodity/spb.jpg')" class="bs"/>
+            <img :src="require('@assets/commodity/spb.jpg')" class="bs" />
           </div>
         </div>
       </div>
     </div>
+    <el-dialog title :visible.sync="sayDialog" width="800" class="playing_dialog_com_sy">
+      <div class="say_something_com_sy">
+        <div class="iconfont icon-guanbi" @click="sayDialog = false"></div>
+        <div class="s_title">
+          <el-row>
+            <el-col :span="4" :offset="1">
+              <img :src="require('@assets/img/user.png')" alt class="n1" />
+              <span class="name">昵称：小女人</span>
+            </el-col>
+            <el-col :span="4" :offset="1">
+              <p class="p12">
+                <span class="blue2">58</span>人关注
+              </p>
+            </el-col>
+            <el-col :span="4" :offset="4">地址：郑州市</el-col>
+            <el-col :span="4" :offset="1">
+              <img :src="require('@assets/img/r2.png')" alt class="n2" />已实名认证
+            </el-col>
+          </el-row>
+        </div>
+        <div class="s_box">
+          <div class="s_part1">
+            <img :src="require('@assets/img/xiaoya.png')" alt class="n3" />
+            <div class="product bs">
+              <el-row>
+                <el-col :span="10">
+                  <img :src="require('@assets/img/car.jpg')" alt class="n4 bs" />
+                </el-col>
+                <el-col :span="13">
+                  <p class="t no_wrap">索尼球形监控HKGH-32索尼球形监控HK…</p>
+                  <p>接口：24/颜色：白色/重量：290g/类型：随便 /分类：随便 ...</p>
+                  <p class="info jcs">
+                    <span class="text_t">￥1868.00</span>
+                    <span class="red">甩手价:￥568.00</span>
+                  </p>
+                </el-col>
+              </el-row>
+            </div>
+          </div>
+          <div class="s_part2">
+            <img :src="require('@assets/img/user.png')" alt class="n1" />
+            <div class="s_text">你好，请问有什么需要帮助的？</div>
+          </div>
+        </div>
+        <div class="s_box_c">
+          <div class="s_t">
+            <img :src="require('@assets/img/user.png')" alt class="n5" />
+            <img :src="require('@assets/img/user.png')" alt class="n5" />
+          </div>
+          <el-input
+            type="textarea"
+            placeholder="请输入内容"
+            v-model="textarea"
+            maxlength="200"
+            show-word-limit
+          ></el-input>
+          <div class="send">
+          <el-button>发送</el-button>
+        </div>
+        </div>
+        
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -219,7 +280,9 @@ export default {
       input3: 2,
       num: 1,
       commodityList: Commodity.HomeCommodity,
-      part3List: Commodity.Part3List
+      part3List: Commodity.Part3List,
+      sayDialog: false,
+      textarea: ""
     };
   },
   computed: {},
@@ -237,5 +300,91 @@ export default {
 </script>
 
 <style lang="less">
+.say_something_com_sy {
+  padding-bottom: 30px;
+  position:relative;
+  .icon-guanbi{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index:1;
+    cursor: pointer;
+  }
+  .n1 {
+    width: 40px;
+    margin-right: 6px;
+  }
+  .n2 {
+    width: 20px;
+    margin-right: 15px;
+  }
+  .n3 {
+    width: 40px;
+    height: 40px;
+  }
+  .n4 {
+    width: 220px;
+  }
+  .s_text {
+    background-color: #e8feff;
+    display: inline-block;
+    padding: 6px 10px;
+  }
+  .s_title {
+    background-color: #03c1c9;
+    color: #fff;
+    padding: 6px 0 3px;
+    .el-row {
+      line-height: 40px;
+    }
 
+    text-decoration: dotted;
+  }
+  .s_box {
+    padding: 0 30px;
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #aaa;
+    .s_part2 {
+      margin-top: 20px;
+    }
+    .s_part1 {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 20px;
+
+      // justify-content: flex-end;
+
+      .product {
+        padding: 10px 6px;
+        margin-right: 10px;
+        max-width: 550px;
+        .t {
+          font-weight: bold;
+          margin-bottom: 6px;
+        }
+        p {
+          line-height: 20px;
+        }
+        .info {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  .s_box_c {
+    padding: 10px 40px;
+    .n5 {
+      width: 20px;
+      margin-left: 20px;
+    }
+    textarea{
+      height: 140px;
+    }
+    .send{
+      text-align: right;
+      margin-top: 20px;
+    }
+  }
+}
 </style>

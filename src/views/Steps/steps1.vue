@@ -88,8 +88,8 @@
           <el-col :span="3" class="t_center">参数</el-col>
           <el-col :span="3" class="t_center">单价</el-col>
           <el-col :span="3" class="t_center">数量</el-col>
-          <el-col :span="3" class="t_center">原价</el-col>
-          <el-col :span="1" class="t_center">小计</el-col>
+          <el-col :span="2" class="t_center">原价</el-col>
+          <el-col :span="3" class="t_center">小计</el-col>
         </el-row>
         <div class="personal_d">
           <img :src="require('@assets/img/t1.jpg')" class="bs" />
@@ -115,10 +115,10 @@
           <el-col :span="3" class="t_center">
             <el-input-number v-model="num" :min="1" :max="10" label="描述文字" size="small"></el-input-number>
           </el-col>
-          <el-col :span="3" class="t_center">
+          <el-col :span="2" class="t_center">
             <span class="text_t">￥1868.00</span>
           </el-col>
-          <el-col :span="1" class="t_center">
+          <el-col :span="3" class="t_center">
             <span class="red">￥568.00</span>
           </el-col>
         </el-row>
@@ -191,88 +191,5 @@ export default {
 </script>
 
 <style lang="less">
-.steps_body {
-  padding-bottom: 50px;
-  .s_content {
-    padding-top: 10px;
-  }
-  .bg_s_p {
-    background-color: #edf1ff;
-    margin-top: 6px;
-    padding: 20px 0;
-  }
-  .bg_s_l {
-    background-color: #edf1ff;
-    .bg_blue_s {
-      background-color: #03c1c9;
-      text-align: center;
-      font-size: 16px;
-      padding: 6px 0;
-      .red {
-        font-size: 14px;
-        font-weight: bold;
-      }
-    }
-    .red2_btn{
-      font-size: 16px;
-      background-color: #8D0101;
-      padding: 4px 36px;
-      color: #ccc;
-    }
-    margin-bottom: 6px;
-    .bg_blue_m{
-      padding: 6px 0;
-      .red{
-        font-size: 18px;
-        font-weight: bold;
-      }
-    }
-  }
 
-  .el-textarea {
-    textarea {
-      height: 70px;
-    }
-  }
-  .address_s {
-    padding-top: 6px;
-    color: #666;
-    .el-row {
-      line-height: 26px;
-      margin-bottom: 3px;
-      i {
-        margin-right: 6px;
-      }
-      .el-radio__label {
-        color: #666;
-      }
-      &.active {
-        background-color: #d6f5f6;
-        .hidden {
-          visibility: inherit;
-        }
-      }
-    }
-    .add_address {
-      padding-top: 20px;
-    }
-  }
-  .title_d {
-    color: #999;
-    padding: 10px 0 4px;
-    border-bottom: 2px dotted #ccc;
-  }
-  .personal_d {
-    line-height: 30px;
-    padding: 8px 0 8px 20px;
-    span {
-      margin: 0 20px 0 26px;
-    }
-    i {
-      color: #74c39b;
-      font-size: 18px;
-      line-height: 22px;
-    }
-  }
-}
 </style>

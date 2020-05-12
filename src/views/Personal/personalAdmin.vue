@@ -83,6 +83,12 @@ import Records3 from "./components/Records3.vue";
 //我的竞赛
 import Player from "./components/Player.vue";
 import PlayerAdd from "./components/PlayerAdd.vue";
+//我的订单
+import Order1 from "./components/Order1.vue";
+import Order1Logistics from "./components/Order1Logistics.vue";
+import Order2 from "./components/Order2.vue";
+import Order3 from "./components/Order3.vue";
+import Order3Edit from "./components/Order3Edit.vue";
 //我的消息
 import Msg1 from "./components/Msg1.vue";
 import Msg2 from "./components/Msg2.vue";
@@ -117,6 +123,11 @@ export default {
     Records3,
     Player,
     PlayerAdd,
+    Order1,
+    Order1Logistics,
+    Order2,
+    Order3,
+    Order3Edit,
     Msg1,
     Msg2,
     Msg3,

@@ -284,7 +284,7 @@ export const PersonalList = [
     },
     {
         title: "历史发布",
-        number: 1,
+        number: 0,
         children: [
             { title: "我的合作", number: 0, show: 0, router: "Records1" },
             { title: "我的活动", number: 0, show: 0, router: "Records2" },
@@ -307,18 +307,20 @@ export const PersonalList = [
             { title: "我的竞赛", number: 0, show: 0, router: "Player" },
         ]
     },
-    {
+    {    
         title: "采购订单",
-        number: 0,
+        number: 1,
         children: [
-
+            { title: "我的订单", number: 0, show: 0, router: "Order1" },
+            { title: "发票管理", number: 0, show: 0, router: "Order2" },
+            { title: "收货地址", number: 0, show: 0, router: "Order3" },
         ]
     },
     {
         title: "卖家中心",
-        number: 0,
+        number: 1,
         children: [
-
+           
         ]
     },
     {

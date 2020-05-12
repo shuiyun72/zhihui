@@ -2399,8 +2399,12 @@
 
 .steps_num_com_sy {
   display: flex;
-  padding: 20px 0 40px;
-
+  padding: 20px 0 20px;
+  &.small{
+    .el-step__title{
+      font-size:12px;
+    }
+  }
   .s_l {
     width: 18%;
     text-align: center;
@@ -2446,7 +2450,89 @@
 .bg_detail_com_sy {
   background-color: #edf1ff;
   padding: 30px 0 40px;
+  display: flex;
 
+  &.small {
+    padding: 16px 0 16px;
+    font-size: 12px;
+    margin-bottom: 3px;
+
+    img {
+      width: 290px;
+    }
+
+    .info_l {
+      margin-top: 6px;
+    }
+
+    .ss {
+      width: 40px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 6px;
+      margin-top: 16px;
+    }
+
+    .fwb {
+      padding-left: 3px;
+      font-weight: normal;
+    }
+
+    .all_btn_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .all_btn {
+        text-align: center;
+
+        .el-button {
+          margin: 6px 0 0 0;
+          width: 92px;
+          height: 20px;
+          padding: 0;
+          line-height: 18px;
+          border: 1px solid #F88509;
+          border-radius: 10px;
+        }
+
+        .bg_or_btn {
+          background-color: #F88509;
+          color: #fff;
+        }
+
+        .or_btn {
+          background-color: #fff;
+          color: #F88509;
+        }
+      }
+    }
+
+    .cs {
+      p {
+        padding-left: 10px;
+        font-size: 12px;
+      }
+    }
+
+    p {
+      line-height: 18px;
+    }
+  }
+
+  .fwb {
+    padding-right: 3px;
+  }
+
+  .el-col:not(:first-child) {
+    &:not(:last-child) {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  // .el-col{
+  // border-right 1px solid #fff
+  // }
   p {
     line-height: 22px;
   }
@@ -2462,19 +2548,21 @@
     line-height: 18px;
   }
 
-  .el-input-number--small .el-input-number__decrease,
-  .el-input-number--small .el-input-number__increase {
+  .el-input-number--small .el-input-number__decrease, .el-input-number--small .el-input-number__increase {
     width: 20px;
   }
+
   .el-input--small .el-input__inner {
     height: 20px;
     line-height: 20px;
   }
-  .el-input-number--small .el-input__inner{
+
+  .el-input-number--small .el-input__inner {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .el-input-number--small{
+
+  .el-input-number--small {
     width: 80px;
   }
 }
@@ -2482,4 +2570,134 @@
 .title_hui_com_sy {
   padding: 10px 20px;
   background-color: #ddd;
+
+  .icon-gouwucheman {
+    color: #f00;
+    margin-right: 10px;
+  }
+
+  .fwb {
+    margin-right: 20px;
+  }
+
+  .red {
+    margin-left: 5px;
+  }
+}
+
+.info_success_com_sy {
+  .fz18 {
+    font-size: 18px;
+  }
+
+  .red {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+}
+
+.edit_el_tabs_com_sy {
+  position: relative;
+
+  .paopao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .p {
+      position: absolute;
+      top: 2px;
+      z-index: 2;
+      background-color: #bc0000;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 50%;
+      color: #fff;
+      transform: scale(0.6);
+
+      &:nth-child(1) {
+        left: 290px;
+      }
+
+      &:nth-child(2) {
+        left: 414px;
+      }
+
+      &:nth-child(3) {
+        left: 566px;
+      }
+
+      &:nth-child(4) {
+        left: 690px;
+      }
+
+      &:nth-child(5) {
+        left: 820px;
+      }
+
+      &:nth-child(6) {
+        left: 290px;
+      }
+    }
+  }
+
+  .el-tabs__header {
+    background-color: #f3f3f3;
+    padding-left: 90px;
+
+    .el-tabs__active-bar {
+      background: #03c1c9;
+    }
+
+    .el-tabs__item {
+      font-size: 16px;
+
+      // font-weight: bold;
+      &:hover {
+        color: #03c1c9;
+      }
+
+      padding: 0 40px;
+
+      &.is-active {
+        color: #03c1c9;
+      }
+    }
+  }
+
+  .title_d {
+    color: #999;
+    padding: 2px 0 4px;
+    border-bottom: 2px dotted #ccc;
+  }
+
+  .personal_d {
+    line-height: 30px;
+    padding: 8px 0 8px 20px;
+    &.bdts{
+      border-top 2px dotted #aaa
+    }
+    span {
+      margin: 0 20px 0 26px;
+    }
+
+    .blue2 {
+      margin: 0;
+    }
+
+    i {
+      color: #74c39b;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .time {
+      font-size: 12px;
+    }
+  }
 }

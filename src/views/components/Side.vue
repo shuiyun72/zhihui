@@ -9,12 +9,14 @@
           </div>
           <div class="span">10</div>
         </div>
-        <div class="is_active item_box">
+        <router-link :to="{path:'/steps2'}" tag="div" class="is_active item_box">
+        <!-- <div class="is_active item_box"> -->
           <div class="item">
             我的
             <br />购物车
           </div>
-        </div>
+        <!-- </div> -->
+        </router-link>
         <div class="item_box">
           <div class="item">
             添加

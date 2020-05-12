@@ -967,6 +967,11 @@
 }
 
 .cro_zhiding_body {
+  .pt30 {
+    padding: 30px 0;
+    font-size: 16px;
+  }
+
   .img {
     text-align: center;
     padding: 20px 0 20px;
@@ -989,7 +994,7 @@
     padding: 20px 0;
 
     button {
-      padding: 8px 40px;
+      padding: 6px 40px;
       border-radius: 30px;
     }
   }
@@ -1782,6 +1787,7 @@
 
   .person_right {
     width: 946px;
+    color: #333;
 
     .person_title {
       padding: 10px 20px;
@@ -2936,69 +2942,87 @@
     width: 110px;
   }
 }
+
 .tail_cargo_detail.wm {
   margin-top: 10px;
   padding-bottom: 60px;
+
   .tail_handle {
     padding: 20px 0;
   }
+
   .tail_detail2 {
     padding-top: 0px;
+
     .t_l {
       width: 280px;
+
       .title {
         background-color: #eee;
         padding: 10px 20px;
         margin-bottom: 10px;
       }
+
       .bottom10 {
         margin-bottom: 10px;
         width: 280px;
+
         .name {
           font-size: 14px;
         }
       }
     }
+
     .t_r {
       width: 900px;
       color: #666;
       box-sizing: border-box;
-      padding:30px 40px;
-      .t{
+      padding: 30px 40px;
+
+      .t {
         font-size: 16px;
         margin-bottom: 16px;
       }
-      p{
+
+      p {
         line-height: 26px;
         margin-bottom: 20px;
       }
-      .img{
+
+      .img {
         text-align: center;
         margin-bottom: 10px;
-        img{
+
+        img {
           width: 60%;
         }
       }
     }
   }
+
   .tail_detail {
     .title {
       background-color: #eee;
       padding: 10px 20px;
     }
-    .no_bw{
-      box-shadow:none;
+
+    .no_bw {
+      box-shadow: none;
     }
+
     .t_body_l {
       .item {
         .i {
           width: 280px;
+
           .name {
             font-size: 14px;
           }
+
           .money_new {
             font-size: 14px;
           }
+
           .money_old {
             line-height: inherit;
           }
@@ -3006,6 +3030,7 @@
       }
     }
   }
+
   .c_detial_commid {
     padding-bottom: 20px;
     background-color: #eee;
@@ -3020,6 +3045,7 @@
     .part1 {
       display: flex;
       justify-content: space-between;
+
       .part_left {
         width: 960px;
         display: flex;
@@ -3040,6 +3066,7 @@
             padding-top: 10px;
             line-height: 28px;
           }
+
           .money_info {
             background-color: #eee;
             padding: 16px 20px;
@@ -3097,6 +3124,7 @@
           padding: 10px 20px;
           color: #8d0101;
         }
+
         .detail_l {
           padding: 0 4px;
         }
@@ -3119,6 +3147,155 @@
           text-align: right;
         }
       }
+    }
+  }
+}
+
+.table_title_com_sy {
+  th {
+    background-color: #aaa;
+    color: #fff;
+  }
+}
+
+.order_body {
+  padding: 4px 10px;
+
+  .home_title {
+    padding: 10px 0 10px 10px;
+    font-size: 16px;
+
+    .a_l {
+      display: inline-block;
+      border-bottom: 1px solid #ccc;
+      padding: 0 10px 10px;
+    }
+  }
+
+  .save_btn {
+    text-align: right;
+    padding: 20px 20px 30px 0;
+  }
+
+  .el-row {
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.steps_body {
+  padding-bottom: 50px;
+
+  .s_content {
+    padding-top: 10px;
+  }
+
+  .bg_s_p {
+    background-color: #edf1ff;
+    margin-top: 6px;
+    padding: 20px 0;
+  }
+
+  .bg_s_l {
+    background-color: #edf1ff;
+
+    &.mt20 {
+      margin-top: 20px;
+    }
+    &.pt6{
+      line-height 32px
+    }
+    .all_money{
+      font-size 16px
+    }
+    .blue_btn{
+      padding :9px 36px
+    }
+    .bg_blue_s {
+      background-color: #03c1c9;
+      text-align: center;
+      font-size: 16px;
+      padding: 6px 0;
+
+      .red {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    .red2_btn {
+      font-size: 16px;
+      background-color: #8D0101;
+      padding: 4px 36px;
+      color: #ccc;
+    }
+
+    margin-bottom: 6px;
+
+    .bg_blue_m {
+      padding: 6px 0;
+
+      .red {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .el-textarea {
+    textarea {
+      height: 70px;
+    }
+  }
+
+  .address_s {
+    padding-top: 6px;
+    color: #666;
+
+    .el-row {
+      line-height: 26px;
+      margin-bottom: 3px;
+
+      i {
+        margin-right: 6px;
+      }
+
+      .el-radio__label {
+        color: #666;
+      }
+
+      &.active {
+        background-color: #d6f5f6;
+
+        .hidden {
+          visibility: inherit;
+        }
+      }
+    }
+
+    .add_address {
+      padding-top: 20px;
+    }
+  }
+
+  .title_d {
+    color: #999;
+    padding: 10px 0 4px;
+    border-bottom: 2px dotted #ccc;
+  }
+
+  .personal_d {
+    line-height: 30px;
+    padding: 8px 0 8px 20px;
+
+    span {
+      margin: 0 20px 0 26px;
+    }
+
+    i {
+      color: #74c39b;
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }
