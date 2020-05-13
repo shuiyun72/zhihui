@@ -2,9 +2,9 @@
   <div class="person_right">
     <div class="title_return_com_sy">
       <div class="left">
-        <span class="r1" @click="childHandle(6,0,'Order1')">订单列表</span>
+        <span class="r1" @click="childHandle(7,0,'Seller1')">已出售的尾货</span>
         <span class="r0">></span>
-        <span class="r2">退款/退货</span>
+        <span class="r2">去发货</span>
       </div>
     </div>
     <div class="steps_num_com_sy small">
@@ -13,11 +13,11 @@
       </div>
       <div class="s_r">
         <el-steps :active="active" align-center>
-          <el-step title="立即购买/购物车结算"></el-step>
-          <el-step title="待付款"></el-step>
-          <el-step title="待发货"></el-step>
-          <el-step title="退款/退货"></el-step>
-          <el-step title="退款/退货完成"></el-step>
+          <el-step title="买家支付"></el-step>
+          <el-step title="去发货"></el-step>
+          <el-step title="等待买家收货"></el-step>
+          <el-step title="买家确认收货"></el-step>
+          <el-step title="交易评价/完成"></el-step>
         </el-steps>
       </div>
     </div>
@@ -50,6 +50,10 @@
         </div>
         <div>
           <el-row class="bg_detail_com_sy small">
+            <div class="seller_img_t_l"> 
+              <div class="bgred"></div>
+              <span class="m">卖</span>
+            </div>
             <el-col :span="8" class="t_center">
               <img :src="require('@assets/img/sps2.jpg')" class="bs" />
             </el-col>
@@ -76,64 +80,13 @@
             <el-col :span="3" class="t_center all_btn_box">
               <span class="red">合计:￥568.00</span>
               <div class="all_btn">
-                <el-button class="de_btn">退款/退货中</el-button>
+                <!-- <el-button class="de_btn">退款/退货中</el-button> -->
               </div>
             </el-col>
           </el-row>
         </div>
       </div>
-      <div class="title_time">时间：2020-04-21 12:35:20</div>
-      <div class="tall_reason_com_sy small_el">
-        <el-row>
-          <el-col :span="4" class="fwb">商品状态：</el-col>
-          <el-col :span="19">需要退货</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">退款金额：</el-col>
-          <el-col :span="17">
-            586.00
-            <span class="red2">(交易金额：￥586.00)</span>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">退款/退货原因：</el-col>
-          <el-col :span="19">商品质量原因，有图</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">上传图片：</el-col>
-          <el-col :span="19">
-            <span class="img_mr">
-              <img :src="require('@assets/img/re1.jpg')" />
-            </span>
-          </el-col>
-        </el-row>
-      </div>
-      <div class="tall_reason_com_sy small_el bg_b">
-        <el-row>
-          <el-col :span="3" class="fwb">时间：</el-col>
-          <el-col :span="19">2020-04-22 15:25:00</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="6" :offset="2" class="alone">卖家已同意退款/退货</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">退货地址：</el-col>
-          <el-col :span="17">河南省郑州市金水区农科路99号</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">收件人：</el-col>
-          <el-col :span="17">陈红红</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">联系电话：</el-col>
-          <el-col :span="17">1300000000</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">备注：</el-col>
-          <el-col :span="17">不收到付件</el-col>
-        </el-row>
-      </div>
-      <div class="title_time">填写退货信息</div>
+      <div class="title_time">发货信息</div>
       <div class="big_info">
         <el-row>
           <el-col :span="4" class="t_right">物流公司：</el-col>
@@ -168,7 +121,7 @@ export default {
   components: { PageNum },
   data() {
     return {
-      active: 4,
+      active: 1,
       va1: "",
       textarea: "",
       input: "",

@@ -157,32 +157,5 @@ export default {
 };
 </script>
 <style lang="less">
-.person_right {
-  .big_info {
-    padding: 16px 0 20px;
-   .el-row{
-      line-height: 32px;
-      margin-bottom: 10px;
-    }
-    .el-col {
-      font-size: 16px;
-    }
-    .el-select{
-      width: 100%;
-    }
-  }
-  .title_time {
-    background-color: #eee;
-    font-size: 16px;
-    padding: 5px 50px;
-    margin-top: 10px;
-  }
-  .edit_re {
-    padding: 0 0 20px 30px;
-  }
-  .p_box_s.bs {
-    padding: 20px 20px;
-  }
-}
 
 </style>

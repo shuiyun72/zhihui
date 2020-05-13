@@ -318,9 +318,13 @@ export const PersonalList = [
     },
     {
         title: "卖家中心",
-        number: 1,
+        number: 1,      
         children: [
-           
+            { title: "发布的尾货", number: 0, show: 0, router: "Seller1" },
+            { title: "已出售的尾货", number: 0, show: 0, router: "Seller2" },
+            { title: "待处理订单", number: 0, show: 0, router: "Seller3" },
+            { title: "退货地址", number: 0, show: 0, router: "Seller4" },
+            { title: "钱包管理", number: 0, show: 0, router: "Seller5" },
         ]
     },
     {

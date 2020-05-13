@@ -31,10 +31,8 @@
             :class="{'active':tc.show}"
             class="child_nav"
           >
-            <el-col :span="6" :offset="6">
+            <el-col :span="15" :offset="6">
               <span class="c_span">{{tc.title}}</span>
-            </el-col>
-            <el-col :span="12">
               <span class="stateC stateR" v-show="tc.number>0">（{{tc.number}}）</span>
             </el-col>
           </el-row>
@@ -96,6 +94,15 @@ import Order1Appraise2 from "./components/Order1Appraise2.vue";
 import Order2 from "./components/Order2.vue";
 import Order3 from "./components/Order3.vue";
 import Order3Edit from "./components/Order3Edit.vue";
+//卖家中心
+import Seller1 from "./components/Seller1.vue";
+import Seller1Add0 from "./components/Seller1Add0.vue";
+import Seller1Add from "./components/Seller1Add.vue";
+import Seller2 from "./components/Seller2.vue";
+import Seller2Return from "./components/Seller2Return.vue";
+import Seller3 from "./components/Seller3.vue";
+import Seller4 from "./components/Seller4.vue";
+import Seller5 from "./components/Seller5.vue";
 //我的消息
 import Msg1 from "./components/Msg1.vue";
 import Msg2 from "./components/Msg2.vue";
@@ -142,6 +149,14 @@ export default {
     Order2,
     Order3,
     Order3Edit,
+    Seller1,
+    Seller1Add0,
+    Seller1Add,
+    Seller2,
+    Seller2Return,
+    Seller3,
+    Seller4,
+    Seller5,
     Msg1,
     Msg2,
     Msg3,

@@ -193,18 +193,5 @@ export default {
 };
 </script>
 <style lang="less">
-.person_right {
-  .title_time {
-    background-color: #eee;
-    font-size: 16px;
-    padding: 5px 50px;
-    margin-top: 10px;
-  }
-  .edit_re {
-    padding: 0 0 20px 30px;
-  }
-  .p_box_s.bs{
-    padding: 20px 20px;
-  }
-}
+
 </style>

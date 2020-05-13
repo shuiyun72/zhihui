@@ -1962,6 +1962,14 @@
 .submit_btn_sy {
   text-align: center;
 
+  .icon-jiahaocu {
+    cursor: pointer;
+    background-color: #01B0B7;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+  }
+
   &.mbt {
     margin-top: 20px;
     padding: 30px 30px 40px;
@@ -2459,6 +2467,27 @@
   background-color: #edf1ff;
   padding: 30px 0 40px;
   display: flex;
+  position: relative;
+
+  .seller_img_t_l {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .bgred {  
+      border-top: 30px solid #BC0000;
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid #BC0000;
+      border-right: 30px solid transparent;
+      width: 0;
+      height: 0;
+    }
+    .m{
+       position: absolute;
+      top: 8px;
+      left: 8px;
+      color #fff
+    }
+  }
 
   .text_t {
     color: #999;
@@ -2500,6 +2529,12 @@
     p {
       line-height: 18px;
     }
+  }
+
+  .all_link_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .all_btn_box {
@@ -2623,6 +2658,34 @@
     left: 0;
     z-index: 1;
 
+    &.seller_l {
+      .p {
+        &:nth-child(1) {
+          left: 310px;
+        }
+
+        &:nth-child(2) {
+          left: 434px;
+        }
+
+        &:nth-child(3) {
+          left: 586px;
+        }
+
+        &:nth-child(4) {
+          left: 710px;
+        }
+
+        &:nth-child(5) {
+          left: 840px;
+        }
+
+        &:nth-child(6) {
+          left: 310px;
+        }
+      }
+    }
+
     .p {
       position: absolute;
       top: 2px;
@@ -2687,6 +2750,10 @@
   }
 
   .title_d {
+    &.pt10 {
+      padding-top: 10px;
+    }
+
     color: #999;
     padding: 2px 0 4px;
     border-bottom: 2px dotted #ccc;
@@ -2760,16 +2827,19 @@
 
 .vertical_steps_com_sy {
   padding-left: 120px;
-  .mb16{
-    margin-bottom :16px
+
+  .mb16 {
+    margin-bottom: 16px;
   }
+
   .title {
     font-size: 16px;
     color: #666;
     font-weight: bold;
     padding: 40px 0;
-    &.l{
-      padding 40px 0 0px
+
+    &.l {
+      padding: 40px 0 0px;
     }
   }
 
@@ -2803,8 +2873,6 @@
     margin-bottom: 40px;
   }
 
-  
-
   &.bg_b {
     background-color: #EDF1FF;
     color: #8D0101;
@@ -2831,15 +2899,18 @@
     margin-right: 30px;
   }
 }
+
 .el_rate_com_sy {
   .iconfont {
     font-size: 26px;
   }
+
   .el-rate {
     height: 32px;
     line-height: 32px;
   }
 }
+
 .appra_info_com_sy {
   display: flex;
   padding: 16px 20px;
@@ -2847,21 +2918,94 @@
   border-radius: 10px;
   margin-top: 10px;
   color: #666;
+
   .ap {
     display: flex;
     border-bottom: 1px dotted #aaa;
     margin-left: 16px;
     width: 800px;
     padding: 8px 0 9px;
+
     .p_t {
       font-size: 16px;
       margin-right: 30px;
     }
+
     .sm {
       font-size: 12px;
     }
   }
+
   .text_a {
     padding: 20px 0 10px 30px;
+  }
+}
+
+.seller_add_com_sy {
+  &.p10 {
+    padding: 20px 10px;
+  }
+
+  .el-row {
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .t_right {
+    padding-right: 6px;
+  }
+
+  .el-select {
+    width: 100%;
+  }
+}
+
+.parameter_box_com_sy {
+  .p_p1 {
+    .l {
+      margin-right: 30px;
+    }
+
+    .btn_f {
+      padding: 4px 10px;
+      background-color: #eee;
+    }
+  }
+
+  .p_p2 {
+    margin-bottom: 10px;
+
+    .inp1 {
+      width: 92px;
+    }
+
+    .inp2 {
+      width: 180px;
+    }
+  }
+
+  .p_p3 {
+    .link {
+      font-size: 16px;
+    }
+
+    .icon-jiahaocu {
+      border: 1px solid #0644eb;
+      color: #0644eb;
+      padding: 6px;
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+  }
+}
+
+.el_rate_com_sy {
+  .iconfont {
+    font-size: 26px;
+  }
+
+  .el-rate {
+    height: 32px;
+    line-height: 32px;
   }
 }
