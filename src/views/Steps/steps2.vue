@@ -58,8 +58,11 @@
           <el-col :span="2" class="t_center">
             <span class="text_t">￥1868.00</span>
           </el-col>
-          <el-col :span="3" class="t_center">
+          <el-col :span="3" class="t_center all_btn_box">
             <span class="red">￥568.00</span>
+            <div class="all_btn">
+              <p class="link" @click="isDeleteDia = true">删除</p>
+            </div>
           </el-col>
         </el-row>
         <div class="personal_d">
@@ -86,15 +89,27 @@
             <p>分类：随便</p>
             <p>参数：随便</p>
           </el-col>
-          <el-col :span="3" class="t_center">284.00</el-col>
+          <el-col :span="3" class="t_center all_btn_box">
+            <p>284.00</p>
+            <p class="red2 hidden">商品已出售或下架</p>
+          </el-col>
           <el-col :span="2" class="t_center">
             <el-input-number v-model="num" :min="0" :max="10" label="描述文字" size="small"></el-input-number>
           </el-col>
           <el-col :span="2" class="t_center">
             <span class="text_t">￥1868.00</span>
           </el-col>
-          <el-col :span="3" class="t_center">
+          <!-- <el-col :span="3" class="t_center all_btn_box">
+            <span class="red">合计:￥568.00</span>
+            <div class="all_btn">
+              <el-button class="bg_or_btn">删除</el-button>
+            </div>
+          </el-col>-->
+          <el-col :span="3" class="t_center all_btn_box">
             <span class="red">￥568.00</span>
+            <div class="all_btn">
+              <p class="link">删除</p>
+            </div>
           </el-col>
         </el-row>
         <div class="personal_d">
@@ -121,15 +136,21 @@
             <p>分类：随便</p>
             <p>参数：随便</p>
           </el-col>
-          <el-col :span="3" class="t_center">284.00</el-col>
+          <el-col :span="3" class="t_center all_btn_box">
+            <p>284.00</p>
+            <p class="red2">商品已出售或下架</p>
+          </el-col>
           <el-col :span="2" class="t_center">
             <el-input-number v-model="num" :min="0" :max="10" label="描述文字" size="small"></el-input-number>
           </el-col>
           <el-col :span="2" class="t_center">
             <span class="text_t">￥1868.00</span>
           </el-col>
-          <el-col :span="3" class="t_center">
+          <el-col :span="3" class="t_center all_btn_box">
             <span class="red">￥568.00</span>
+            <div class="all_btn">
+              <p class="link">删除</p>
+            </div>
           </el-col>
         </el-row>
         <el-row class="bg_s_l mt20 pt6">

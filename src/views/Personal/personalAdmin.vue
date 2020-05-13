@@ -86,6 +86,13 @@ import PlayerAdd from "./components/PlayerAdd.vue";
 //我的订单
 import Order1 from "./components/Order1.vue";
 import Order1Logistics from "./components/Order1Logistics.vue";
+import Order1Return from "./components/Order1Return.vue";
+import Order1Return2 from "./components/Order1Return2.vue";
+import Order1Return3 from "./components/Order1Return3.vue";
+import Order1Return4 from "./components/Order1Return4.vue";
+import Order1Return5 from "./components/Order1Return5.vue";
+import Order1Appraise from "./components/Order1Appraise.vue";
+import Order1Appraise2 from "./components/Order1Appraise2.vue";
 import Order2 from "./components/Order2.vue";
 import Order3 from "./components/Order3.vue";
 import Order3Edit from "./components/Order3Edit.vue";
@@ -125,6 +132,13 @@ export default {
     PlayerAdd,
     Order1,
     Order1Logistics,
+    Order1Return,
+    Order1Return2,
+    Order1Return3,
+    Order1Return4,
+    Order1Return5,
+    Order1Appraise,
+    Order1Appraise2,
     Order2,
     Order3,
     Order3Edit,

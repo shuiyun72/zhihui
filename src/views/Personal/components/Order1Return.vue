@@ -4,7 +4,7 @@
       <div class="left">
         <span class="r1" @click="childHandle(6,0,'Order1')">订单列表</span>
         <span class="r0">></span>
-        <span class="r2">物流信息</span>
+        <span class="r2">退款/退货</span>
       </div>
     </div>
     <div class="steps_num_com_sy small">
@@ -22,15 +22,30 @@
       </div>
     </div>
     <div class="edit_el_tabs_com_sy">
-      <div class="personal_d bdts">
+      <el-row class="title_d"> 
+        <el-col :span="8" class="t_center">宝贝</el-col>
+        <el-col :span="4" class="t_center">商品名称</el-col>
+        <el-col :span="3" class="t_center">参数</el-col>
+        <el-col :span="2" class="t_center">单价</el-col>
+        <el-col :span="2" class="t_center">数量</el-col>
+        <el-col :span="2" class="t_center">原价</el-col>
+        <el-col :span="3" class="t_center">操作</el-col>
+      </el-row>
+      <div class="personal_d">
         <el-row>
-          <el-col :span="9">
-            <span class="blue2">订单号：12316451321546541</span>
-          </el-col>
-          <el-col :span="7" class="t_right" :offset="8">
-            <span class="time">2020-04-15 15:35:21</span>
-          </el-col>
-        </el-row>
+                <el-col :span="8">
+                  <img :src="require('@assets/img/t1.jpg')" class="bs" />
+                  <span>卖家：小女人</span>
+                  <i class="iconfont icon-weixin1"></i>
+                  <span class="yellow">和我联系</span>
+                </el-col>
+                <el-col :span="9">
+                  <span class="blue2">订单号：12316451321546541</span>
+                </el-col>
+                <el-col :span="7" class="t_right">
+                  <span class="time">2020-04-15 15:35:21</span>
+                </el-col>
+              </el-row>
       </div>
       <div v-for="(t,i) in [2]" :key="i+'pp'">
         <el-row class="bg_detail_com_sy small">
@@ -64,7 +79,7 @@
             </div>
             <div class="all_btn" v-show="t==2">
               <!-- <el-button class="or_btn" @click="routerTo('Logistics')">查看物流</el-button> -->
-              <el-button class="or_btn">申请退款/货</el-button>
+              <!-- <el-button class="or_btn">申请退款/货</el-button> -->
               <p class="info_l">倒计时：9天12小时</p>
               <el-button class="bg_or_btn">确认收货</el-button>
             </div>
@@ -105,58 +120,51 @@
         </el-row>
       </div>
     </div>
-    <div class="person_msg_info_com_sy">
-      <div class="title">卖家信息</div>
+    <div class="tall_reason_com_sy">
       <el-row>
-        <el-col :span="2" class="t_center">
-          <img :src="require('@assets/img/t1.jpg')" class="bs" />
+        <el-col :span="2" class="fwb">商品状态：</el-col>
+        <el-col :span="21">
+          <el-button class="round_btn_p1 active_or">需要退货</el-button>
+          <el-button class="round_btn_p1"  @click="routerTo('Order1Return2')">无需退货</el-button>
+          <el-button class="round_btn_p1">未收到货</el-button>
         </el-col>
-        <el-col :span="6">
-          昵称： 小女人
-          <i class="iconfont icon-weixin"></i>
-          <span class="lx">和我联系</span>
-        </el-col>
-        <el-col :span="4">姓名： 胡文*</el-col>
-        <el-col :span="7">联系电话： 1300000000</el-col>
-        <el-col :span="4">来自： 广东省广州市</el-col>
       </el-row>
       <el-row>
-        <el-col :span="20" :offset="2">收货地址：河南省郑州市基础工程广场23号楼6单元8888</el-col>
+        <el-col :span="2" class="fwb">退款金额：</el-col>
+        <el-col :span="4">
+          <el-input size="mini" v-model="va1" placeholder="输入需要退款的金额"></el-input>
+        </el-col>
+        <el-col :span="17" :offset="1">
+          交易金额：
+          <span class="red2">￥586.00</span>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="2" class="fwb">退货原因：</el-col>
+        <el-col :span="21">
+          <el-input
+            type="textarea"
+            placeholder="请输入内容"
+            v-model="textarea"
+            maxlength="200"
+            show-word-limit
+          ></el-input>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="2" class="fwb">上传图片：</el-col>
+        <el-col :span="21">
+          <span class="img_mr">
+            <img :src="require('@assets/img/re1.jpg')" />
+          </span>
+          <span class="img_mr">
+            <img :src="require('@assets/img/re2.jpg')" />
+          </span>
+        </el-col>
       </el-row>
     </div>
-    <div class="person_msg_info_com_sy">
-      <div class="title">买家信息</div>
-      <el-row>
-        <el-col :span="2" class="t_center">
-          <img :src="require('@assets/img/t2.jpg')" class="bs" />
-        </el-col>
-        <el-col :span="6">昵称： 零度</el-col>
-        <el-col :span="4">姓名： 文文*</el-col>
-        <el-col :span="7">联系电话： 1300000000</el-col>
-        <el-col :span="4">来自： 河南省郑州市</el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="20" :offset="2">收货地址：河南省郑州市基础工程广场23号楼6单元8888</el-col>
-      </el-row>
-    </div>
-    <div class="vertical_steps_com_sy">
-      <div class="title">物流信息：</div>
-      <el-steps direction="vertical" :active="3" style="height:300px"> 
-        <el-step title="物流公司：申通快递" icon="iconfont icon-dian3" description="单号：4564889465468496"></el-step> 
-        <el-step title="订单创建成功" icon="iconfont icon-dian3" description="2018-04-11"></el-step>
-        <el-step title="已揽收" icon="iconfont icon-dian3" description="2018-04-13"></el-step>
-        <el-step title="已从郑州集散中心发往南京集散中心" icon="iconfont icon-dian3" description="2018-04-15"></el-step>
-      </el-steps>
-    </div>
-    <div class="vertical_steps_com_sy">
-      <div class="title">物流信息：</div>
-      <el-steps direction="vertical" :active="4" style="height:300px"> 
-        <el-step title="物流公司：申通快递" icon="iconfont icon-dian3" description="单号：4564889465468496"></el-step> 
-        <el-step title="订单创建成功" icon="iconfont icon-dian3" description="2018-04-11"></el-step>
-        <el-step title="已揽收" icon="iconfont icon-dian3" description="2018-04-13"></el-step>
-        <el-step title="已从郑州集散中心发往南京集散中心" icon="iconfont icon-dian3" description="2018-04-15"></el-step>
-        <el-step title="【已签收】" icon="iconfont icon-dian3"></el-step>
-      </el-steps>
+    <div class="submit_btn_sy mbt or">
+      <el-button>提 交</el-button>
     </div>
   </div>
 </template>
@@ -167,8 +175,9 @@ export default {
   components: { PageNum },
   data() {
     return {
-      activeName: "0",
-      active: 3
+      active: 4,
+      va1: "",
+      textarea: ""
     };
   },
   methods: {
@@ -176,13 +185,12 @@ export default {
       this.$parent.childHandle(i, ic, el);
     },
     routerTo(el) {
-      if (el == "Logistics") {
-        this.childHandle(6, 0, "Order1Logistics");
-      }
+      this.childHandle(6, 0, el);
     }
   }
 };
 </script>
 <style lang="less">
+
 
 </style>

@@ -6,15 +6,17 @@
       </div>
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="所有订单" name="0">
-          <el-row class="title_d">
-            <el-col :span="4" class="t_center" :offset="8">商品名称</el-col>
-            <el-col :span="3" class="t_center">参数</el-col>
-            <el-col :span="2" class="t_center">单价</el-col>
-            <el-col :span="2" class="t_center">数量</el-col>
-            <el-col :span="2" class="t_center">原价</el-col>
-            <el-col :span="3" class="t_center">操作</el-col>
-          </el-row>
-          <div v-for="(t,i) in 10" :key="i+'pp'">
+          
+            <el-row class="title_d">
+              <el-col :span="4" class="t_center" :offset="8">商品名称</el-col>
+              <el-col :span="3" class="t_center">参数</el-col>
+              <el-col :span="2" class="t_center">单价</el-col>
+              <el-col :span="2" class="t_center">数量</el-col>
+              <el-col :span="2" class="t_center">原价</el-col>
+              <el-col :span="3" class="t_center">操作</el-col>
+            </el-row>
+          
+          <div v-for="(t,i) in [1,2,3,4,5,6,7,8,9,10]" :key="i+'pp'">
             <div class="personal_d" v-show="t != 10">
               <el-row>
                 <el-col :span="8">
@@ -61,43 +63,43 @@
                   <el-button class="bg_or_btn">去付款</el-button>
                 </div>
                 <div class="all_btn" v-show="t==2">
-                  <el-button class="or_btn" @click="routerTo('Logistics')">查看物流</el-button>
-                  <el-button class="or_btn">申请退款/货</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Logistics')">查看物流</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Return')">申请退款/货</el-button>
                   <p class="info_l">倒计时：9天12小时</p>
                   <el-button class="bg_or_btn">确认收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==3">
-                  <el-button class="or_btn"  @click="remindDia = true">提醒发货</el-button>
-                  <el-button class="or_btn">申请退款/货</el-button>
+                  <el-button class="or_btn" @click="remindDia = true">提醒发货</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Return')">申请退款/货</el-button>
                   <p class="info_l">倒计时：9天12小时</p>
                   <el-button class="or_btn">确认收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==4">
                   <el-button class="or_btn">查看物流</el-button>
-                  <el-button class="bg_or_btn">去发货(退)</el-button>
+                  <el-button class="bg_or_btn" @click="routerTo('Order1Return3')">去发货(退)</el-button>
                   <p class="info_l">倒计时：9天12小时</p>
                   <el-button class="or_btn">确认收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==5">
-                  <el-button class="or_btn">查看物流</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Return4')">查看物流</el-button>
                   <el-button class="bg_or_btn">查看拒绝理由</el-button>
                   <p class="info_l">倒计时：9天12小时</p>
                   <el-button class="or_btn">确认收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==6">
-                  <el-button class="or_btn">查看退货物流</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Return5')">查看退货物流</el-button>
                 </div>
                 <div class="all_btn" v-show="t==7">
                   <el-button class="bg_or_btn">退款成功</el-button>
                 </div>
                 <div class="all_btn" v-show="t==8">
-                  <el-button class="bg_or_btn">去评价</el-button>
+                  <el-button class="bg_or_btn" @click="routerTo('Order1Appraise')">去评价</el-button>
                 </div>
                 <div class="all_btn" v-show="t==9">
-                  <el-button class="or_btn">查看评价</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Appraise2')">查看评价</el-button>
                 </div>
                 <div class="all_btn" v-show="t==10">
-                  <el-button class="or_btn">查看评价</el-button>
+                  <el-button class="or_btn" @click="routerTo('Order1Appraise2')">查看评价</el-button>
                 </div>
               </el-col>
             </el-row>
@@ -123,9 +125,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       activeName: "0",
@@ -137,17 +138,12 @@ export default {
     childHandle(i, ic, el) {
       this.$parent.childHandle(i, ic, el);
     },
-    handleClick(tab, event) {
-      console.log(tab, event);
-    },
-    routerTo(el){
-      if(el == "Logistics"){
-        this.childHandle(6,0,"Order1Logistics")
-      }
+    handleClick(tab, event) {},
+    routerTo(el) {
+      this.childHandle(6, 0, el);
     }
   }
 };
 </script>
 <style lang="less">
-
 </style>
