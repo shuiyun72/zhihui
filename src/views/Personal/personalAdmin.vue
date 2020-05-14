@@ -100,9 +100,14 @@ import Seller1Add0 from "./components/Seller1Add0.vue";
 import Seller1Add from "./components/Seller1Add.vue";
 import Seller2 from "./components/Seller2.vue";
 import Seller2Return from "./components/Seller2Return.vue";
+import Seller2Return2 from "./components/Seller2Return2.vue";
+import Seller2Logistics from "./components/Seller2Logistics.vue";
 import Seller3 from "./components/Seller3.vue";
 import Seller4 from "./components/Seller4.vue";
 import Seller5 from "./components/Seller5.vue";
+import Seller5DrawMoney from "./components/Seller5DrawMoney.vue";
+import Seller5AddCard from "./components/Seller5AddCard.vue";
+import Seller5Log from "./components/Seller5Log.vue";
 //我的消息
 import Msg1 from "./components/Msg1.vue";
 import Msg2 from "./components/Msg2.vue";
@@ -154,9 +159,14 @@ export default {
     Seller1Add,
     Seller2,
     Seller2Return,
+    Seller2Return2,
+    Seller2Logistics,
     Seller3,
     Seller4,
     Seller5,
+    Seller5DrawMoney,
+    Seller5AddCard,
+    Seller5Log,
     Msg1,
     Msg2,
     Msg3,

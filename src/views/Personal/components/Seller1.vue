@@ -80,13 +80,13 @@
                   <el-button class="or_btn">提醒TA收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==5">
-                  <el-button class="or_btn">已拒绝TA退货</el-button>
+                  <el-button class="or_btn"  @click="childHandle(7,1,'Seller2Return2')">已拒绝TA退货</el-button>
                   <p class="info_l">倒计时：9天12小时</p>
                   <el-button class="or_btn">提醒TA收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==6">
                   <el-button class="or_btn">已同意退款/货</el-button>
-                  <el-button class="or_btn">查看物流</el-button>
+                  <el-button class="or_btn"  @click="childHandle(7,1,'Seller2Logistics')">查看物流</el-button>
                   <el-button class="bg_or_btn">确认退款</el-button>
                 </div>
                 <div class="all_btn" v-show="t==7">

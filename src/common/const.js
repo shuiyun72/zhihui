@@ -294,7 +294,7 @@ export const PersonalList = [
     },
     {
         title: "我的订阅",
-        number: 1,
+        number: 0,
         children: [
             { title: "订阅详情", number: 0, show: 0, router: "" },
             { title: "订阅设置", number: 0, show: 0, router: "" },

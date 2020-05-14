@@ -162,7 +162,6 @@ export default {
     return {
       active: 4,
       va1: "",
-      textarea: "",
       input: "",
       value: "",
       options: [

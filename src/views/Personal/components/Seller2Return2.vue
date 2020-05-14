@@ -2,7 +2,7 @@
   <div class="person_right">
     <div class="title_return_com_sy">
       <div class="left">
-        <span class="r1" @click="childHandle(6,0,'Order1')">订单列表</span>
+        <span class="r1" @click="childHandle(7,1,'Seller1')">订单列表</span>
         <span class="r0">></span>
         <span class="r2">退款/退货</span>
       </div>
@@ -35,8 +35,8 @@
         <div class="personal_d">
           <el-row>
             <el-col :span="8">
-              <img :src="require('@assets/img/t1.jpg')" class="bs" />
-              <span>卖家：小女人</span>
+              <img :src="require('@assets/img/t2.jpg')" class="bs" />
+              <span>买家：零度</span>
               <i class="iconfont icon-weixin1"></i>
               <span class="yellow">和我联系</span>
             </el-col>
@@ -50,6 +50,10 @@
         </div>
         <div>
           <el-row class="bg_detail_com_sy small">
+            <div class="seller_img_t_l">
+              <div class="bgred"></div>
+              <span class="m">卖</span>
+            </div>
             <el-col :span="8" class="t_center">
               <img :src="require('@assets/img/sps2.jpg')" class="bs" />
             </el-col>
@@ -76,7 +80,7 @@
             <el-col :span="3" class="t_center all_btn_box">
               <span class="red">合计:￥568.00</span>
               <div class="all_btn">
-                <el-button class="de_btn">退款/退货中</el-button>
+                <!-- <el-button class="de_btn">退款/退货中</el-button> -->
               </div>
             </el-col>
           </el-row>
@@ -107,56 +111,43 @@
             </span>
           </el-col>
         </el-row>
-      </div>
-      <div class="tall_reason_com_sy small_el bg_b">
         <el-row>
-          <el-col :span="3" class="fwb">时间：</el-col>
-          <el-col :span="19">2020-04-22 15:25:00</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="6" :offset="2" class="alone">卖家已同意退款/退货</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">退货地址：</el-col>
-          <el-col :span="17">河南省郑州市金水区农科路99号</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">收件人：</el-col>
-          <el-col :span="17">陈红红</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">联系电话：</el-col>
-          <el-col :span="17">1300000000</el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="4" class="fwb">备注：</el-col>
-          <el-col :span="17">不收到付件</el-col>
+          <el-col :span="3" :offset="1">
+            <div class="link fwb mt18 fz16">申请平台介入</div>
+          </el-col>
         </el-row>
       </div>
-      <div class="title_time">填写退货信息</div>
-      <div class="big_info">
-        <el-row>
-          <el-col :span="4" class="t_right">物流公司：</el-col>
-          <el-col :span="8">
-            <el-select v-model="value" placeholder="请选择">
-              <el-option
-                v-for="item in options"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value"
-              ></el-option>
-            </el-select>
+      <div class="title_time">拒绝退款/货</div>
+      <div class="tall_reason_com_sy small_el">
+        <el-row  class="pb16">
+          <el-col :span="4" class="fwb">拒绝理由：</el-col>
+          <el-col :span="19">
+            <el-input 
+              type="textarea"
+              :autosize="{ minRows: 4}"
+              placeholder="请输入内容"
+              v-model="textarea"
+              
+              maxlength="200"
+              show-word-limit
+            ></el-input>
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="4" class="t_right">快递单号：</el-col>
-          <el-col :span="8">
-            <el-input v-model="input"></el-input>
+          <el-col :span="4" class="fwb">上传图片：</el-col>
+          <el-col :span="19">
+            <span class="img_mr">
+              <img :src="require('@assets/img/re1.jpg')" />
+            </span>
+            <span class="img_mr">
+              <img :src="require('@assets/img/re2.jpg')" />
+            </span>
           </el-col>
         </el-row>
+        
       </div>
       <div class="submit_btn_sy mbt or">
-        <el-button>提 交</el-button>
+        <el-button>提交</el-button>
       </div>
     </div>
   </div>
@@ -170,6 +161,7 @@ export default {
     return {
       active: 4,
       va1: "",
+      textarea: "",
       input: "",
       value: "",
       options: [
@@ -197,4 +189,25 @@ export default {
 };
 </script>
 <style lang="less">
+.pb16{
+  padding: 0px 0 16px;
+}
+.seller2_at_time_com_sy {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  text-align: center;
+  p {
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #999;
+  }
+  .or_btn_p1 {
+    border: 1px solid #f88509;
+    color: #f88509;
+    padding: 6px 20px;
+  }
+  .el-button + .el-button {
+    margin-left: 80px;
+  }
+}
 </style>
