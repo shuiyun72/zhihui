@@ -100,8 +100,12 @@
                   <el-col :span="4" class="t_right">关联甲方：12家</el-col>
                 </el-row>
 
-                <el-row v-for="(t,i) in 26" :key="i+'t3'" v-show="activeShow == '历史中标乙方'"
-                 @click.native="router4">
+                <el-row
+                  v-for="(t,i) in 26"
+                  :key="i+'t3'"
+                  v-show="activeShow == '历史中标乙方'"
+                  @click.native="router4"
+                >
                   <el-col :span="10">河河南天天了集团有限公司有限公司</el-col>
                   <el-col :span="10" class="t_center t_de">中标信息：23条</el-col>
                   <el-col :span="4" class="t_right t_de">关联企业：23家</el-col>
@@ -120,6 +124,7 @@
 <script>
 import Side from "@components/Side.vue";
 import CardNav from "./components/CardNav.vue";
+import _ from "lodash";
 export default {
   components: { Side, CardNav },
   data() {
@@ -160,8 +165,7 @@ export default {
     },
     router3() {
       this.$router.push({ path: "/project/detail3" });
-    }
-    ,
+    },
     router4() {
       this.$router.push({ path: "/project/detail4" });
     }
@@ -180,5 +184,4 @@ export default {
 </script>
 
 <style lang="less">
-
 </style>

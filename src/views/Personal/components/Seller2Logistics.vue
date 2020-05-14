@@ -114,9 +114,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       activeName: "0",

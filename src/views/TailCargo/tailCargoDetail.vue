@@ -254,10 +254,9 @@
             show-word-limit
           ></el-input>
           <div class="send">
-          <el-button>发送</el-button>
+            <el-button>发送</el-button>
+          </div>
         </div>
-        </div>
-        
       </div>
     </el-dialog>
   </div>
@@ -265,8 +264,7 @@
 
 <script>
 //part3
-import HeaderTop from "@components/Header/HeaderTop.vue";
-import HeaderSearch from "@components/Header/HeaderSearch.vue";
+
 import ImgLunbo from "@components/OverAll/imgLunbo.vue";
 import Side from "@components/Side.vue";
 import * as Commodity from "@/common/commodity";
@@ -287,8 +285,6 @@ export default {
   },
   computed: {},
   components: {
-    HeaderTop,
-    HeaderSearch,
     Side,
     ImgLunbo,
     SmallGoods,
@@ -302,12 +298,12 @@ export default {
 <style lang="less">
 .say_something_com_sy {
   padding-bottom: 30px;
-  position:relative;
-  .icon-guanbi{
+  position: relative;
+  .icon-guanbi {
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index:1;
+    z-index: 1;
     cursor: pointer;
   }
   .n1 {
@@ -378,10 +374,10 @@ export default {
       width: 20px;
       margin-left: 20px;
     }
-    textarea{
+    textarea {
       height: 140px;
     }
-    .send{
+    .send {
       text-align: right;
       margin-top: 20px;
     }

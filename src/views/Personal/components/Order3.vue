@@ -112,7 +112,7 @@ export default {
     };
   },
   methods: {
-    handleEdit(el) {
+    handleEdit() {
       this.childHandle(6, 2, "Order3Edit");
     },
     childHandle(i, ic, el) {

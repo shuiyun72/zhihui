@@ -4,7 +4,7 @@
       <div class="paopao seller_l">
         <div class="p" v-for="(t,i) in paopaoList" :key="i+'p'" :class="{'hidden':t==0}">{{t}}</div>
       </div>
-      <el-tabs v-model="activeName" @tab-click="handleClick">
+      <el-tabs v-model="activeName">
         <el-tab-pane label="所有订单" name="0">
           <el-row class="title_d">
             <el-col :span="4" class="t_center" :offset="8">商品名称</el-col>
@@ -80,13 +80,13 @@
                   <el-button class="or_btn">提醒TA收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==5">
-                  <el-button class="or_btn"  @click="childHandle(7,1,'Seller2Return2')">已拒绝TA退货</el-button>
+                  <el-button class="or_btn" @click="childHandle(7,1,'Seller2Return2')">已拒绝TA退货</el-button>
                   <p class="info_l">倒计时：9天12小时</p>
                   <el-button class="or_btn">提醒TA收货</el-button>
                 </div>
                 <div class="all_btn" v-show="t==6">
                   <el-button class="or_btn">已同意退款/货</el-button>
-                  <el-button class="or_btn"  @click="childHandle(7,1,'Seller2Logistics')">查看物流</el-button>
+                  <el-button class="or_btn" @click="childHandle(7,1,'Seller2Logistics')">查看物流</el-button>
                   <el-button class="bg_or_btn">确认退款</el-button>
                 </div>
                 <div class="all_btn" v-show="t==7">
@@ -129,7 +129,6 @@ export default {
     childHandle(i, ic, el) {
       this.$parent.childHandle(i, ic, el);
     },
-    handleClick(tab, event) {},
     routerTo(el) {
       this.childHandle(7, 0, el);
     }

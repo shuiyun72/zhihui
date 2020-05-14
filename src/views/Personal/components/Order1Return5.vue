@@ -137,29 +137,36 @@
       <div class="vertical_steps_com_sy">
         <div class="title l">
           <el-row class="mb16">
-            <el-col :span="3" >物流公司：</el-col>
-            <el-col :span="10" >顺丰速运</el-col>
+            <el-col :span="3">物流公司：</el-col>
+            <el-col :span="10">顺丰速运</el-col>
           </el-row>
           <el-row>
             <el-col :span="3">快递单号：</el-col>
-            <el-col :span="10" > 251564864151465416156</el-col>
+            <el-col :span="10">251564864151465416156</el-col>
           </el-row>
-        </div> 
+        </div>
         <div class="title">物流信息：</div>
         <el-steps direction="vertical" :active="2" style="height:300px">
           <el-step title="订单创建成功" icon="iconfont icon-dian3" description="2020/05/07 15:35:58"></el-step>
-          <el-step title="已从郑州集散中心发往南京集散中心" icon="iconfont icon-dian3" description="2020/05/07 15:35:58"></el-step>
+          <el-step
+            title="已从郑州集散中心发往南京集散中心"
+            icon="iconfont icon-dian3"
+            description="2020/05/07 15:35:58"
+          ></el-step>
           <el-step title="【已签收】" icon="iconfont icon-dian3" description="2020/05/07 15:35:58"></el-step>
         </el-steps>
       </div>
     </div>
     <el-dialog title="提示" :visible.sync="returnResult" width="560px" class="playing_dialog_com_sy">
-      <div class="cro_zhiding_body">  
+      <div class="cro_zhiding_body">
         <p class="pt16">钱款已退回到支付宝账户</p>
         <p class="pt10">交易单号：121354651564816846</p>
-        <p class="pt10">金额：<span class="red2">￥586.00</span> </p>
+        <p class="pt10">
+          金额：
+          <span class="red2">￥586.00</span>
+        </p>
         <div class="submit">
-          <el-button class=" btn_p4" @click="returnResult = false">取消</el-button>
+          <el-button class="btn_p4" @click="returnResult = false">取消</el-button>
           <el-button class="blue_btn btn_p3" @click="returnResult = false">确定</el-button>
         </div>
       </div>
@@ -168,13 +175,12 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       active: 5,
-      returnResult:false,
+      returnResult: false
     };
   },
   methods: {

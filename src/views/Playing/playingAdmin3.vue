@@ -46,7 +46,8 @@
       </div>
       <div class="right">
         <div class="up_img_box bs">
-          <span class="p">选择上传展示位图片：</span><el-button class="btn_p3">上传图片</el-button>
+          <span class="p">选择上传展示位图片：</span>
+          <el-button class="btn_p3">上传图片</el-button>
           <h2>
             广告展示位截止时间：
             <span>2019-12-15 12：00：00</span>
@@ -66,10 +67,9 @@ import HeaderTop from "@components/Header/HeaderTop.vue";
 import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
-import PageNum from "@components/PageNum";
 import { adminList } from "@const";
 export default {
-  components: { PageNum, HeaderTop, HeaderSearch, HeaderNav, Side },
+  components: { HeaderTop, HeaderSearch, HeaderNav, Side },
   data() {
     return {
       adminList: adminList,
@@ -116,5 +116,4 @@ export default {
 };
 </script>
 <style lang="less">
-
 </style>

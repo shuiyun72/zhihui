@@ -170,9 +170,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       active: 4,
@@ -193,5 +192,4 @@ export default {
 };
 </script>
 <style lang="less">
-
 </style>

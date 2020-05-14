@@ -137,14 +137,14 @@
       <div class="vertical_steps_com_sy">
         <div class="title l">
           <el-row class="mb16">
-            <el-col :span="3" >物流公司：</el-col>
-            <el-col :span="10" >顺丰速运</el-col>
+            <el-col :span="3">物流公司：</el-col>
+            <el-col :span="10">顺丰速运</el-col>
           </el-row>
           <el-row>
             <el-col :span="3">快递单号：</el-col>
-            <el-col :span="10" > 251564864151465416156</el-col>
+            <el-col :span="10">251564864151465416156</el-col>
           </el-row>
-        </div> 
+        </div>
         <div class="title">物流信息：</div>
         <el-steps direction="vertical" :active="1" style="height:300px">
           <el-step title="等待揽收" icon="iconfont icon-dian3" description="2020/05/07 15:35:58"></el-step>
@@ -155,9 +155,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       active: 4,

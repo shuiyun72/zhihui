@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import * as Const from "@/common/const";
 export default {
   props:{
     HeaderSearch:{

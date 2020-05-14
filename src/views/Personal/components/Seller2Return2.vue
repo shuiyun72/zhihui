@@ -119,15 +119,14 @@
       </div>
       <div class="title_time">拒绝退款/货</div>
       <div class="tall_reason_com_sy small_el">
-        <el-row  class="pb16">
+        <el-row class="pb16">
           <el-col :span="4" class="fwb">拒绝理由：</el-col>
           <el-col :span="19">
-            <el-input 
+            <el-input
               type="textarea"
               :autosize="{ minRows: 4}"
               placeholder="请输入内容"
               v-model="textarea"
-              
               maxlength="200"
               show-word-limit
             ></el-input>
@@ -144,7 +143,6 @@
             </span>
           </el-col>
         </el-row>
-        
       </div>
       <div class="submit_btn_sy mbt or">
         <el-button>提交</el-button>
@@ -154,9 +152,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       active: 4,
@@ -189,7 +186,7 @@ export default {
 };
 </script>
 <style lang="less">
-.pb16{
+.pb16 {
   padding: 0px 0 16px;
 }
 .seller2_at_time_com_sy {

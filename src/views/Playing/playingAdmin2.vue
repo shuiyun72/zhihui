@@ -71,10 +71,9 @@ import HeaderTop from "@components/Header/HeaderTop.vue";
 import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
-import PageNum from "@components/PageNum";
 import { adminList } from "@const";
 export default {
-  components: { PageNum, HeaderTop, HeaderSearch, HeaderNav, Side },
+  components: { HeaderTop, HeaderSearch, HeaderNav, Side },
   data() {
     return {
       adminList: adminList,

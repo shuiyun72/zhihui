@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import * as Commodity from "@/common/commodity";
 export default {
   data() {
     return {};

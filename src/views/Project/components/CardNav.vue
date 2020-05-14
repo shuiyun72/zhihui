@@ -12,23 +12,23 @@
         <span>{{CardNav.num}}</span>条
       </div>
     </div>
-    <i class="el-icon-caret-right"  :class="{'active':CardNav.active}"></i>
+    <i class="el-icon-caret-right" :class="{'active':CardNav.active}"></i>
   </div>
 </template>
 
 <script>
 export default {
-    props:{
-        CardNav:{
-            type:Object,
-            default:{}   
-        }
-    },
-    methods:{
-      parentCards(text){
-        this.$emit("parentCards",text)
-      }
+  props: {
+    CardNav: {
+      type: Object,
+      default: {}
     }
+  },
+  methods: {
+    parentCards(text) {
+      this.$emit("parentCards", text);
+    }
+  }
 };
 </script>
 
@@ -74,7 +74,7 @@ export default {
     position: relative;
     top: 30px;
     left: -16px;
-    &.active{
+    &.active {
       color: #eaeaea;
     }
   }

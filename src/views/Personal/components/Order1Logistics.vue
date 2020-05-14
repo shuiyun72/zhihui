@@ -141,8 +141,8 @@
     </div>
     <div class="vertical_steps_com_sy">
       <div class="title">物流信息：</div>
-      <el-steps direction="vertical" :active="3" style="height:300px"> 
-        <el-step title="物流公司：申通快递" icon="iconfont icon-dian3" description="单号：4564889465468496"></el-step> 
+      <el-steps direction="vertical" :active="3" style="height:300px">
+        <el-step title="物流公司：申通快递" icon="iconfont icon-dian3" description="单号：4564889465468496"></el-step>
         <el-step title="订单创建成功" icon="iconfont icon-dian3" description="2018-04-11"></el-step>
         <el-step title="已揽收" icon="iconfont icon-dian3" description="2018-04-13"></el-step>
         <el-step title="已从郑州集散中心发往南京集散中心" icon="iconfont icon-dian3" description="2018-04-15"></el-step>
@@ -150,8 +150,8 @@
     </div>
     <div class="vertical_steps_com_sy">
       <div class="title">物流信息：</div>
-      <el-steps direction="vertical" :active="4" style="height:300px"> 
-        <el-step title="物流公司：申通快递" icon="iconfont icon-dian3" description="单号：4564889465468496"></el-step> 
+      <el-steps direction="vertical" :active="4" style="height:300px">
+        <el-step title="物流公司：申通快递" icon="iconfont icon-dian3" description="单号：4564889465468496"></el-step>
         <el-step title="订单创建成功" icon="iconfont icon-dian3" description="2018-04-11"></el-step>
         <el-step title="已揽收" icon="iconfont icon-dian3" description="2018-04-13"></el-step>
         <el-step title="已从郑州集散中心发往南京集散中心" icon="iconfont icon-dian3" description="2018-04-15"></el-step>
@@ -162,9 +162,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       activeName: "0",
@@ -184,5 +183,4 @@ export default {
 };
 </script>
 <style lang="less">
-
 </style>

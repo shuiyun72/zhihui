@@ -50,7 +50,7 @@
         </div>
         <div>
           <el-row class="bg_detail_com_sy small">
-            <div class="seller_img_t_l"> 
+            <div class="seller_img_t_l">
               <div class="bgred"></div>
               <span class="m">卖</span>
             </div>
@@ -116,9 +116,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       active: 1,

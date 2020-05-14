@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="edit_el_tabs_com_sy">
-      <el-row class="title_d"> 
+      <el-row class="title_d">
         <el-col :span="8" class="t_center">宝贝</el-col>
         <el-col :span="4" class="t_center">商品名称</el-col>
         <el-col :span="3" class="t_center">参数</el-col>
@@ -33,19 +33,19 @@
       </el-row>
       <div class="personal_d">
         <el-row>
-                <el-col :span="8">
-                  <img :src="require('@assets/img/t1.jpg')" class="bs" />
-                  <span>卖家：小女人</span>
-                  <i class="iconfont icon-weixin1"></i>
-                  <span class="yellow">和我联系</span>
-                </el-col>
-                <el-col :span="9">
-                  <span class="blue2">订单号：12316451321546541</span>
-                </el-col>
-                <el-col :span="7" class="t_right">
-                  <span class="time">2020-04-15 15:35:21</span>
-                </el-col>
-              </el-row>
+          <el-col :span="8">
+            <img :src="require('@assets/img/t1.jpg')" class="bs" />
+            <span>卖家：小女人</span>
+            <i class="iconfont icon-weixin1"></i>
+            <span class="yellow">和我联系</span>
+          </el-col>
+          <el-col :span="9">
+            <span class="blue2">订单号：12316451321546541</span>
+          </el-col>
+          <el-col :span="7" class="t_right">
+            <span class="time">2020-04-15 15:35:21</span>
+          </el-col>
+        </el-row>
       </div>
       <div v-for="(t,i) in [2]" :key="i+'pp'">
         <el-row class="bg_detail_com_sy small">
@@ -125,7 +125,7 @@
         <el-col :span="2" class="fwb">商品状态：</el-col>
         <el-col :span="21">
           <el-button class="round_btn_p1 active_or">需要退货</el-button>
-          <el-button class="round_btn_p1"  @click="routerTo('Order1Return2')">无需退货</el-button>
+          <el-button class="round_btn_p1" @click="routerTo('Order1Return2')">无需退货</el-button>
           <el-button class="round_btn_p1">未收到货</el-button>
         </el-col>
       </el-row>
@@ -170,9 +170,8 @@
 </template>
 
 <script>
-import PageNum from "@components/PageNum";
 export default {
-  components: { PageNum },
+  components: {},
   data() {
     return {
       active: 4,
@@ -191,6 +190,4 @@ export default {
 };
 </script>
 <style lang="less">
-
-
 </style>

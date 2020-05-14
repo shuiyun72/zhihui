@@ -6,16 +6,15 @@
       </div>
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="所有订单" name="0">
-          
-            <el-row class="title_d">
-              <el-col :span="4" class="t_center" :offset="8">商品名称</el-col>
-              <el-col :span="3" class="t_center">参数</el-col>
-              <el-col :span="2" class="t_center">单价</el-col>
-              <el-col :span="2" class="t_center">数量</el-col>
-              <el-col :span="2" class="t_center">原价</el-col>
-              <el-col :span="3" class="t_center">操作</el-col>
-            </el-row>
-          
+          <el-row class="title_d">
+            <el-col :span="4" class="t_center" :offset="8">商品名称</el-col>
+            <el-col :span="3" class="t_center">参数</el-col>
+            <el-col :span="2" class="t_center">单价</el-col>
+            <el-col :span="2" class="t_center">数量</el-col>
+            <el-col :span="2" class="t_center">原价</el-col>
+            <el-col :span="3" class="t_center">操作</el-col>
+          </el-row>
+
           <div v-for="(t,i) in [1,2,3,4,5,6,7,8,9,10]" :key="i+'pp'">
             <div class="personal_d" v-show="t != 10">
               <el-row>
@@ -138,7 +137,9 @@ export default {
     childHandle(i, ic, el) {
       this.$parent.childHandle(i, ic, el);
     },
-    handleClick(tab, event) {},
+    handleClick(tab, event) {
+      console.log(tab, event);
+    },
     routerTo(el) {
       this.childHandle(6, 0, el);
     }

@@ -4,7 +4,7 @@
       <div class="paopao">
         <div class="p" v-for="(t,i) in paopaoList" :key="i+'p'" :class="{'hidden':t==0}">{{t}}</div>
       </div>
-      <el-tabs v-model="activeName" @tab-click="handleClick">
+      <el-tabs v-model="activeName">
         <el-tab-pane label="所有订单" name="0">
           
             <el-row class="title_d">
@@ -138,7 +138,6 @@ export default {
     childHandle(i, ic, el) {
       this.$parent.childHandle(i, ic, el);
     },
-    handleClick(tab, event) {},
     routerTo(el) {
       this.childHandle(6, 0, el);
     }

@@ -88,6 +88,7 @@
 <script>
 import Side from "@components/Side.vue";
 import CardNav from "./components/CardNav.vue";
+import _ from "lodash";
 export default {
   components: { Side, CardNav },
   data() {

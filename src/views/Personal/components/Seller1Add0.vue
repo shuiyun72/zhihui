@@ -70,7 +70,6 @@ export default {
     childHandle(i, ic, el) {
       this.$parent.childHandle(i, ic, el);
     },
-    handleClick(tab, event) {},
     routerTo(el) {
       this.childHandle(7, 0, el);
     }

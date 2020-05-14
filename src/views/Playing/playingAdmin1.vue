@@ -20,9 +20,7 @@
         <div class="item" v-for="(t,i) in adminList" :key="i+'t'">
           <el-row @click.native="parentHandle(i)">
             <el-col :span="6" class="t_right">
-              <i
-                :class="t.number > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"
-              ></i>
+              <i :class="t.number > 0 ?'el-icon-caret-bottom':'el-icon-caret-right'"></i>
             </el-col>
             <el-col :span="6">
               <span class="title_span">{{t.title}}</span>
@@ -119,6 +117,7 @@ import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
 import PageNum from "@components/PageNum";
 import { adminList } from "@const";
+import _ from "lodash";
 export default {
   components: { PageNum, HeaderTop, HeaderSearch, HeaderNav, Side },
   data() {
@@ -157,14 +156,14 @@ export default {
   },
   methods: {
     parentHandle(i) {
-      this.adminList[i].number = this.adminList[i].number == 0 ? 1 : 0 ;
+      this.adminList[i].number = this.adminList[i].number == 0 ? 1 : 0;
     },
-    childHandle(i,ic) {
-      _.map(this.adminList,item=>{
-        _.map(item.children,child=>{
+    childHandle(i, ic) {
+      _.map(this.adminList, item => {
+        _.map(item.children, child => {
           child.show = 0;
-        })
-      })
+        });
+      });
       this.adminList[i].children[ic].show = 1;
     }
   }

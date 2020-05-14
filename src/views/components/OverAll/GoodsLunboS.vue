@@ -8,16 +8,14 @@
 
 <script>
 import * as Commodity from "@/common/commodity";
-import SmallGoods from "@components/Goods/SmallGoods";
+
 export default {
   data() {
     return {
       commodityList: Commodity.HomeCommodity
     };
   },
-  components: {
-    SmallGoods
-  },
+  components: {},
   methods: {
     showShop(el) {
       console.log(el);

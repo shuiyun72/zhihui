@@ -18,9 +18,11 @@
     </div>
     <div class="title_Progress">
       <div class="left">
-        <el-breadcrumb separator=">" >
+        <el-breadcrumb separator=">">
           <el-breadcrumb-item :to="{ path: '/tailCargo' }">尾货捡漏</el-breadcrumb-item>
-          <el-breadcrumb-item @click.native="handleScreen(-1,{})" v-if="srceenActiveN > -1"><span class="breadcrumb_text">综合布线系统</span></el-breadcrumb-item>
+          <el-breadcrumb-item @click.native="handleScreen(-1,{})" v-if="srceenActiveN > -1">
+            <span class="breadcrumb_text">综合布线系统</span>
+          </el-breadcrumb-item>
           <el-breadcrumb-item>{{srceenActiveN > -1 ? srceenActive.text :'综合布线系统'}}</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
@@ -89,9 +91,7 @@
 
 <script>
 //part3
-import HeaderTop from "@components/Header/HeaderTop.vue";
-import HeaderSearch from "@components/Header/HeaderSearch.vue";
-import Side from "@components/Side.vue";
+
 import * as Commodity from "@/common/commodity";
 import SmallGoods from "@components/Goods/SmallGoods";
 import BigGoods from "@components/Goods/BigGoods";
@@ -100,28 +100,25 @@ export default {
     return {
       commodityList: Commodity.HomeCommodity,
       part3List: Commodity.Part3List,
-      srceenActiveN:-1,
-      srceenActive:{}
+      srceenActiveN: -1,
+      srceenActive: {}
     };
   },
   components: {
-    HeaderTop,
-    HeaderSearch,
-    Side,
     SmallGoods,
     BigGoods
   },
-  computed:{
-    isScreen(){
-      if(JSON.stringify(this.srceenActive) == "{}"){
-        return false
-      }else{
-        return true
+  computed: {
+    isScreen() {
+      if (JSON.stringify(this.srceenActive) == "{}") {
+        return false;
+      } else {
+        return true;
       }
     }
   },
   methods: {
-    handleScreen(i,t){
+    handleScreen(i, t) {
       this.srceenActiveN = i;
       this.srceenActive = t;
     }
