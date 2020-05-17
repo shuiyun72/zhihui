@@ -10,12 +10,12 @@
           <div class="span">10</div>
         </div>
         <router-link :to="{path:'/steps2'}" tag="div" class="is_active item_box">
-        <!-- <div class="is_active item_box"> -->
+          <!-- <div class="is_active item_box"> -->
           <div class="item">
             我的
             <br />购物车
           </div>
-        <!-- </div> -->
+          <!-- </div> -->
         </router-link>
         <div class="item_box">
           <div class="item">
@@ -66,52 +66,16 @@
         </div>
       </div>
       <div class="part1" v-show="isShowRightPart1">
-        <div class="item_box">
-          <div class="item">
-            平台
-            <br />首页
-          </div>
-        </div>
-        <div class="item_box is_active">
-          <div class="item">
-            尾货
-            <br />专场
-          </div>
-        </div>
-        <div class="item_box">
-          <div class="item">
-            项目
-            <br />信息
-          </div>
-        </div>
-        <div class="item_box">
-          <div class="item">
-            企业
-            <br />入驻
-          </div>
-        </div>
-        <div class="item_box">
-          <div class="item">
-            众包
-            <br />合作
-          </div>
-        </div>
-        <div class="item_box">
-          <div class="item">
-            达人
-            <br />活动
-          </div>
-        </div>
-        <div class="item_box">
-          <div class="item">
-            弱电
-            <br />社区
-          </div>
-        </div>
-        <div class="item_box">
-          <div class="item_last">
-            个人
-            <br />中心
+        <div
+          class="item_box"
+          v-for="(t,i) in sideRightNav"
+          :key="i+'xx'"
+          :class="{'is_active':t.active}"
+        >
+          <div class="item" @click="routeTo(t,i)">
+            {{t.text1}}
+            <br />
+            {{t.text2}}
           </div>
         </div>
       </div>
@@ -125,7 +89,7 @@
       <div class="part3">
         <i class="el-icon-picture"></i>
       </div>
-      <div class="part3">
+      <div class="part3" @click="toTop">
         <i class="el-icon-upload2"></i>
       </div>
     </div>
@@ -136,20 +100,58 @@
 export default {
   data() {
     return {
-      isShow: false
+      isShow: false,
+      sideRightNav: [
+        { text1: "平台", text2: "首页", route: "/home/home", active: 0 },
+        { text1: "尾货", text2: "专场", route: "/tailCargo/home", active: 0 },
+        { text1: "项目", text2: "信息", route: "/project/home", active: 0 },
+        { text1: "企业", text2: "入驻", route: "/enterprise/home", active: 0 },
+        { text1: "众包", text2: "合作", route: "/crowds/home", active: 0 },
+        { text1: "达人", text2: "活动", route: "/expert/home", active: 0 },
+        {
+          text1: "弱电",
+          text2: "社区",
+          route: "/lightCurrent/home",
+          active: 0
+        },
+        { text1: "个人", text2: "中心", route: "/personal/admin", active: 0 }
+      ]
     };
+  },
+  mounted() {
+    let thisRoute = this.$route.path.split("\/")[1];
+    if(thisRoute != "playing" && thisRoute != "vote"){
+      let indss = _.findIndex(this.sideRightNav, res => {
+        return res.route.split("\/")[1] == thisRoute;
+      });
+      this.sideRightNav[indss].active = 1;
+    }
   },
   props: {
     isShowRightPart1: {
       default: true
     },
-    toUrl:{
-      default:""
+    toUrl: {
+      default: ""
     }
   },
   methods: {
     showConnection() {
       this.isShow = !this.isShow;
+    },
+    routeTo(t, i) {
+      if (t.route != this.$route.path) {
+        this.$router.push({ path: t.route });
+      }
+    },
+    toTop() {
+      let top = document.documentElement.scrollTop || document.body.scrollTop;
+      const timeTop = setInterval(() => {
+        document.body.scrollTop = document.documentElement.scrollTop = top -= 20;
+        if (top <= 0) {
+          clearInterval(timeTop);
+        }
+      }, 20);
     }
   }
 };
@@ -229,37 +231,39 @@ export default {
   margin-left: 620px;
   .part1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    .item_box + .item_box {
+      .item {
+        border-top: 1px solid #35c0c6;
+      }
+    }
+    .item_box.is_active + .item_box,
+    .item_box:hover + .item_box {
+      .item {
+        border-top: 1px solid transparent;
+      }
+    }
     .item_box {
       width: 50px;
-      padding: 10px 9px 0;
+      padding: 0px 9px 10px;
       line-height: 14px;
       color: #000;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 1);
       .item_last {
-        padding-bottom: 10px;
+        padding-top: 10px;
         color: #35c0c6;
       }
       .item {
-        border-bottom: 1px solid #35c0c6;
-        padding-bottom: 10px;
+        padding-top: 10px;
         box-sizing: border-box;
-        position: relative;
-        top: 1px;
         color: #35c0c6;
       }
       &.is_active,
       &:hover {
         .item {
-          border-bottom: 1px solid #fff;
-          color: #fff;
-        }
-        .item_last {
-          border-bottom: 1px solid #35c0c6;
           color: #fff;
         }
         background: #35c0c6;
-        position: relative;
       }
     }
   }

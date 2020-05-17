@@ -30,7 +30,11 @@ export default {
       default: false
     }
   },
-  methods: {}
+  methods: {
+    showShop(el){
+      console.log(el)
+    }
+  }
 };
 </script>
 <style lang="less">
