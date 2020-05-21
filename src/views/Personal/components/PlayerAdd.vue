@@ -64,12 +64,12 @@
             <el-input type="textarea"></el-input>
           </el-col>
         </el-row>
-        <el-row>
-          <el-col :span="2">答案1：</el-col>
+        <el-row v-for="(t,i) in response" :key="i+'xxz'">
+          <el-col :span="2">答案{{i+1}}：</el-col>
           <el-col :span="1">
             <el-checkbox class="big_checkbox"></el-checkbox>
           </el-col>
-          <el-col :span="11">
+          <el-col :span="13">
             <el-input
               v-model="d1"
               size="mini"
@@ -78,23 +78,9 @@
             ></el-input>
           </el-col>
         </el-row>
-        <el-row>
-          <el-col :span="2">答案2:</el-col>
-          <el-col :span="1">
-            <el-checkbox class="big_checkbox"></el-checkbox>
-          </el-col>
-          <el-col :span="9">
-            <el-input
-              v-model="d2"
-              size="mini"
-              placeholder="请输入选择答案，并在正确答案前打上“ √ ”（答案不超过15个字符）"
-              maxlength="15"
-            ></el-input>
-          </el-col>
-        </el-row>
         <div class="true_add">
           <div class="add">
-            <i class="iconfont icon-jiahao"></i>
+            <i class="iconfont icon-jiahao pointer" @click="addRes"></i>
           </div>
           <p>注：题目达到20题才可以提交</p>
           <el-button class="blue_btn2_r">提交</el-button>
@@ -131,10 +117,14 @@ export default {
       addressModel: [],
       radio: "3",
       d1: "",
-      d2: ""
+      d2: "",
+      response:2
     };
   },
   methods: {
+    addRes(){
+      ++this.response;
+    },
     childHandle(i, ic, el) {
       this.$parent.childHandle(i, ic, el);
     }

@@ -14,17 +14,19 @@ import _ from "lodash";
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+	router,
+	store,
+	render: h => h(App)
 }).$mount('#app')
 
-router.afterEach((to,from,next) => {
-  let top = document.documentElement.scrollTop || document.body.scrollTop
-	 const timeTop = setInterval(() => {
-	   document.body.scrollTop = document.documentElement.scrollTop = top -= 20
-	   if (top <= 0) {
-	     clearInterval(timeTop)
-	   }
-	 }, 20)
+router.afterEach((to, from, next) => {
+	let top = document.documentElement.scrollTop || document.body.scrollTop
+	if (to.matched[0].path != "/enterprise") {
+		const timeTop = setInterval(() => {
+			document.body.scrollTop = document.documentElement.scrollTop = top -= 20
+			if (top <= 0) {
+				clearInterval(timeTop)
+			}
+		}, 20)
+	}
 })

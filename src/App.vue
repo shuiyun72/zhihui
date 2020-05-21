@@ -16,3 +16,14 @@ export default {
   }
 };
 </script>
+<style lang="less">
+.el-table {
+  width: 100%;
+  .el-table__header {
+    width: 100% !important;
+  }
+  .el-table__body {
+    width: 100% !important;
+  }
+}
+</style>

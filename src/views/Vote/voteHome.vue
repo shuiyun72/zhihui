@@ -2,6 +2,7 @@
   <div class="vote_home">
     <Side :toUrl="'vote'"></Side>
     <div class="bg_img_top">
+      <CarouselLb></CarouselLb>
       <div class="click">点击竞价此展示位</div>
     </div>
     <div class="vote_body wm">
@@ -108,8 +109,9 @@
 <script>
 import Side from "@components/Side.vue";
 import { addressList1 } from "@const";
+import CarouselLb from "@components/CarouselLb";
 export default {
-  components: { Side },
+  components: { Side,CarouselLb },
   mounted() {},
   data() {
     return {

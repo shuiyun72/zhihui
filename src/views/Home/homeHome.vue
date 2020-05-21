@@ -1,6 +1,7 @@
 <template>
   <div id="home2">
     <div class="bg_img_top">
+      <CarouselLb></CarouselLb>
       <div class="click">点击竞价此展示位</div>
     </div>
     <div class="blue_title">
@@ -52,13 +53,17 @@
           <div class="img">
             <img :src="require('@assets/img/shopimg.png')" alt />
           </div>
-          <div class="table_list_money">
-            <div class="item" v-for="(item,i) in tableList" :key="i">
-              <span class="user">{{item.user}}</span>：
-              <span class="content no_wrap">{{item.content}}</span>赚取
-              <span class="red">￥{{item.money}}</span>
-            </div>
-          </div>
+          <el-carousel trigger="click" height="358px" :interval="5000" direction="vertical">
+            <el-carousel-item v-for="iteml in 4" :key="iteml">
+              <div class="table_list_money">
+                <div class="item" v-for="(item,i) in tableList" :key="i+'xcc'">
+                  <span class="user">{{item.user}}</span>：
+                  <span class="content no_wrap">{{item.content}}</span>赚取
+                  <span class="red">￥{{item.money}}</span>
+                </div>
+              </div>
+            </el-carousel-item>
+          </el-carousel>
         </div>
         <div class="right">
           <BigGoods
@@ -73,12 +78,16 @@
         <div class="left">
           <img :src="require('@assets/img/shopimg.png')" alt />
         </div>
-        <div class="right">
-          <GoodsLunboS>
-            <div class="d_flex">
-              <SmallGoods :smallGoodsItem="item" v-for="(item,index) in DataFor(5,[commodityList[0]])" :key="index"></SmallGoods>
-            </div>
-          </GoodsLunboS>
+        <div class="right width970_lb_com_sy bs">
+          <el-carousel trigger="click" height="70px" :interval="7000" class="carousel_l">
+            <el-carousel-item v-for="items in 4" :key="items">
+              <SmallGoods
+                :smallGoodsItem="item"
+                v-for="(item,index) in DataFor(5,[commodityList[0]])"
+                :key="index"
+              ></SmallGoods>
+            </el-carousel-item>
+          </el-carousel>
         </div>
       </div>
     </div>
@@ -137,10 +146,16 @@
           <div class="link">更多...</div>
         </div>
       </div>
-      <div class="h2_part8a_box">
-        <div class="img bs" v-for="(t,i) in DataFor(25,[{img:'mqh.png'}])" :key="i">
-          <img :src="require('@assets/img/'+t.img)" alt />
-        </div>
+      <div class="wm">
+        <el-carousel trigger="click" height="690px" :interval="5500">
+          <el-carousel-item v-for="items in 4" :key="items">
+            <div class="h2_part8a_box">
+              <div class="img bs" v-for="(t,i) in DataFor(25,[{img:'mqh.png'}])" :key="i">
+                <img :src="require('@assets/img/'+t.img)" alt />
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
       </div>
     </div>
 
@@ -322,11 +337,13 @@ import * as Commodity from "@/common/commodity";
 import BigGoods from "@components/Goods/BigGoods";
 import SmallGoods from "@components/Goods/SmallGoods";
 import GoodsLunboS from "@components/OverAll/GoodsLunboS";
+import CarouselLb from "@components/CarouselLb";
 export default {
   components: {
     BigGoods,
     SmallGoods,
-    GoodsLunboS
+    GoodsLunboS,
+    CarouselLb
   },
   computed: {
     tableList() {
@@ -370,5 +387,23 @@ export default {
 };
 </script>
 <style lang="less">
+.width970_lb_com_sy {
+  box-sizing: border-box;
+  width: 970px;
 
+  .carousel_l {
+    padding: 17px 0px 17px 20px;
+  }
+  .el-carousel__arrow {
+    border-radius: 0;
+    width: 20px;
+    height: 40px;
+  }
+  .el-carousel__arrow--right {
+    right: 0;
+  }
+  .el-carousel__arrow--left {
+    left: -20px;
+  }
+}
 </style>

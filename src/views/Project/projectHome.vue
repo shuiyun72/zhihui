@@ -2,6 +2,7 @@
   <div class="project_home">
     <Side :toUrl="'crowds'"></Side>
     <div class="bg_img_top">
+      <CarouselLb></CarouselLb>
       <div class="click">点击竞价此展示位</div>
     </div>
     <div class="project_body wm">
@@ -159,8 +160,9 @@
 
 <script>
 import Side from "@components/Side.vue";
+import CarouselLb from "@components/CarouselLb";
 export default {
-  components: { Side },
+  components: { Side ,CarouselLb},
   mounted(){
     console.log("%c /project/home > 附近项目 > 评标结果 > 列表 > 商机分析 > 历史招标代理 > 列表 > 历史服务甲方",'color:#0f0;')
   },

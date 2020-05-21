@@ -18,7 +18,7 @@
           <el-breadcrumb separator=">">
             <el-breadcrumb-item :to="{ path: '/project' }">项目信息</el-breadcrumb-item>
             <el-breadcrumb-item :to="{ path: '/project/list2' }">中标信息</el-breadcrumb-item>
-            <el-breadcrumb-item>项目详情</el-breadcrumb-item>
+            <el-breadcrumb-item>{{selectTitle}}</el-breadcrumb-item>
           </el-breadcrumb>
         </div>
         <div class="right">
@@ -55,7 +55,7 @@
             <span class="red_b">有奖反馈！</span>
           </div>
         </div>
-        <el-tabs type="border-card" class="part2 project_tabs_sy">
+        <el-tabs type="border-card" class="part2 project_tabs_sy" @tab-click="changeItem">
           <el-tab-pane label="项目详情">
             <div class="project_tab">
               <p v-for="(t,i) in projectTab1" :key="i+'p1'">{{t}}</p>
@@ -152,7 +152,8 @@ export default {
           active: 0
         }
       ],
-      activeShow: "招采信息"
+      activeShow: "招采信息",
+      selectTitle:"项目详情"
     };
   },
   methods: {
@@ -168,6 +169,9 @@ export default {
     },
     router4() {
       this.$router.push({ path: "/project/detail4" });
+    },
+    changeItem(tab, event){
+      this.selectTitle = event.target.innerHTML
     }
   },
   mounted() {

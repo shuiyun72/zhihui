@@ -9,6 +9,7 @@
 
     <div id="firm">
       <div class="bg_img_top">
+        <CarouselLb></CarouselLb>
         <div class="click">点击竞价此展示位</div>
       </div>
       <div class="firm_num_box_sy">
@@ -152,8 +153,9 @@ import HeaderSearch from "@components/Header/HeaderSearch.vue";
 import HeaderNav from "@components/Header/HeaderNav.vue";
 import Side from "@components/Side.vue";
 import PageNum from "@components/PageNum";
+import CarouselLb from "@components/CarouselLb";
 export default {
-  components: { PageNum, HeaderTop, HeaderSearch, HeaderNav, Side },
+  components: { PageNum, HeaderTop, HeaderSearch, HeaderNav, Side,CarouselLb },
   data() {
     return {};
   },

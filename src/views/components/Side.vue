@@ -43,7 +43,12 @@
       </router-link>
     </div>
     <div id="rightside">
-      <div class="connection_qq_com_sy bs" v-show="isShow">
+      <div
+        class="connection_qq_com_sy bs"
+        v-show="isShow"
+        @mouseenter="showConnectionS"
+        @mouseleave="showConnectionH"
+      >
         <div>
           <i class="iconfont icon-zuojitianchong"></i>
           <span>客服电话：400-118-6800</span>
@@ -65,21 +70,23 @@
           </span>
         </div>
       </div>
-      <div class="part1" v-show="isShowRightPart1">
-        <div
-          class="item_box"
-          v-for="(t,i) in sideRightNav"
-          :key="i+'xx'"
-          :class="{'is_active':t.active}"
-        >
-          <div class="item" @click="routeTo(t,i)">
-            {{t.text1}}
-            <br />
-            {{t.text2}}
+      <transition name="fade">
+        <div class="part1" v-show="isShowRightPart1 && isShowRightPart1S">
+          <div
+            class="item_box"
+            v-for="(t,i) in sideRightNav"
+            :key="i+'xx'"
+            :class="{'is_active':t.active}"
+          >
+            <div class="item" @click="routeTo(t,i)">
+              {{t.text1}}
+              <br />
+              {{t.text2}}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="part2" @click="showConnection">
+      </transition>
+      <div class="part2" @mouseenter="showConnectionS" @mouseleave="showConnectionH">
         <i class="el-icon-chat-line-round"></i>
         <div class="green">
           联系
@@ -115,17 +122,22 @@ export default {
           active: 0
         },
         { text1: "个人", text2: "中心", route: "/personal/admin", active: 0 }
-      ]
+      ],
+      isShowRightPart1S: false,
+      setTimeoutTimer:null
     };
   },
   mounted() {
-    let thisRoute = this.$route.path.split("\/")[1];
-    if(thisRoute != "playing" && thisRoute != "vote"){
+    let thisRoute = this.$route.path.split("/")[1];
+    if (thisRoute != "playing" && thisRoute != "vote") {
       let indss = _.findIndex(this.sideRightNav, res => {
-        return res.route.split("\/")[1] == thisRoute;
+        return res.route.split("/")[1] == thisRoute;
       });
-      this.sideRightNav[indss].active = 1;
+      if(this.sideRightNav[indss]){
+        this.sideRightNav[indss].active = 1;
+      }
     }
+    window.addEventListener("scroll", this.windowScroll);
   },
   props: {
     isShowRightPart1: {
@@ -136,8 +148,25 @@ export default {
     }
   },
   methods: {
-    showConnection() {
-      this.isShow = !this.isShow;
+    windowScroll() {
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      if (scrollTop <= 400) {
+        this.isShowRightPart1S = false;
+      } else {
+        this.isShowRightPart1S = true;
+      }
+    },
+    showConnectionS() {
+      this.isShow = true;
+      clearTimeout(this.setTimeoutTimer)
+    },
+    showConnectionH() {
+      this.setTimeoutTimer = setTimeout(()=>{
+        this.isShow = false;
+      },600) 
     },
     routeTo(t, i) {
       if (t.route != this.$route.path) {
@@ -170,7 +199,7 @@ export default {
   cursor: pointer;
 }
 #leftside {
-  top: 200px;
+  bottom: 50px;
   margin-left: -690px;
   .bs {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
@@ -229,6 +258,14 @@ export default {
 #rightside {
   bottom: 50px;
   margin-left: 620px;
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 2s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
   .part1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
     .item_box + .item_box {

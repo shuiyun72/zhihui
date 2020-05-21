@@ -108,14 +108,14 @@
             </div>
           </div>
           <div class="right">
-            <span>
-              <i class="iconfont icon-xing-copy"></i>收藏
+            <span @click="isActive1C">
+              <i class="iconfont icon-xing-copy" :class="{'active':isActive1}"></i>收藏
             </span>
             <span>
               <i class="iconfont icon-pinglun"></i>5
             </span>
-            <span>
-              <i class="iconfont icon-zan1"></i>1.3万
+            <span @click="isActive2C">
+              <i class="iconfont icon-zan1"  :class="{'active':isActive2}"></i>1.3万
             </span>
           </div>
         </div>
@@ -137,10 +137,21 @@ export default {
     console.log("我的关注详情第一个可以作为模板")
   },
   data() {
-    return {};
+    return {
+      isActive1:false,
+      isActive2:false,
+    };
   },
   computed: {},
-  methods: {}
+  methods: {
+    isActive1C(){
+      console.log("sss")
+      this.isActive1 = !this.isActive1;
+    },
+    isActive2C(){
+      this.isActive2 = !this.isActive2;
+    }
+  }
 };
 </script>
 

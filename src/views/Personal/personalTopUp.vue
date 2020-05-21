@@ -46,41 +46,9 @@
         </el-row>
         <el-row>
           <el-col :span="3" class="t1">充值金额：</el-col>
-          <el-col :span="18">
-            <div class="btn_selete_com_sy">
-              1000元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-            <div class="btn_selete_com_sy">
-              800元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-            <div class="btn_selete_com_sy">
-              200元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-            <div class="btn_selete_com_sy active">
-              100元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="18" :offset="3">
-            <div class="btn_selete_com_sy">
-              50元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-            <div class="btn_selete_com_sy">
-              20元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-            <div class="btn_selete_com_sy">
-              10元
-              <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
-            </div>
-            <div class="btn_selete_com_sy">
-              50元
+          <el-col :span="16">
+            <div class="btn_selete_com_sy" v-for="(t,i) in numList" :key="i+'xas'" :class="{'active':i==seleI}" @click="handleClick(t,i)">
+              {{t}}元
               <i class="iconfont icon-gouxuan-youxiajiaogouxuan"></i>
             </div>
           </el-col>
@@ -93,20 +61,20 @@
         <el-row>
           <el-col :span="3" class="t1">应付金额：</el-col>
           <el-col :span="18">
-            <span class="orange">100元</span>
+            <span class="orange">{{payNum}}元</span>
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="3" class="t1">发票信息：</el-col>
           <el-col :span="18">
-            <el-checkbox v-model="checked1">不需要发票</el-checkbox>
+            <el-radio v-model="radio" label="1">不需要发票</el-radio>
             <el-tooltip
               class="item"
               effect="dark"
               content="支付完成后，请在“我的账户”-“智汇币”-“充值记录”里面根据提示提交开票申请"
               placement="bottom-start"
             >
-              <el-checkbox v-model="checked2">需要发票</el-checkbox>
+               <el-radio v-model="radio" label="2">不需要发票</el-radio>
             </el-tooltip>
             
           </el-col>
@@ -169,11 +137,19 @@ export default {
       checked2: false,
       checked3: true,
       payDialog: false,
-      payType: true
+      payType: true,
+      numList:[1000,800,200,100,50,20,10,5],
+      seleI:3,
+      payNum:100,
+      radio:'1'
     };
   },
   mounted() {},
   methods: {
+    handleClick(t,i){
+      this.payNum = t;
+      this.seleI = i;
+    },
     handleType() {
       if (this.payType) {
         this.payDialog = true;

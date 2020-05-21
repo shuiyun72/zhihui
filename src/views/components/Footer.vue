@@ -1,12 +1,12 @@
 <template>
   <div id="footer">
     <el-row class="part1">
-      <el-col :span="8" class="part1_left" :offset="1">
+      <el-col :span="8" class="part1_left">
         <img :src="require('@assets/img/footlog.png')" alt />
         <p>全国统一服务热线：</p>
         <h3>400-118-6800</h3>
       </el-col>
-      <el-col :span="12" class="part1_right" :offset="2">
+      <el-col :span="12" class="part1_right" :offset="4">
         <div class="foot_item" v-for="(item,index) in footList" :key="index+'i'">
           <div class="title">{{item.title}}</div>
           <!-- {text:"智汇币攻略",url:"",isBlank:false,isA:true}, -->
@@ -54,13 +54,15 @@ export default {
 <style scoped lang="less">
 #footer {
   width: 100%;
-  height: 641px;
+  height: 600px;
   padding: 70px 100px 50px;
   background-color: #666666;
   box-sizing: border-box;
   .part1 {
-    padding-bottom: 80px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #111;
+    width: 1200px;
+    margin: 0 auto;
     .part1_left {
       text-align: center;
       p {
@@ -70,7 +72,9 @@ export default {
         padding: 21px 160px 10px 0;
       }
       h3 {
-        font-size: 58px;
+        font-size: 36px;
+        text-align: left;
+        padding-top: 10px;
         color: #fff;
       }
     }
@@ -95,8 +99,9 @@ export default {
     }
   }
   .part2 {
-    margin-top: 36px;
     line-height: 50px;
+    width: 1200px;
+    margin: 16px auto 0;
     .left {
       width: 120px;
       float: left;
@@ -118,7 +123,9 @@ export default {
     }
   }
   .part3 {
-    padding-top: 60px;
+    padding-top: 30px;
+    width: 1200px;
+    margin: 0 auto;
     font-size: 18px;
     color: #fff;
     text-align: center;

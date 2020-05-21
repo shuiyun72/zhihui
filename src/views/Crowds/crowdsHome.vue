@@ -1,7 +1,9 @@
 <template>
   <div class="crow_home1">
     <Side :toUrl="'crowds'"></Side>
-    <div class="bg_img_top"></div>
+    <div class="bg_img_top">
+      <CarouselLb></CarouselLb>
+    </div>
     <div class="crow_part1 bs">
       <div class="select_box_com_sy">
         <div class="item" v-for="(t,i) in DataFor(3,selectList)" :key="i">
@@ -60,8 +62,9 @@
 <script>
 import Side from "@components/Side.vue";
 import PageNum from "@components/PageNum";
+import CarouselLb from "@components/CarouselLb";
 export default {
-  components: { PageNum, Side },
+  components: { PageNum, Side,CarouselLb },
   data() {
     return {
       selectList: [

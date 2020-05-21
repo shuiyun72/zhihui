@@ -24,12 +24,10 @@
       <div class="h_title" v-show="AccountHomeData.home=='h1'">智汇币交易明细</div>
       <div class="h_title" v-show="AccountHomeData.home=='h2' || AccountHomeData.home=='h3'">智汇豆交易明细</div>
       <div class="h_select jcs">
-        <div class="item active">全部明细</div>
-        <div class="item">收入明细</div>
-        <div class="item">支出明细</div>
+        <div class="item" v-for="(item,inL) in mxList" :key="inL+'xxa'" :class="{'active':inL == selectTitle}" @click="handleSelectT(item,inL)">{{item.title}}</div>
       </div>
       <div class="none_title_table">
-        <el-table :data="tableData" style="width: 100%" stripe>
+        <el-table :data="tableData" stripe>
           <el-table-column prop="date" label="时间" align="center"></el-table-column>
           <el-table-column prop="type" label="方式" align="center"></el-table-column>
           <el-table-column prop="num" align="center" label="数量"></el-table-column>
@@ -57,7 +55,20 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      selectTitle:0,
+      mxList:[ 
+        {
+          title:"全部明细"
+        },
+        {
+          title:"收入明细"
+        },
+        {
+          title:"支出明细"
+        }
+      ]
+    };
   },
   methods: {
     childHandle(i, ic, el) {
@@ -65,9 +76,19 @@ export default {
     },
     topUp(){
       this.$router.push({path:"/personal/topUp"})
+    },
+    handleSelectT(t,i){
+      this.selectTitle = i;
+      console.log(t,"为选中的信息,下面的表格改变'tableData'的值,不需要直接写3个")
     }
   }
 };
 </script>
-<style lang="less">
+<style>
+.el-table_header{
+  width:100% !important
+}
+.el-table_body{
+  width:100% !important
+}
 </style>

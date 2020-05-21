@@ -168,6 +168,7 @@
     left: 0;
     bottom: 100px;
     cursor: pointer;
+    z-index: 10;
 
     &.green {
       color: #fff;
@@ -1843,11 +1844,16 @@
 
     i {
       margin: 0 6px 0 30px;
+      cursor: pointer;
     }
 
     .icon-xing-copy {
-      color: #F88F00;
-      font-size: 22px;
+      &.active {
+        color: #F88F00;
+      }
+
+      color: #999;
+      font-size: 20px;
 
       &.none {
         color: #ccc;
@@ -1856,12 +1862,16 @@
 
     .icon-pinglun {
       color: #666;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .icon-zan1 {
-      color: #f00;
-      font-size: 28px;
+      &.active {
+        color: #f00;
+      }
+
+      color: #999;
+      font-size: 26px;
 
       &.none {
         color: #ccc;
@@ -1961,9 +1971,11 @@
 
 .submit_btn_sy {
   text-align: center;
-  .next{
-    margin-left :300px;
+
+  .next {
+    margin-left: 300px;
   }
+
   .icon-jiahaocu {
     cursor: pointer;
     background-color: #01B0B7;
@@ -1977,11 +1989,12 @@
     padding: 30px 30px 40px;
     border-top: 2px dotted #aaa;
   }
+
   &.orb {
     button {
-      color #F88509
+      color: #F88509;
       background-color: #fff;
-      border-color:#F88509 
+      border-color: #F88509;
     }
   }
 
@@ -2173,6 +2186,7 @@
   border-radius: 3px;
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 16px;
 
   &.active {
     background-color: #baf9ae;
@@ -2407,11 +2421,25 @@
   text-align: center;
   padding: 32px 0 0;
 
+  &.active {
+    span {
+      background-color: #eee;
+      color: #03c1c9;
+      padding: 2px 6px;
+
+      i {
+        font-size: 14px;
+        color: #e58e03;
+        margin-right: 6px;
+      }
+    }
+  }
+
   span {
     background-color: #eee;
     color: #333;
     padding: 2px 6px;
-
+    cursor pointer
     i {
       font-size: 14px;
       color: #666;
@@ -2482,7 +2510,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    .bgred {  
+
+    .bgred {
       border-top: 30px solid #BC0000;
       border-bottom: 30px solid transparent;
       border-left: 30px solid #BC0000;
@@ -2490,11 +2519,12 @@
       width: 0;
       height: 0;
     }
-    .m{
-       position: absolute;
+
+    .m {
+      position: absolute;
       top: 8px;
       left: 8px;
-      color #fff
+      color: #fff;
     }
   }
 
@@ -3018,10 +3048,12 @@
     line-height: 32px;
   }
 }
+
 .waller_num_com_sy {
   padding: 40px 20px 20px;
   display: flex;
   justify-content: space-around;
+
   i {
     width: 2px;
     height: 22px;
@@ -3030,26 +3062,91 @@
     position: relative;
     top: 18px;
   }
+
   .item {
     text-align: center;
+
     p {
       padding: 6px 0 16px 0;
       color: #666;
     }
+
     .orange {
       font-weight: bold;
     }
   }
 }
-.submit_or_btn_sy{
+
+.submit_or_btn_sy {
   text-align: center;
   padding-top: 30px;
-  
-  button{
+
+  button {
     border: 1px solid #F88509;
     color: #F88509;
     border-radius: 20px;
     padding: 5px 30px;
     font-weight: bold;
+  }
+}
+
+.c_d_img_lunbo_com_sy {
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  width: 450px;
+
+  .big_img {
+    width: 100%;
+
+    img {
+      width: 442px;
+      border: 4px solid #03c1c9;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+  }
+
+  .small_show {
+    padding: 22px 26px;
+    position: relative;
+
+    .pre, .next {
+      position: absolute;
+      font-size: 20px;
+      height: 66px;
+      line-height: 66px;
+      top: 50%;
+      margin-top: -33px;
+      font-weight: bold;
+      text-align: center;
+      width: 24px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+
+    .pre {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .small_show_box {
+      img {
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        margin-right: 2px;
+        width: 92px;
+
+        &.is_active {
+          border: 2px solid #03c1c9;
+        }
+      }
+    }
   }
 }

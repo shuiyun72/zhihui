@@ -21,8 +21,26 @@
         <div class="part1">
           <div class="part_left">
             <div class="left">
-              <ImgLunbo></ImgLunbo>
-              <div class="collect_sy">
+              <div class="c_d_img_lunbo_com_sy">
+                <div class="big_img">
+                  <img :src="require('@assets/commodity/'+selectImg)" alt />
+                </div>
+                <div class="small_show">
+                  <i class="pre el-icon-arrow-left"></i>
+                  <i class="next el-icon-arrow-right"></i>
+                  <div class="small_show_box">
+                    <img
+                      :src="require('@assets/commodity/'+item.img)"
+                      alt
+                      v-for="(item,index) in imgCList"
+                      :key="index+'sx'"
+                      :class="{'is_active':index==seleI}"
+                      @click="selectImgShow(item,index)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="collect_sy" @click="isActiveC" :class="{'active':isA}">
                 <span>
                   <i class="iconfont icon-xing"></i>收藏产品
                 </span>
@@ -265,7 +283,6 @@
 <script>
 //part3
 
-import ImgLunbo from "@components/OverAll/imgLunbo.vue";
 import Side from "@components/Side.vue";
 import * as Commodity from "@/common/commodity";
 import SmallGoods from "@components/Goods/SmallGoods";
@@ -280,18 +297,34 @@ export default {
       commodityList: Commodity.HomeCommodity,
       part3List: Commodity.Part3List,
       sayDialog: false,
-      textarea: ""
+      textarea: "",
+      imgCList:[
+        {img:"p1.jpg"},
+        {img:"p2.jpg"},
+        {img:"p3.jpg"},
+        {img:"p4.jpg"}
+      ],
+      selectImg:"p1.jpg",
+      seleI:0,
+      isA:false
     };
   },
   computed: {},
   components: {
     Side,
-    ImgLunbo,
     SmallGoods,
     GoodsLunboS,
     BigGoods
   },
-  methods: {}
+  methods: {
+    selectImgShow(item,index){
+      this.selectImg = item.img;
+      this.seleI = index;
+    },
+    isActiveC(){
+      this.isA = !this.isA
+    }
+  }
 };
 </script>
 

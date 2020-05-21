@@ -34,7 +34,7 @@
             </el-col>
             <el-col :span="3" :offset="4">默认地址</el-col>
             <el-col :span="2">
-              <div class="link">修改此地址</div>
+              <div class="link" @click="editAddress">修改此地址</div>
             </el-col>
           </el-row>
           <el-row>
@@ -163,7 +163,7 @@
             </div>
           </el-col>
           <el-col :span="4" class="t_center">
-            <el-button class="red2_btn">提 交 订 单</el-button>
+            <el-button class="red2_btn" @click="submitOrder">提 交 订 单</el-button>
           </el-col>
         </el-row>
       </div>
@@ -186,7 +186,16 @@ export default {
     };
   },
   computed: {},
-  methods: {}
+  methods: {
+    editAddress(){
+      sessionStorage.setItem("PersonalR",JSON.stringify({"router":"Order3","i":6,"ic":2}));
+      this.$router.push({path:"/personal/admin"})
+    },
+    submitOrder(){
+      sessionStorage.setItem("PersonalR",JSON.stringify({"router":"Order1","i":6,"ic":0}));
+      this.$router.push({path:"/personal/admin"})
+    }
+  }
 };
 </script>
 

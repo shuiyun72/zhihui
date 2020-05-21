@@ -296,8 +296,8 @@ export const PersonalList = [
         title: "我的订阅",
         number: 0,
         children: [
-            { title: "订阅详情", number: 0, show: 0, router: "" },
-            { title: "订阅设置", number: 0, show: 0, router: "" },
+            { title: "订阅详情", number: 0, show: 0, router: "subscribe1" },
+            { title: "订阅设置", number: 0, show: 0, router: "subscribe2" },
         ]
     },
     {
@@ -321,9 +321,9 @@ export const PersonalList = [
         number: 1,      
         children: [
             { title: "发布的尾货", number: 0, show: 0, router: "Seller1" },
-            { title: "已出售的尾货", number: 0, show: 0, router: "Seller2" },
-            { title: "待处理订单", number: 0, show: 0, router: "Seller3" },
-            { title: "退货地址", number: 0, show: 0, router: "Seller4" },
+            { title: "已出售的尾货", number: 0, show: 0, router: "Seller1" },
+            { title: "待处理订单", number: 0, show: 0, router: "Seller1" },
+            { title: "退货地址", number: 0, show: 0, router: "Seller2Return" },
             { title: "钱包管理", number: 0, show: 0, router: "Seller5" },
         ]
     },

@@ -78,6 +78,9 @@ import Group1 from "./components/Group1.vue";
 import Records1 from "./components/Records1.vue";
 import Records2 from "./components/Records2.vue";
 import Records3 from "./components/Records3.vue";
+//我的订阅
+import Subscribe1 from "./components/Subscribe1.vue";
+import Subscribe2 from "./components/Subscribe2.vue";
 //我的竞赛
 import Player from "./components/Player.vue";
 import PlayerAdd from "./components/PlayerAdd.vue";
@@ -140,6 +143,8 @@ export default {
     Records1,
     Records2,
     Records3,
+    Subscribe1,
+    Subscribe2,
     Player,
     PlayerAdd,
     Order1,
